@@ -1,0 +1,165 @@
+<!-- .slide: class="title" -->
+# A Velociraptor GUI tour
+
+<img src="/modules/gui_tour/tour-bus.png" class="title-inset">
+
+---
+
+<!-- .slide: class="content" -->
+
+## The Dashboard
+
+* The Dashboard shows the current state of the installation:
+    * How many clients are connected
+    * Current CPU load and memory footprint on the server.
+    * When running hunts or intensive processing, memory and CPU requirements will increase but not too much.
+    * You can customize the dashboard - it’s also just an artifact.
+
+---
+
+<!-- .slide: class="full_screen_diagram" -->
+
+## The Dashboard
+
+![](/modules/gui_tour/dashboard.png)
+
+---
+
+<!-- .slide: class="content" -->
+## User Preferences
+
+You can customize the interface to your liking
+
+
+<div class="container small-font">
+<div class="col">
+
+* Themes
+
+</div>
+<div class="col">
+
+* Languages
+* Timezones
+
+</div>
+</div>
+
+<img src="/modules/gui_tour/user_preferences.png" style="bottom: inherit" class="" />
+
+---
+
+<!-- .slide: class="title" -->
+
+# Interactively investigate individual clients
+
+---
+
+
+<!-- .slide: class="content small-font" -->
+## Searching for a client
+
+To work with a specific client we need to search for it.  Press the
+**Search** or **Show All** button to see some clients. You can also
+use the **Show recent hosts** to see your own clients.
+
+![](/modules/gui_tour/search_clients.png)
+
+---
+
+<!-- .slide: class="content" -->
+## Search for clients
+
+### hostname, label, or client ID.
+
+* You can start typing the hostname to auto-complete
+* Some common terms:
+   * `host`: search by hostnames
+   * `mac`: Mac addresses
+   * `ip`: last seen IP address
+   * `label`: Search by labels
+
+---
+
+
+<!-- .slide: class="content small-font" -->
+## Client Overview
+
+* Internally the client id is considered the most accurate source of
+endpoint identity
+
+![](/modules/gui_tour/client_overview.png)
+
+---
+
+<!-- .slide: class="content small-font" -->
+## Shell commands
+
+* Velociraptor allows running shell commands on the endpoint using
+  `Powershell`/`Cmd`/`Bash`
+    * Only Velociraptor users with the administrator role are allowed to
+  do this!
+    * Actions are logged and audited
+
+```powershell
+Get-LocalGroupMember -Group "Administrators"
+```
+
+![](/modules/gui_tour/shell_commands.png)
+
+---
+
+<!-- .slide: class="title" -->
+# Interactively fetching files from the endpoint
+
+<img src="/modules/gui_tour/fetch.png" class="title-inset">
+
+---
+
+<!-- .slide: class="content small-font" -->
+## The VFS View
+
+Remember that the VFS view is simply a server side cache of
+information we know about the endpoint - it is usually out of date!
+
+![](/modules/gui_tour/vfs_view.png)
+
+---
+
+
+<!-- .slide: class="content small-font" -->
+## Navigating the interface
+
+* Click the “Refresh this directory” will schedule a directory listing
+  artifact and wait for the results (usually very quick if the
+  endpoint is online).
+* The “Recursively refresh this directory” will schedule a recursive
+  refresh - this may take some time! After this operation a lot of the
+  VFS will be pre-populated already.
+* “Collect from client” will retrieve the file data to the
+  server. After which, the floppy disk sign indicates that we have
+  file data available and you can click the “Download” link to get a
+  copy of the file.
+
+
+---
+
+<!-- .slide: class="content small-font" -->
+## The VFS interface
+
+Previewing a file after download.
+
+![](/modules/gui_tour/vfs_view_2.png)
+
+---
+
+<!-- .slide: class="content small-font" -->
+
+## Previewing files
+
+The GUI allows close inpection of binary files
+* Viewing in hex or text
+* Paging - skipping to offset
+* Searching using regex or hex strings
+
+<img src="/modules/gui_tour/vfs_view_3.png" class="title-inset">
