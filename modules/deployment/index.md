@@ -12,7 +12,7 @@
 
 </div>
 
-<img src="/resources/velo_bike.gif" style=" position: fixed; display: inline; right: 0px;  bottom: -100px; height: 300px; z-index: -10;"/>
+<img src="/resources/velo_bike.gif" class="fixed" style=" right: 0px;  bottom: -100px; height: 300px; z-index: -10;"/>
 
 ---
 

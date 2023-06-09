@@ -2,7 +2,7 @@
 
 # Configuring Clients
 
-<img src="taming_velociraptors.png" style="position: fixed; display: inline; right: 0px;  z-index: -10;"/>
+<img src="taming_velociraptors.png" class="fixed" style="right: 0px;  z-index: -10;"/>
 
 ---
 
