@@ -24,6 +24,7 @@
 <!-- .slide: class="content" -->
 
 ## Velociraptor Artifacts
+
 Velociraptor comes with a large number of artifact types
 * Client Artifacts run on the endpoint
 * Client Event artifacts monitor the endpoint
@@ -52,7 +53,6 @@ community to publish useful VQL artifacts for reuse
 
 ![](/modules/artifacts_and_vql_intro/artifact-exchange.png)
 
-
 ---
 
 <!-- .slide: class="full_screen_diagram" -->
@@ -77,7 +77,6 @@ containing artifact definitions).
 
 ---
 
-
 <!-- .slide: class="content small-font" -->
 
 ## Main parts of an artifact
@@ -93,7 +92,19 @@ containing artifact definitions).
 
 ---
 
-<!-- .slide: class="full_screen_diagram" -->
+<!-- .slide: class="content small-font" -->
+
+## The Artifact Repository
+
+![](artifact_repository.png)
+
+
+---
+
+
+<!-- .slide: class="content small-font" -->
+
+## Main parts of an artifact
 
 ![](artifact_structure.png)
 
@@ -107,6 +118,8 @@ containing artifact definitions).
 * The client automatically parses them into a VQL type depending on
   the parameter's type specification.
 * The GUI uses type specification to render an appropriate UI
+
+<img src="artifact_parameters.png" style="width: 70%">
 
 ---
 
@@ -185,12 +198,18 @@ sources:
 ---
 
 <!-- .slide: class="content small-font" -->
+
+## Collect artifact from endpoint
+
+![](collect_artifact.png)
+
+---
+
+<!-- .slide: class="content small-font" -->
 ## Your artifact is ready to collect
 
 Let's create a hunt to find all currently running command shells from
 wmi across our entire deployment.
-
-Find out in seconds...
 
 ![](hunt_artifact.png)
 
@@ -225,12 +244,14 @@ Find out in seconds...
 ## Calling artifacts from VQL
 
 * You can call other artifacts from your own VQL using the “Artifact.<artifact name>” plugin notation.
-* Args to the Artifact() plugin are passed as artifact parameters.
+    * Args to the Artifact() plugin are passed as artifact parameters.
+    * When calling artifacts types are not converted and preconditions
+      are not considered. Make sure you pass the expected types
 
-![](artifact_calling_artifact.png)
-
-* When calling artifacts types are not converted and preconditions are
-not considered. Make sure you pass the expected types
+```sql
+SELECT * FROM Artifact.Windows.Sys.Users() WHERE Name =~ "administrator"
+```
+<img src="artifact_calling_artifact.png" style="width: 70%">
 
 ---
 
@@ -242,7 +263,7 @@ not considered. Make sure you pass the expected types
    * Usually a type is a dict but sometimes it is a something else
      (Use `format="%T"` or `EXPLAIN` to see the types)
 
-* Timestamps are given as Golang `time.Time` types.
+* Timestamps are given as Golang [time.Time](https://golang.org/pkg/time/#Time) types.
 * Timestamps have some common methods some of which are accessible from VQL:
     * `Unix`, `UnixNano` - number of seconds since the epoch
     * `Day`, `Minute`, `Month` etc - convert time to days minutes etc.
@@ -280,6 +301,19 @@ Write an artifact to identify local accounts logged in since February
 
 <!-- .slide: class="content small-font" -->
 
+## Exercise: Identify recent accounts
+```sql
+SELECT Name, UUID, timestamp(epoch=Mtime) AS LastLogin
+FROM Artifact.Windows.Sys.Users()
+WHERE LastLogin > "2023-02-01"
+```
+
+![](last_login.png)
+
+---
+
+<!-- .slide: class="content small-font" -->
+
 ## Format time
 
 * Generally discouraged to format time manually - prefer to use ISO
@@ -288,6 +322,21 @@ Write an artifact to identify local accounts logged in since February
   the different members of the `time.Time` object.
 
 Update the previous artifact to format the time like `4 February 2021 10:23:00`
+
+---
+
+<!-- .slide: class="content small-font" -->
+
+## Format time
+
+```sql
+LET myFormat(X) = format(format="%v %v %v %v:%v:%v", args=[
+   X.Day, X.Month, X.Year, X.Hour, X.Minute, X.Second
+])
+
+SELECT myFormat(X=timestamp(epoch=now()))
+FROM scope()
+```
 
 ---
 
@@ -414,7 +463,7 @@ SELECT * FROM switch(
 * Evaluate all subqueries in order and when any of them returns rows
   stop evaluating the next ones.
 
-* Note: The order of keys is important!
+* **Note**: The order of keys is important!
 
 As usual VQL is lazy - this means that branches that are not taken are
 essentially free!
@@ -424,14 +473,15 @@ essentially free!
 <!-- .slide: class="content small-font" -->
 
 ## Conditional: chain plugin
+
 The `chain()` plugin allows multiple queries to be combined.
 
-``sql
+```sql
 SELECT * FROM chain(
     a={ <sub query >},
     b={ <sub query >},
     c={ <sub query >})
-``
+```
 
 Evaluate all subqueries in order and append all the rows together.
 
@@ -478,15 +528,11 @@ FROM range(start=10, end=20, step=1)
   from other groups.
 * Groups keep only the last row in that group.
 
----
-
-<!-- .slide: class="full_screen_diagram" -->
-
-![](aggregate_functions_group.png)
+<img src="aggregate_functions_group.png" style="width: 70%">
 
 ---
 
-<!-- .slide: class="full_screen_diagram" -->
+<!-- .slide: class="content small-font" -->
 
 ## Example: Count all rows
 
@@ -504,7 +550,7 @@ single row will be returned.
 
 ---
 
-<!-- .slide: class="full_screen_diagram" -->
+<!-- .slide: class="content" -->
 
 ## Stacking
 

@@ -39,8 +39,6 @@ SELECT * FROM clock()
 
 Click the stop button to cancel the query.
 
-```
-
 ---
 
 <!-- .slide: class="content small-font" -->
@@ -73,4 +71,4 @@ SELECT * FROM watch_evtx(filename="C:/Windows/System32/winevt/logs/system.evtx")
 
 Watch the System event log and then clear it. Wait for couple minutes.
 
-![](select_evtx.png)
+<img src="watch_evtx.png" style="width: 70%">
