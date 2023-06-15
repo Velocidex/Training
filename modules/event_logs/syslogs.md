@@ -69,7 +69,8 @@ Read the first 50 lines from the auth log
 ## Filter lines and apply Grok
 
 
-Grok expressions are well published
+* Grok expressions for common applications are well published.
+* You can figure out expressions for new log sources using online tools.
 
 https://grokdebugger.com/
 
