@@ -86,7 +86,6 @@ event id mean.
 Some common event ids are documented publicly.
 
 </div>
-
 <div class="col">
 
 ![](event_id_searching.png)
