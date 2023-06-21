@@ -78,6 +78,7 @@ use the **Show recent hosts** to see your own clients.
    * `mac`: Mac addresses
    * `ip`: last seen IP address
    * `label`: Search by labels
+   * `recent`: Show all clients recently interacted with
 
 ---
 

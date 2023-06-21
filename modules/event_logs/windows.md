@@ -38,7 +38,7 @@
 
 <!-- .slide: class="content" -->
 
-## Event Messages
+## Event Messages - Where are they?
 
 * Windows Event Logs architecture does NOT store the event message in the evtx file!
     * This allows for event message internationalization
@@ -244,3 +244,18 @@ WHERE ChannelName =~ "bits"
 ## Exercise: Convert to an artifact
 
 Write an artifact that can be used to hunt for enabled or disabled event logs.
+
+---
+
+<!-- .slide: class="content" -->
+
+## Using Sigma Rules to search event logs
+
+TODO
+
+---
+<!-- .slide: class="content" -->
+
+## The EVTX Hunter
+
+TODO

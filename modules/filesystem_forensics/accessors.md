@@ -1,6 +1,6 @@
 <!-- .slide: class="title" -->
 
-# Filesystem Accessors
+# More about Accessors
 
 ## Accessing data in many ways.
 
@@ -134,3 +134,113 @@ SELECT * FROM glob(globs="*", root='''\\.\C:\Windows''', accessor="ntfs")
     * A Windows path starts with a drive letter, or a device name, and
       uses `\` (preferred) or `/` for path separator.
     * Linux paths are rooted at `/`
+
+---
+
+<!-- .slide: class="content" -->
+
+## The data and scope accessors
+
+* Velociraptor contains many plugins that read files via accessors
+* Sometimes data is already available as a string.
+* The `data` accessor allows VQL plugins to treat a string as a file.
+   * The filename is taken as the content of the file.
+* The `scope` accessor is similar
+   * The filename is takes an the name of a scope variable that
+     contains the data.
+   * Useful for uploads as the original path is also sent
+
+---
+
+<!-- .slide: class="content" -->
+
+## The ZIP accessor
+
+* Zip files are a common basis for many file formats
+    * e.g. `docx`, `pptx`, `jar`, `odt`
+* Velociraptor makes it easy to access using the `zip` accessor:
+    * `Path`: Is the path within the zip file
+    * `DelegateAccessor`: The zip accessor will use this to open the
+      underlying file.
+    * `DelegatePath`: The zip accessor will use this to open the
+      underlying file.
+
+---
+
+<!-- .slide: class="content" -->
+
+## Exercise: Search a word document for a keyword
+
+* Create a `docx` document using `wordpad`
+* Apply the `glob()` plugin with the zip accessor to view all the files.
+* Apply the `yara()` plugin to searh the content of the zip for a keyword.
+
+---
+
+<!-- .slide: class="content" -->
+
+## The process accessor: accessing process memory
+
+* Velociraptor can read process memory using the `process` accessor
+* Process memory is not contiguous - it is very sparse.
+* Velociraptor handles the sparse nature automatically
+   * The yara plugin automatically handles sparse regions
+   * Upload plugin skips uploading unmapped memory
+
+---
+
+<!-- .slide: class="content" -->
+
+## Exercise: Write an artifact that uploads process memory
+
+* Search for a keyword hit and upload the entire process memory if
+  there is a hit.
+
+---
+
+<!-- .slide: class="content" -->
+
+## The sparse accessor
+
+* Velociraptor can handle sparse files correctly.
+* The `sparse` accessor allows you to create a sparse overlay over other data
+   * Velociraptor will skip sparse regions when scanning or uploading
+   * Useful when we want to avoid reading certain data
+   * e.g. Memory scanning or Carving
+
+---
+
+<!-- .slide: class="content" -->
+
+## Exercise: Upload only first 10k of each file.
+
+Write an artifact that uploads only the first 10kb of each file.
+
+
+---
+
+<!-- .slide: class="content" -->
+
+## The smb accessor
+
+* It is possible to access a remote SMB server using the `smb` accessor.
+
+* The accessor requires credentials for accessing the remote server.
+
+* Credentials are provided via a scope parameter
+
+```sql
+
+LET SMB_CREDENTIALS <= set(item=dict(), field=ServerName,
+  value=format(format="%s:%s", args=[Username, Password]))
+
+```
+
+---
+
+<!-- .slide: class="content" -->
+
+## Exercise: Configuring an SMB share
+
+* Configure an SMB share on your server and place a file there.
+* Write a VQL query that searches the SMB share.

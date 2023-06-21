@@ -48,8 +48,8 @@ The "gui" command creates an instant temporary server/client with self
 4. Build MSI packages for Windows
 5. Deploy via GPO/SCCM etc.
 
-NOTES:
-The instructor will demonstrate step 1. See the workshop setup document for credentials.
+* The instructor will demonstrate step 1. See the workshop setup
+  document for credentials.
 
 ---
 
@@ -77,7 +77,8 @@ Google will require OAuth verification which can take weeks!
 
 ### Generate OAuth client credentials.
 
-Note you can have multiple credentials and multiple domains in the same GCP project.
+Note you can have multiple credentials and multiple domains in the
+same GCP project.
 
 ![](oauth_client_id.png)
 
@@ -85,7 +86,9 @@ Note you can have multiple credentials and multiple domains in the same GCP proj
 
 <!-- .slide: class="full_screen_diagram small-font" -->
 
-##### The redirect URL is the url which Google will use to call back to Velociraptor with the user’s successful login. Note the client id and secret - we will need to provide it in the server config.
+* The redirect URL is the url which Google will use to call back to
+  Velociraptor with the user’s successful login. Note the client id
+  and secret - we will need to provide it in the server config.
 
 It must be `https://<domain>/auth/google/callback`
 
@@ -102,7 +105,9 @@ It must be `https://<domain>/auth/google/callback`
 <!-- .slide: class="content small-font" -->
 ## Installing a new server
 
-Use the password provided in the Workshop setup to log into the server.
+Use the password provided in the Workshop setup to log into the
+server.
+
 1. Fetch the latest Velociraptor Windows and Linux release binaries
 2. Create a new configuration:
 
@@ -138,7 +143,6 @@ sudo dpkg -i velociraptor_server*.deb
 <!-- .slide: class="full_screen_diagram small-font" -->
 
 Generate new configuration with the details in the Workshop setup document.
-Make sure to use /data/ as this will run on Linux
 
 ![](config_wizard.png)
 
@@ -157,6 +161,7 @@ velociraptor config generate --merge
 ```
 
 ---
+
 
 <!-- .slide: class="content small-font" -->
 ## Building a server deb package

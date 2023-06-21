@@ -149,6 +149,22 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-delete-i
 
 <!-- .slide: class="content" -->
 
+## Integration with Slack/Discord
+
+TODO
+
+---
+
+<!-- .slide: class="content" -->
+
+## Exercise: Forwarding alerts to Discord
+
+* Write an artifact to forward alerts to a discord channel.
+
+---
+
+<!-- .slide: class="content" -->
+
 ## Summary
 
 * The hunting possibilities are only limited by your imagination!
