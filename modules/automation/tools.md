@@ -125,6 +125,14 @@ sources:
 
 <!-- .slide: class="content " -->
 
+## Serving tools from an SMB server
+
+TODO
+
+---
+
+<!-- .slide: class="content " -->
+
 ## Third party binaries summary
 
 * `Generic.Utils.FetchBinary` on the client side delivers files to the client on demand.

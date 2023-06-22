@@ -2,6 +2,8 @@
 
 # Timelines
 
+## Combining different sources of information
+
 ---
 
 <!-- .slide: class="content " -->

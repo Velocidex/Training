@@ -426,7 +426,7 @@ SELECT * FROM foreach(
 ## Foreach on steroids!
 
 * Normally foreach iterates over each row one at a time.
-* The foreach() plugin also takes the workers parameter. If this is
+* The `foreach()` plugin also takes the workers parameter. If this is
   larger than 1, foreach() will use multiple threads.
 
 * This allows to parallelize the query!
@@ -471,6 +471,71 @@ SELECT * FROM foreach(row={
 ```
 
 ---
+
+<!-- .slide: class="content " -->
+
+## The foreach() column parameter
+
+* A row is really a dict consisting of
+   * columns (the dict keys)
+   * cells (the dict values)
+
+* Sometimes a query will pass an entire dict in one of the columns.
+* In that case we want to use that dict as the row instead of the
+  actual row.
+* Do this by specifying the `column` parameter
+
+---
+
+<!-- .slide: class="content " -->
+
+## Exercise: Filter columns by name
+
+* Consider the following CSV file
+
+```csv
+Column1,Column2,SomethingElse
+1,2,3
+2,3,4
+3,4,5
+```
+
+* Write a query that only shows `Column*`
+
+---
+
+<!-- .slide: class="content small-font" -->
+
+## Filtering columns and dicts
+
+```sql
+LET CSVFile = '''
+Column1,Column2,SomethingElse
+1,2,3
+2,3,4
+3,4,5
+'''
+
+LET FilterDict(RowDict) =
+  to_dict(item={
+    SELECT * FROM items(item=RowDict)
+    WHERE _key =~ "Column"
+  })
+
+LET GetDictForCSVRow =
+  SELECT _value AS RowDict
+  FROM items(item={
+    SELECT * FROM parse_csv(accessor="data", filename=CSVFile)
+  })
+
+SELECT * FROM foreach(row=GetDictForCSVRow,
+query={
+  SELECT * FROM foreach(row={
+    SELECT FilterDict(RowDict=RowDict) AS RebuildDict
+    FROM scope()
+  }, column="RebuildDict")
+})
+```
 
 <!-- .slide: class="content small-font" -->
 
@@ -614,11 +679,11 @@ FROM netstat()
 ---
 
 <!-- .slide: class="content small-font" -->
-## Local functions
+## Local VQL functions
 
 * LET expressions can declare parameters.
 * This is useful for refactoring functions into their own queries.
-* The callsite still uses named args to populate the scope.
+* The call site still uses named args to populate the scope.
 
 ```sql
 LET MyFunc(X) = 5 + X

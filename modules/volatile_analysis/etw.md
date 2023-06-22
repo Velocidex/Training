@@ -249,8 +249,40 @@ Invoke-WebRequest -Uri "https://www.google.com" -UseBasicParsing
 ## Dump mapped objects
 
 * Dump the powershell process's mapped DLLs.
-* The DLL winhttp.dll is responsible for making outbound http connections.
+* The DLL `winhttp.dll` is responsible for making outbound http connections.
 
 * If the http request is enabled, the process will link the winhttp.dll at runtime.
 * This technique works on many other programs that may load DLLs on demand.
    * e.g. Python
+
+---
+
+<!-- .slide: class="content" -->
+
+## Process injection
+
+TODO
+
+---
+
+<!-- .slide: class="content" -->
+
+## Process Memory scanning
+
+TODO
+
+---
+
+<!-- .slide: class="content" -->
+
+## Memory Carving: Zip files/Word documents
+
+TODO
+
+---
+
+<!-- .slide: class="content" -->
+
+## Physical Memory acquisition
+
+TODO

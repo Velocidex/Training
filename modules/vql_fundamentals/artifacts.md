@@ -60,9 +60,13 @@ community to publish useful VQL artifacts for reuse
 
 ![](/modules/artifacts_and_vql_intro/import-exchange.png)
 
-<!-- .slide: class="title" -->
-# Searching for files
-## Let's start at the beginning….
+---
+
+<!-- .slide: class="content" -->
+
+## Exercise: Manually import Exchange artifacts
+
+* Import only Windows related Exchange Artifacts.
 
 ---
 

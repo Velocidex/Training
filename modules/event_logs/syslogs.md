@@ -87,3 +87,11 @@ https://grokdebugger.com/
 * Use foreach to expand the dict into columns
 
 ![](parse_syslog_grok.png)
+
+---
+
+<!-- .slide: class="content" -->
+
+## Carving SSH auth logs
+
+TODO
