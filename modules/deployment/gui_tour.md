@@ -163,3 +163,38 @@ The GUI allows close inpection of binary files
 * Searching using regex or hex strings
 
 <img src="/modules/gui_tour/vfs_view_3.png" class="title-inset">
+
+---
+
+<!-- .slide: class="content" -->
+## Velociraptor artifacts
+
+Velociraptor is just a VQL engine!
+
+* We package VQL queries in Artifacts:
+    * YAML files
+    * Include human description
+    * Package related VQL queries into “Sources”
+    * Take parameters for customization
+    * Can in turn be used in VQL as well...
+
+---
+
+<!-- .slide: class="content" -->
+
+## What does the VFS view do under the cover?
+
+* Refreshing the VFS simply schedules new artifacts to be collected - it is just a GUI convenience.
+
+![](/modules/artifacts_introduction/vfs_collections.png)
+
+---
+<!-- .slide: class="content" -->
+## Velociraptor uses expert knowledge to find the evidence
+
+A key objective of Velociraptor is encapsulating DFIR knowledge into
+the platform, so you don’t need to be a DFIR expert.  We have high
+level questions to answer We know where to look for evidence of user /
+system activities
+
+We build artifacts to collect and analyze the evidence in order to answer our investigative questions.
