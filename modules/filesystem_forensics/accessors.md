@@ -122,6 +122,31 @@ SELECT * FROM glob(globs="*", root='''\\.\C:\Windows''', accessor="ntfs")
 
 ## Exercise: OSPath operations
 
+* The OSPath object can be used to manipulate paths
+   * Useful methods: `Basename`, `Dirname`, `Components`
+   * Adding components, indexing gets specific components.
+   * Works for complex nested paths
+
+```sql
+LET ZipPath = "C:/Users/Administrator/Documents/test.docx"
+SELECT OSPath,
+  OSPath.Basename,  OSPath[0], OSPath.Components,
+  OSPath.Dirname, OSPath.Dirname + "Hello.txt",
+  OSPath.Path
+FROM glob(globs="**",
+    root=pathspec(DelegateAccessor="file", DelegatePath=ZipPath),
+    accessor="zip")
+```
+
+---
+
+<!-- .slide: class="full_screen_diagram" -->
+
+### OSPath operations
+
+![](ospath_operations.png)
+
+---
 
 
 <!-- .slide: class="content" -->
@@ -179,6 +204,56 @@ SELECT * FROM glob(globs="*", root='''\\.\C:\Windows''', accessor="ntfs")
 
 <!-- .slide: class="content" -->
 
+## Solution: Search a word document for a keyword
+
+```sql
+LET ZipPath = "C:/Users/Administrator/Documents/test.docx"
+LET Rule = '''
+rule X {
+    strings: $a="secret"
+    condition: any of them
+}
+'''
+SELECT * FROM foreach(row={
+    SELECT * FROM glob(globs="**",
+        root=pathspec(DelegateAccessor="file", DelegatePath=ZipPath),
+        accessor="zip")
+}, query={
+    SELECT * FROM yara(rules=Rule, files=OSPath, accessor="zip")
+})
+```
+
+
+---
+
+<!-- .slide: class="content small-font" -->
+
+## Raw registry parsing
+
+* In a previous exercise we looked for a key in the
+  `HKEY_CURRENT_USER` hive.
+* Any artifacts looking in `HKEY_USERS` using the Windows API are
+  limited to the set of users currently logged in! We need to parse
+  the raw hive to reliably recover all users.
+
+* Each user’s setting is stored in:
+      `C:\Users\<name>\ntuser.dat`
+
+* It is a raw registry hive file format. We need to use `raw_reg`
+  accessor.
+
+The raw reg accessor uses a PathSpec to access the underlying file.
+
+---
+
+<!-- .slide: class="content" -->
+
+## Exercise: Repeat the Run/RunOnce example with raw registry.
+
+---
+
+<!-- .slide: class="content" -->
+
 ## The process accessor: accessing process memory
 
 * Velociraptor can read process memory using the `process` accessor
@@ -216,7 +291,6 @@ SELECT * FROM glob(globs="*", root='''\\.\C:\Windows''', accessor="ntfs")
 
 Write an artifact that uploads only the first 10kb of each file.
 
-
 ---
 
 <!-- .slide: class="content" -->
@@ -244,3 +318,5 @@ LET SMB_CREDENTIALS <= set(item=dict(), field=ServerName,
 
 * Configure an SMB share on your server and place a file there.
 * Write a VQL query that searches the SMB share.
+
+See https://docs.velociraptor.app/docs/offline_triage/remote_uploads/#smb-share

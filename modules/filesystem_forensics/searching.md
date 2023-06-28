@@ -68,11 +68,13 @@ SELECT * FROM glob(globs=['C:/Users/**/*.exe',
 
 <!-- .slide: class="content small-font" -->
 
-The OSPath column includes the key (as directory) and the value (as a
-filename) in the path.
+## The registry accessor
 
-The Registry accessor also includes value contents if they are small
-enough in the Data column.
+* The `OSPath` column includes the key (as directory) and the value (as a
+  filename) in the path.
+
+* The Registry accessor also includes value contents if they are small
+  enough in the `Data` column.
 
 
 ---
@@ -81,67 +83,13 @@ enough in the Data column.
 
 ## Exercise - RunOnce artifact
 
-Write an artifact which hashes every binary mentioned in Run/RunOnce
-keys.
+* Write an artifact which hashes every binary mentioned in Run/RunOnce
+  keys.
 
-“Run and RunOnce registry keys cause programs to run each time that a
-user logs on.”  MSDN
+* “Run and RunOnce registry keys cause programs to run each time that
+  a user logs on.”
 
----
-
-<!-- .slide: class="content small-font" -->
-
-## Raw registry parsing
-
-* In the previous exercise we looked for a key in the
-  `HKEY_CURRENT_USER` hive.
-* Any artifacts looking in HKEY_USERS using the Windows API are
-  limited to the set of users currently logged in! We need to parse
-  the raw hive to reliably recover all users.
-
-* Each user’s setting is stored in:
-      `C:\Users\<name>\ntuser.dat`
-
-* It is a raw registry hive file format. We need to use raw_reg
-  accessor.
-
-The raw reg accessor uses a PathSpec to access the underlying file.
-
----
-
-<!-- .slide: class="content small-font" -->
-
-## Paths in Velociraptor
-
-TODO
-
----
-
-<!-- .slide: class="content small-font" -->
-
-## The ‘data’ accessor
-
-* VQL contains many plugins that work on files.
-* Sometimes we load data into memory as a string.
-* It is handy to be able to use all the normal file plugins with
-  literal string data - this is what the data accessor is for.
-
-* The data accessor creates an in memory file-like object from the
-filename data.
-
----
-
-<!-- .slide: class="content small-font" -->
-
-## Artifact with csv type parameters
-
-If a parameter is specified with a type of CSV, Velociraptor will
-automatically apply the previous transformation - no need to do this
-by hand any more.
-
-
-
-Setting a parameter of type csv presents a GUI for the user and automatically parses it from a string.
+*  https://learn.microsoft.com/en-us/windows/win32/setupapi/run-and-runonce-registry-keys
 
 ---
 

@@ -106,6 +106,12 @@ endpoint identity
 Get-LocalGroupMember -Group "Administrators"
 ```
 
+---
+
+<!-- .slide: class="content" -->
+
+## Running Shell Commands
+
 ![](/modules/gui_tour/shell_commands.png)
 
 ---
@@ -117,8 +123,8 @@ Get-LocalGroupMember -Group "Administrators"
 
 ---
 
-<!-- .slide: class="content small-font" -->
-## The VFS View
+<!-- .slide: class="full_screen_diagram small-font" -->
+### The VFS View
 
 Remember that the VFS view is simply a server side cache of
 information we know about the endpoint - it is usually out of date!
@@ -181,16 +187,18 @@ Velociraptor is just a VQL engine!
 
 ---
 
-<!-- .slide: class="content" -->
+<!-- .slide: class="full_screen_diagram small-font" -->
 
-## What does the VFS view do under the cover?
+### What does the VFS view do under the cover?
 
 * Refreshing the VFS simply schedules new artifacts to be collected - it is just a GUI convenience.
 
 ![](/modules/artifacts_introduction/vfs_collections.png)
 
 ---
+
 <!-- .slide: class="content" -->
+
 ## Velociraptor uses expert knowledge to find the evidence
 
 A key objective of Velociraptor is encapsulating DFIR knowledge into

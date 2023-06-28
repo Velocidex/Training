@@ -14,7 +14,7 @@
        * Exercise: Configure and deploy a new Server with Google and
          Lets Encrypt
        * Using multiple OAuth providers - Azure + Google
-       * Deploying with browser client cerificates
+       * Deploying with browser client certificates
        * Exercise: Create a Multi-Frontend deployments
        * Exercise: Customize the dashboard
        * Server Lockdown Mode: Additional security.
@@ -228,7 +228,7 @@
      * Alerting and escalation.
 
 * Module 10: Friendly game of Capture the Flag
-  * Given a threat report, you team will develop a set of artifacts
+  * Given a threat report, your team will develop a set of artifacts
     that detect as many steps in the kill chain as possible. Deploy
     those artifacts in the Velociraptor environment.
   * The Winners are the teams that automatically detect and remediate
