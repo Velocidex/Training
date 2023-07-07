@@ -1,0 +1,9 @@
+toc:
+  - name: Extending VQL With Powershell
+    path: extending.md
+
+  - name: Using External Tools
+    path: tools.md
+
+  - name: Server Automation
+    path: automation.md

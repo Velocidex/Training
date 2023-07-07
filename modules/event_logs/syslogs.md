@@ -46,10 +46,9 @@ Example - Use Grok to detect SSH login events.
 * Used by many log forwarding platforms such as Elastic for example:
 
 ```
-%{SYSLOGTIMESTAMP:Timestamp} %{SYSLOGHOST:logsource}
-%{SYSLOGPROG}: %{DATA:event} %{DATA:method} for (invalid user )?%{DATA:user}
-from %{IPORHOST:ip} port %{NUMBER:port}
-ssh2(: %{GREEDYDATA:system.auth.ssh.signature})?
+%{SYSLOGTIMESTAMP:Timestamp} %{SYSLOGHOST:logsource} \w+\[\d+\]: %{DATA:event}
+%{DATA:method} for (invalid user )?%{DATA:user}
+from %{IPORHOST:ip} port %{NUMBER:port} ssh2: %{GREEDYDATA:Key}
 ```
 
 ---
@@ -59,6 +58,10 @@ ssh2(: %{GREEDYDATA:system.auth.ssh.signature})?
 ## Let's use VQL to parse ssh events
 
 Read the first 50 lines from the auth log
+
+```
+Jun 25 18:56:08 devbox sshd[31872]: Accepted publickey for mic from 192.168.0.112 port 52323 ssh2: RSA SHA256:B4123453463443566345
+```
 
 ![](parse_syslog_lines.png)
 

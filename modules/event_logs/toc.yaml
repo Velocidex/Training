@@ -1,0 +1,6 @@
+toc:
+  - name: Windows Event Logs
+    path: windows.md
+
+  - name: Linux Syslog
+    path: syslogs.md

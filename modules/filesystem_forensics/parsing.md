@@ -62,6 +62,8 @@ SELECT * FROM sqlite_master
 
 ![](sqlite_analysis.png)
 
+* Streamlined Artifact: https://github.com/Velocidex/SQLiteHunter
+
 ---
 
 <!-- .slide: class="content " -->
@@ -518,3 +520,11 @@ SELECT OSPath, Certificate FROM foreach(row={
 })
 WHERE Certificate
 ```
+
+---
+
+<!-- .slide: class="content small-font" -->
+
+## Parsing the trusted certificates from the registry
+
+![](parsing_certificates_from_registry.png)

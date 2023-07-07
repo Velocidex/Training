@@ -1,0 +1,30 @@
+toc:
+  - name: "Module 1: Deployment"
+    path: /modules/deployment/
+
+  - name: "Module 2: VQL Fundamentals"
+    path: /modules/vql_fundamentals/
+
+  - name: "Module 3: Filesystem Forensics"
+    path: /modules/filesystem_forensics/
+
+  - name: "Module 4: Event Logs"
+    path: /modules/event_logs/
+
+  - name: "Module 6: Offline Collection and Triage"
+    path: /modules/offline_collection/
+
+  - name: "Module 7: Volatile Artifacts and Memory Analysis"
+    path: /modules/volatile_analysis/
+
+  - name: "Module 8: Hunting"
+    path: /modules/hunting/
+
+  - name: "Module 9: Event Monitoring"
+    path: /modules/event_monitoring/
+
+  - name: "Module 10: Server Automation"
+    path: /modules/automation/
+
+  - name: "Module 11: Capture The Flag"
+    path: /modules/capture_the_flag/

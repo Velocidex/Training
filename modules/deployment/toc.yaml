@@ -1,0 +1,16 @@
+type: presentation
+toc:
+  - name: "Velociraptor: Digging Deeper!"
+    path: index.md
+  - name: Overview
+    path: /presentations/modules/overview/
+  - name: Deploying Servers
+    path: deploying_servers.md
+  - name: More Deployment Scenarios
+    path: more_deployments.md
+  - name: Orgs and ACLs
+    path: /presentations/modules/orgs_and_acls/
+  - name: Deploying Clients
+    path: deploying_clients.md
+  - name: GUI Tour
+    path: gui_tour.md

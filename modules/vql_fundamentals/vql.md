@@ -717,8 +717,10 @@ SELECT MyFunc(X=6) FROM scope()
 ## Plugin reference
 
 * VQL is a glue language
-* It is quite capable but it is not designed to be able to implement arbitrary algorithms
-* It relies on VQL plugins and functions to do the heavy lifting while VQL combines high level logic
+* It is quite capable but it is not designed to be able to implement
+  arbitrary algorithms
+* It relies on VQL plugins and functions to do the heavy lifting while
+  VQL combines high level logic
 
 There is a plugin reference on the web site
 
@@ -923,3 +925,53 @@ FROM X
 ## Complete solution
 
 ![](netstat_complete.png)
+
+---
+
+<!-- .slide: class="content small-font" -->
+
+## Column formatting
+
+* VQL treats rows as JSON objects. Cell values are just JSON types.
+* Sometimes the type of the column requires specialized viewing.
+* The GUI can take hints about how to display each column.
+* In the notebook
+
+```
+LET ColumnTypes <= dict(ClientId="client",  Base64Data="base64hex")
+```
+* In an artifact:
+```yaml
+column_types:
+ ClientId: client
+ Base64hex: base64hex
+```
+
+---
+
+<!-- .slide: class="content small-font" -->
+
+## Example: Display hex data in the GUI
+
+```sql
+LET Data = unhex(string="0102030405060708")
+LET ColumnTypes <= dict(HexData="base64hex", Preview="preview_upload")
+
+SELECT Data, base64encode(string=Data) AS HexData,
+    upload(accessor="data", file=Data) AS Preview
+FROM scope()
+```
+
+* [Column Types](https://github.com/Velocidex/velociraptor/blob/master/gui/velociraptor/src/components/core/table.jsx):
+  * `number`, `mb`, `timestamp`, `nobreak`, `tree`, `url`, `safe_url`,
+    `flow`, `preview_upload`, `client`, `client_id`, `base64hex`
+
+---
+
+<!-- .slide: class="content small-font" -->
+
+## Example: Display hex data in the GUI
+
+![](hex_viewing.png)
+
+![](hex_viewing_2.png)
