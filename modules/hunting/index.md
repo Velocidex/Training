@@ -56,7 +56,7 @@ https://attack.mitre.org/techniques/T1183/
 ## First plant a signal on your machine
 
 ```
-REG ADD "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\notepad.exe" /v Debugger /t REG_SZ /d "C:\Program Files\Notepad++\notepad++.exe -notepadStyleCmdline -z" /f
+REG ADD "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\notepad.exe" /v Debugger /t REG_SZ /d """"C:\Program Files\Notepad++\notepad++.exe""" -notepadStyleCmdline -z" /f
 ```
 
 * Type notepad - you get notepad++ (useful but….)
@@ -64,7 +64,7 @@ REG ADD "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution 
 ---
 
 <!-- .slide: class="content" -->
-# Windows.Persistence.Debug
+## Windows.Persistence.Debug
 
 * Write an artifact to detect this modification.
 * Hash and upload a copy of each binary specified by this key.

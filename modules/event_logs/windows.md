@@ -105,7 +105,8 @@ Some common event ids are documented publicly.
 
 * Read the value `EventMessageFile`.
 
-* This will point at a DLL path, open the resource section of this dll for a Message Table resource.
+* This will point at a DLL path, open the resource section of this dll
+  for a Message Table resource.
 * This will produce a formatted string.
 * Interpolate the UserData section into the string.
 

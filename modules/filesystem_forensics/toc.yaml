@@ -1,0 +1,18 @@
+toc:
+  - name: Searching for files
+    path: searching.md
+
+  - name: NTFS Forensics
+    path: ntfs.md
+
+  - name: Accessors
+    path: accessors.md
+
+  - name: Parsing
+    path: parsing.md
+
+  - name: Timelines
+    path: timelines.md
+
+  - name: MSBuild based attacks
+    path: /presentations/modules/msbuild_engine/
