@@ -89,7 +89,32 @@ SELECT * FROM glob(globs=['C:/Users/**/*.exe',
 * “Run and RunOnce registry keys cause programs to run each time that
   a user logs on.”
 
-*  https://learn.microsoft.com/en-us/windows/win32/setupapi/run-and-runonce-registry-keys
+   *  https://learn.microsoft.com/en-us/windows/win32/setupapi/run-and-runonce-registry-keys
+
+   * You can test this by adding a key
+
+   ```
+   REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v Notepad /t REG_SZ /d "C:\Windows\notepad.exe"
+   ```
+
+   * Can you think of limitations?
+
+---
+
+<!-- .slide: class="content small-font" -->
+
+## Exercise - RunOnce artifact
+
+<div class="solution solution-closed">
+
+```
+LET RunGlob = '''HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run\*'''
+
+SELECT Name, Mtime, Data.value AS Data
+FROM glob(globs=RunGlob, accessor="registry")
+```
+
+</div>
 
 ---
 
@@ -97,7 +122,11 @@ SELECT * FROM glob(globs=['C:/Users/**/*.exe',
 
 ## Exercise: Hash all files provided in the globs
 
-Create an artifact that hashes files found by user provided globs.
+* Create an artifact that hashes files found by user provided globs.
+
+* BONUS:
+  * Support number of concurrent threads.
+  * Accept a list of hashes and filter on those.
 
 ---
 
@@ -175,6 +204,12 @@ rule X {
 
 Looks like somewhere in `C:\Users\<name>\AppData\Local\Microsoft\Edge\**`
 
+```
+LET Globs = "C:/Users/Administrator/AppData/Local/Microsoft/Edge/**"
+
+SELECT OSPath FROM glob(globs=Globs)
+```
+
 ---
 
 <!-- .slide: class="content small-font" -->
@@ -188,7 +223,7 @@ Looks like somewhere in `C:\Users\<name>\AppData\Local\Microsoft\Edge\**`
 
 ```
 rule URL {
-  strings: $a = /https?:\\/\\/[a-z0-9\\/+&#:\\?.-]+/i
+  strings: $a = /https?:\/\/[a-z0-9\/+&#:\?.-]+/i
   condition: any of them
 }
 ```
@@ -200,6 +235,27 @@ rule URL {
 
 ## Step 3: Let’s do this!
 
+<div class="solution solution-closed">
+
+```
+LET Globs = "C:/Users/Administrator/AppData/Local/Microsoft/Edge/**"
+LET URLRule = '''
+rule URL {
+  strings: $a = /https?:\/\/[a-z0-9\/+&#:\?.-]+/i
+  condition: any of them
+}
+'''
+
+SELECT *
+FROM foreach(row={
+   SELECT OSPath FROM glob(globs=Globs)
+}, query={
+   SELECT OSPath, String.Data AS Hit
+   FROM yara(files=OSPath, rules=URLRule, number=10000000)
+})
+```
+
+</div>
 
 ---
 
@@ -235,9 +291,22 @@ relevant container
 
 <!-- .slide: class="content small-font" -->
 
-## Exercise
+## Exercise: Upload Recent executables
 
-Collect all executables in users’ home directory
+* Collect all recent executables in users’ home directory
 
+   * Written in the past week
 
-Write your own VQL by combining `glob()` and `upload()`
+* Write your own VQL by combining `glob()` and `upload()`
+
+<div class="solution solution-closed">
+
+```
+LET Globs = "C:/Users/Administrator/**/*.exe"
+
+SELECT Mtime, OSPath, upload(file=OSPath) AS Upload
+FROM glob(globs=Globs)
+WHERE Mtime > now() - 7 * 24 * 60 * 60
+```
+
+</div>

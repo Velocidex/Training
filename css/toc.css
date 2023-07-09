@@ -14,3 +14,7 @@ html[data-bs-theme="light"] #light-btn {
 html[data-bs-theme="dark"] #dark-btn {
     display: none;
 }
+
+.print-link {
+    float: right;
+}

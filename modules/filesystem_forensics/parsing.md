@@ -45,7 +45,7 @@
 * Location is
 
 ```sh
-C:\Users\Administrator\AppData\Local\Google\Chrome\User Data\Default\Top Sites
+C:\Users\*\AppData\Local\Google\Chrome\User Data\Default\Top Sites
 ```
 
 * SQLite query to see the schema
@@ -127,6 +127,8 @@ Write a VQL Parser to parse these logs.
 
 * Not really perfect because log is not very consistent.
 
+<div class="solution solution-closed">
+
 ```sql
 LET LogGlob = '''C:\ProgramData\Microsoft\Windows Defender\Support\MPLog*.log'''
 
@@ -158,6 +160,7 @@ SELECT * FROM foreach(row={
 }, column="Data")
 ```
 
+</div>
 
 ---
 
@@ -277,7 +280,7 @@ A common mechanism of privilege escalation is compromise of SSH keys without pas
 
 <div class="col">
 
-![](/presentations/sans_2022/ssh_keys_aws.png)
+![](/modules/sans_2022/ssh_keys_aws.png)
 
 </div>
 </div>
@@ -331,7 +334,7 @@ A common mechanism of privilege escalation is compromise of SSH keys without pas
 </div>
 <div class="col">
 
-![](/presentations/sans_2022/ssh_keys_format.png)
+![](/modules/sans_2022/ssh_keys_format.png)
 
 </div>
 </div>
@@ -351,6 +354,8 @@ A common mechanism of privilege escalation is compromise of SSH keys without pas
 
 ## Step 1: read the file.
 
+<div class="solution solution-closed">
+
 ```sql
 LET Filename = '''C:\Users\Administrator/.ssh/id_rsa'''
 
@@ -358,6 +363,8 @@ SELECT read_file(filename=Filename) FROM scope()
 ```
 
 ![](read_ssh_keyfile.png)
+
+</div>
 
 ---
 
@@ -370,6 +377,8 @@ SELECT read_file(filename=Filename) FROM scope()
 * What is the binary data though?
 * Write a "Profile" and apply it to the binary data to extract fields.
 
+<div class="solution solution-closed">
+
 ```sql
 LET Filename = '''C:\Users\Administrator/.ssh/id_rsa'''
 
@@ -381,12 +390,16 @@ LET Decoded(Filename) = base64decode(
 SELECT Decoded(Filename=Filename) FROM scope()
 ```
 
+</div>
+
 ---
 
 <!-- .slide: class="content small-font" -->
 ## Step 3: Binary parser built in VQL
 
 * Declare struct layout as a data driven "profile".
+
+<div class="solution solution-closed">
 
 ```sql
 LET SSHProfile = '''[
@@ -402,6 +415,8 @@ LET SSHProfile = '''[
 '''
 ```
 
+</div>
+
 * We can update the profile at any time without rebuilding the client.
 
 ---
@@ -409,6 +424,8 @@ LET SSHProfile = '''[
 <!-- .slide: class="full_screen_diagram small-font" -->
 
 ### Step 4: Parse the header and find if the key is encrypted.
+
+<div class="solution solution-closed">
 
 ```sql
 LET Filename = '''C:\Users\Administrator/.ssh/id_rsa'''
@@ -437,6 +454,8 @@ SELECT parse_binary(
 FROM scope()
 ```
 
+</div>
+
 ---
 
 <!-- .slide: class="content small-font" -->
@@ -444,7 +463,7 @@ FROM scope()
 
 *Uses binary parser, regular expression and file search*
 
-![](/presentations/sans_2022/private_key_artifact.png)
+![](/modules/sans_2022/private_key_artifact.png)
 
 ---
 
@@ -482,6 +501,7 @@ FROM glob(globs=Glob, accessor="registry")
 
 ## Solution
 
+<div class="solution solution-closed">
 
 ```sql
 LET ColumnTypes = dict(Blob="base64hex")
@@ -520,6 +540,8 @@ SELECT OSPath, Certificate FROM foreach(row={
 })
 WHERE Certificate
 ```
+
+</div>
 
 ---
 

@@ -53,7 +53,7 @@ from %{IPORHOST:ip} port %{NUMBER:port} ssh2: %{GREEDYDATA:Key}
 
 ---
 
-<!-- .slide: class="content" -->
+<!-- .slide: class="content small-font" -->
 
 ## Let's use VQL to parse ssh events
 

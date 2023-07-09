@@ -58,12 +58,19 @@ vssadmin create shadow
 ---
 
 <!-- .slide: class="full_screen_diagram small-font" -->
+
+## Exercise: Find all VSS copies of the event logs
+
+<div class="solution solution-closed">
+
 ```
 SELECT *
 FROM glob(globs="/*/windows/system32/winevt/logs/system.evtx", accessor="ntfs")
 ```
 
 ![](evtx_in_vss.png)
+
+</div>
 
 ---
 

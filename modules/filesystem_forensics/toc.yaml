@@ -1,4 +1,7 @@
 toc:
+  - name: Filesystem Forensics
+    path: index.md
+
   - name: Searching for files
     path: searching.md
 

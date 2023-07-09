@@ -176,6 +176,8 @@ We generally want to make artifacts reusable:
 
 ## Final artifact
 
+<div class="solution solution-closed">
+
 ```yaml
 name: Windows.Detection.WmiSubprocess
 description: |
@@ -198,6 +200,8 @@ sources:
         FROM pslist()
         WHERE Name =~ ProcessName AND Parent.Name =~ "Wmi"
 ```
+
+</div>
 
 ---
 

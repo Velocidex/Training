@@ -1,22 +1,3 @@
-<!-- .slide: class="title" -->
-# The Velociraptor Query Language
-
-## Harness the power of VQL
-
----
-
-<!-- .slide: class="content small-font" -->
-
-## Module overview
-
-* Velociraptor is a VQL evaluation engine
-* Many features are implemented in terms of VQL so VQL is central!
-* This module will focus on VQL understanding and demonstrate how it works internally.
-* This module will use the notebook to evaluate VQL.
-* Later we can leverage the same VQL across the network at scale!
-
----
-
 <!-- .slide: class="content small-font" -->
 
 ## Why a query language?
@@ -249,7 +230,7 @@ evaluated. We can use this to understand the evaluation order.
 
 <!-- .slide: class="content small-font" -->
 
-## Exercise
+## Exercise: Evalution and Side effects with log()
 
 Evaluating the log() function returns true and logs the message in the
 query log.
@@ -264,7 +245,7 @@ query log.
 ---
 
 <!-- .slide: class="content small-font" -->
-## Exercise
+## Exercise: Evalution and Side effects with log()
 
 In the following queries predict if the log function will be
 evaluated.
@@ -417,8 +398,6 @@ SELECT * FROM foreach(
 
 * Note how “Exe” is resolved from the produced row since the query is evaluated within the nested scope.
 
-![](foreach_query.png)
-
 ---
 
 <!-- .slide: class="content small-font" -->
@@ -459,6 +438,8 @@ Convert the previous query to a multi-threaded query using foreach.
 
 ## Solution
 
+<div class="solution solution-closed">
+
 ```sql
 SELECT * FROM foreach(row={
     SELECT OSPath
@@ -469,6 +450,8 @@ SELECT * FROM foreach(row={
     FROM scope()
 }, workers=30)
 ```
+
+</div>
 
 ---
 
@@ -816,6 +799,8 @@ LIMIT 5
 Applying a `WHERE` clause will filter out all rows that are not
 interesting, leaving rows that should be acted on for detection.
 
+<div class="solution solution-closed">
+
 ```
 SELECT Name, Pid, Username, CommandLine, {
    SELECT Name, Pid FROM pslist(pid=Ppid)
@@ -824,6 +809,8 @@ FROM pslist()
 WHERE Name =~ 'cmd.exe' AND Parent.Name =~ "Wmi"
 LIMIT 5
 ```
+
+</div>
 
 ---
 
@@ -903,6 +890,8 @@ FROM netstat() WHERE Status =~ "LISTEN"
 
 ## Complete solution
 
+<div class="solution solution-closed">
+
 ```
 LET X = SELECT *, {
   SELECT Name, Exe, Username, parse_pe(file=Exe) AS peinfo
@@ -917,6 +906,8 @@ SELECT Process.Username, Process.Name, Process.Exe,
            args=[Laddr.IP, Laddr.Port]) AS Laddr
 FROM X
 ```
+
+</div>
 
 ---
 
@@ -940,7 +931,9 @@ FROM X
 ```
 LET ColumnTypes <= dict(ClientId="client",  Base64Data="base64hex")
 ```
+
 * In an artifact:
+
 ```yaml
 column_types:
  ClientId: client

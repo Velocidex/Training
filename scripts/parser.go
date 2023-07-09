@@ -39,6 +39,7 @@ func ParseCourse() (*Course, error) {
 		module.Topics = nil
 
 		for _, topic := range tmp.Topics {
+
 			// If a topic is an absolute path then it is a reference
 			// to another module.
 			if filepath.IsAbs(topic.Path) {
@@ -121,7 +122,7 @@ func buildCourseTOC(course *Course) string {
 
 <div class="px-4 py-5 my-5 text-center">
     <img class="d-block mx-auto mb-4"
-         src="{Base}/themes/workshop/velo_workshop.svg"
+         src="{Base}/css/velo_workshop.svg"
          alt="" height="100px">
     <h1 class="display-5 fw-bold text-body-emphasis">
       Velociraptor: Digging Deeper
@@ -144,10 +145,12 @@ func buildCourseTOC(course *Course) string {
     </div>
   </div>
 
-<ul class="toc">
+<div class="container">
+  <ul class="toc">
 `, "{Base}", ".")
 
 	for _, module := range course.Modules {
+		module_path := path.Clean(module.Path)
 		res += fmt.Sprintf(`
        <li class="toc_close fs-2">
           <span onClick="toggleLeaf(this)">
@@ -156,13 +159,20 @@ func buildCourseTOC(course *Course) string {
           <a href="./%v/index.html">
            %v
          </a>
+         <a class="btn btn-link print-link" role="button"
+                 href="./%v/index.html?print-pdf">
+            <i class="fa fa-sm fa-print"></i>
+         </a>
          %v
        </li>
-`, path.Clean(module.Path), module.Name, getCourseTopics(module))
+`,
+			module_path, module.Name,
+			module_path, getCourseTopics(module))
 	}
 
 	res += `
-</ul>
+  </ul>
+</div>
 
 </body>
 </html>
@@ -206,6 +216,10 @@ func getCourseTopics(module *Module) string {
  <ul>
 `
 	for _, topic := range module.Topics {
+		if topic.Path == "index.md" {
+			continue
+		}
+
 		res += fmt.Sprintf(`
        <li class="toc_close fs-3">
          <span onClick="toggleLeaf(this)">
