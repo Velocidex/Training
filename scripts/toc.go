@@ -8,7 +8,7 @@ import (
 )
 
 var (
-	copy_regex   = regexp.MustCompile("\\.(png|md|css|js|svg|woff2|ttf|woff|ttf)$")
+	copy_regex   = regexp.MustCompile("\\.(png|md|css|js|svg|woff2|ttf|woff|ttf|gif)$")
 	asset_regex  = regexp.MustCompile(`src="([^"]+)"`)
 	asset_regex2 = regexp.MustCompile(`!\[\]\(([^\)]+)\)`)
 )
@@ -40,9 +40,10 @@ func doIt() error {
 	output_manager.CopyDirectory("./presentations/plugin/zoom", "plugin/zoom")
 	output_manager.CopyDirectory("./presentations/themes/workshop/", "themes/workshop")
 	output_manager.CopyDirectory("./presentations/dist/theme", "dist/theme")
+	output_manager.CopyDirectory("./presentations/resources", "resources")
+
 	output_manager.CopyDirectory("./css", "css")
 	output_manager.CopyDirectory("./js", "js")
-	output_manager.CopyDirectory("./webfonts", "webfonts")
 
 	Dump(course)
 
@@ -70,9 +71,11 @@ func doIt() error {
 			}
 
 			// Also create a html for each topic.
-			output_manager.WriteFile(topic.Link, buildIndexHtml(&Module{
-				Topics: []*Topic{topic},
-			}))
+			if topic.Path != "index.md" {
+				output_manager.WriteFile(topic.Link, buildIndexHtml(&Module{
+					Topics: []*Topic{topic},
+				}))
+			}
 
 			// Make sure all assets are copied over if they are not
 			// already inside the module directory.

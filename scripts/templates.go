@@ -17,7 +17,7 @@ const (
 
         <link rel="stylesheet" href="{Base}/dist/reveal.css">
         <link rel="stylesheet" href="{Base}/dist/theme/serif.css" id="theme">
-        <link rel="stylesheet" href="{Base}/themes/workshop/velo.css">
+        <link rel="stylesheet" href="{Base}/css/velo.css">
         <link rel="stylesheet" href="{Base}/plugin/highlight/vs.css">
     </head>
     <body>
@@ -31,6 +31,8 @@ const (
         <script src="{Base}/plugin/highlight/highlight.js"></script>
         <script src="{Base}/plugin/notes/notes.js"></script>
         <script src="{Base}/plugin/zoom/zoom.js"></script>
+        <script src="{Base}/js/jquery-3.3.1.min.js?1688344844"></script>
+        <script src="{Base}/js/slides.js"></script>
         <script>
             Reveal.initialize({
                 controls: true,
@@ -41,7 +43,7 @@ const (
                 slideNumber: true,
 
                 plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
-            });
+            }).then(initializeSlides);
 
         </script>
 
@@ -67,9 +69,15 @@ func buildIndexHtml(module *Module) string {
 		if err != nil {
 			continue
 		}
-		sections += fmt.Sprintf(section_template, string(data))
+		sections += fmt.Sprintf(section_template,
+			adjustSectionText(string(data)))
 	}
 
-	index := strings.ReplaceAll(index_html, "{Base}", "../..")
+	index := adjustSectionText(index_html)
 	return fmt.Sprintf(index, sections)
+}
+
+func adjustSectionText(in string) string {
+	in = strings.ReplaceAll(in, "/modules/", "../../modules/")
+	return strings.ReplaceAll(in, "{Base}", "../..")
 }

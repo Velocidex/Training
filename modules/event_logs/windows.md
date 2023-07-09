@@ -228,6 +228,8 @@ Some common event ids are documented publicly.
 
 ## Solution
 
+<div class="solution solution-closed">
+
 ```sql
 LET Key = "HKLM/Software/Microsoft/Windows/CurrentVersion/Winevt/Channels/*"
 
@@ -237,6 +239,8 @@ WHERE ChannelName =~ "bits"
 ```
 
 <img src="event_disabled_vql.png" style="width: 70%" />
+
+</div>
 
 ---
 

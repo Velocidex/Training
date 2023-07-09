@@ -1,3 +1,9 @@
 toc:
   - name: Event Monitoring
     path: index.md
+
+  - name: WMI Eventing
+    path: wmi.md
+
+  - name: Integration With External Systems
+    path: elastic.md

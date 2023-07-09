@@ -1,6 +1,11 @@
 toc:
+  - path: index.md
+
   - name: Windows Event Logs
     path: windows.md
 
   - name: Linux Syslog
     path: syslogs.md
+
+  - name: Linux Journal Logs
+    path: journal.md

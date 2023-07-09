@@ -1,4 +1,6 @@
 toc:
+  - path: index.md
+
   - name: Extending VQL With Powershell
     path: extending.md
 
