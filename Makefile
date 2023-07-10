@@ -1,13 +1,11 @@
-output = ./serve
+output = ./course
 ifeq ($(GOOS),windows)
-  output = './serve.exe'
+  output = './course.exe'
 endif
 
-all:
-	go run ./bin
-
+all: build
 build:
-	go build -o $(output) ./bin
+	go build -o $(output) ./scripts/
 
 spelling:
 	pyspelling

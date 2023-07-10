@@ -9,6 +9,8 @@ import (
 
 type OutputManager struct {
 	output_path string
+
+	verbose bool
 }
 
 func (self OutputManager) ensureFilePath(path string) (string, error) {
@@ -25,7 +27,9 @@ func (self OutputManager) WriteFile(path, data string) error {
 		return err
 	}
 
-	fmt.Printf("WriteFile %s \n", output_path)
+	if self.verbose {
+		fmt.Printf("WriteFile %s \n", output_path)
+	}
 
 	out_fd, err := os.OpenFile(
 		output_path, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0600)
@@ -48,7 +52,9 @@ func (self OutputManager) CopyDirectory(src, dst string) error {
 	// Make sure the output directory exists
 	output_directory := filepath.Join(self.output_path, dst)
 
-	fmt.Printf("CopyDirectory %s -> %s\n", src, output_directory)
+	if self.verbose {
+		fmt.Printf("CopyDirectory %s -> %s\n", src, output_directory)
+	}
 	err = os.MkdirAll(output_directory, 0775)
 	if err != nil {
 		return err
@@ -59,7 +65,7 @@ func (self OutputManager) CopyDirectory(src, dst string) error {
 		srcPath := filepath.Join(src, filename)
 		destPath := filepath.Join(output_directory, filename)
 		if copy_regex.MatchString(filename) {
-			err := Copy(srcPath, destPath)
+			err := self.Copy(srcPath, destPath)
 			if err != nil {
 				return err
 			}
@@ -72,19 +78,22 @@ func (self OutputManager) CopyDirectory(src, dst string) error {
 func (self OutputManager) CopyFile(src, dst string) error {
 	// Make sure the output directory exists
 	output_path := filepath.Join(self.output_path, dst)
-	fmt.Printf("CopyFile %s -> %s\n", src, output_path)
-
+	if self.verbose {
+		fmt.Printf("CopyFile %s -> %s\n", src, output_path)
+	}
 	output_directory := filepath.Dir(output_path)
 	err := os.MkdirAll(output_directory, 0775)
 	if err != nil {
 		return err
 	}
 
-	return Copy("./"+src, output_path)
+	return self.Copy("./"+src, output_path)
 }
 
-func Copy(srcFile, dstFile string) error {
-	fmt.Printf("Copy %s -> %s\n", srcFile, dstFile)
+func (self OutputManager) Copy(srcFile, dstFile string) error {
+	if self.verbose {
+		fmt.Printf("Copy %s -> %s\n", srcFile, dstFile)
+	}
 
 	out, err := os.Create(dstFile)
 	if err != nil {

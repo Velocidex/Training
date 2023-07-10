@@ -2,12 +2,30 @@ package main
 
 import (
 	"fmt"
+	"log"
+	"os"
 	"path/filepath"
 	"regexp"
 	"strings"
+
+	"github.com/jessevdk/go-flags"
 )
 
 var (
+	opts struct {
+		Verbose  bool `short:"v" long:"verbose" description:"Show verbose debug information"`
+		Generate *struct {
+			Positional struct {
+				Output string
+			} `positional-args:"true" required:"true"`
+		} `command:"generate"`
+
+		Serve *struct {
+			Port      int    `default:"1313"`
+			Directory string `default:"."`
+		} `command:"serve"`
+	}
+
 	copy_regex   = regexp.MustCompile("\\.(png|md|css|js|svg|woff2|ttf|woff|ttf|gif)$")
 	asset_regex  = regexp.MustCompile(`src="([^"]+)"`)
 	asset_regex2 = regexp.MustCompile(`!\[\]\(([^\)]+)\)`)
@@ -22,7 +40,7 @@ func getHeading(part string) string {
 	return ""
 }
 
-func doIt() error {
+func doIt(output_directory string, verbose bool) error {
 	course, err := ParseCourse()
 	if err != nil {
 		return err
@@ -31,7 +49,7 @@ func doIt() error {
 	fmt.Printf("Loading course with %v\n", Stats(course))
 
 	// Prepare the skeleton
-	output_manager := OutputManager{"/shared/tmp/output/"}
+	output_manager := OutputManager{output_directory, verbose}
 	output_manager.CopyDirectory("./presentations/dist/", "dist")
 	output_manager.CopyDirectory("./presentations/plugin/", "plugin")
 	output_manager.CopyDirectory("./presentations/plugin/highlight", "plugin/highlight")
@@ -41,13 +59,15 @@ func doIt() error {
 	output_manager.CopyDirectory("./presentations/themes/workshop/", "themes/workshop")
 	output_manager.CopyDirectory("./presentations/dist/theme", "dist/theme")
 	output_manager.CopyDirectory("./presentations/resources", "resources")
-
+	output_manager.CopyDirectory("./webfonts/", "webfonts")
 	output_manager.CopyDirectory("./css", "css")
 	output_manager.CopyDirectory("./js", "js")
 
-	Dump(course)
+	if verbose {
+		Dump(course)
+	}
 
-	err = output_manager.WriteFile("toc.html", buildCourseTOC(course))
+	err = output_manager.WriteFile("index.html", buildCourseTOC(course))
 	if err != nil {
 		return err
 	}
@@ -93,8 +113,19 @@ func doIt() error {
 }
 
 func main() {
-	err := doIt()
+	_, err := flags.ParseArgs(&opts, os.Args[1:])
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
+	}
+
+	if opts.Generate != nil {
+		err = doIt(opts.Generate.Positional.Output, opts.Verbose)
+
+	} else if opts.Serve != nil {
+		err = ServeStatic(opts.Serve.Directory, opts.Serve.Port)
+	}
+
+	if err != nil {
+		log.Fatal(err)
 	}
 }
