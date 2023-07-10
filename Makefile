@@ -5,7 +5,7 @@ endif
 
 all: build
 build:
-	go build -o $(output) ./scripts/
+	go build -o $(output) ./src/
 
 spelling:
 	pyspelling

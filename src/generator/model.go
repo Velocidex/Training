@@ -1,4 +1,4 @@
-package main
+package generator
 
 import "fmt"
 
@@ -52,6 +52,6 @@ func Stats(course *Course) string {
 		}
 	}
 
-	return fmt.Sprintf("Stats: %v modules, %v topics, %v slides, %v assets\n",
+	return fmt.Sprintf("Stats: %v modules, %v topics, %v slides, %v assets",
 		modules, topics, slides, assets)
 }

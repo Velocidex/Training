@@ -1,14 +1,10 @@
-package main
+package generator
 
 import (
 	"fmt"
-	"log"
-	"os"
 	"path/filepath"
 	"regexp"
 	"strings"
-
-	"github.com/jessevdk/go-flags"
 )
 
 var (
@@ -40,13 +36,18 @@ func getHeading(part string) string {
 	return ""
 }
 
-func doIt(output_directory string, verbose bool) error {
+func GenerateSite(
+	output_directory string, verbose bool) error {
+
 	course, err := ParseCourse()
 	if err != nil {
 		return err
 	}
 
-	fmt.Printf("Loading course with %v\n", Stats(course))
+	if verbose {
+		fmt.Printf("Loading course with %v to directory %v\n",
+			Stats(course), output_directory)
+	}
 
 	// Prepare the skeleton
 	output_manager := OutputManager{output_directory, verbose}
@@ -110,22 +111,4 @@ func doIt(output_directory string, verbose bool) error {
 	}
 
 	return nil
-}
-
-func main() {
-	_, err := flags.ParseArgs(&opts, os.Args[1:])
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	if opts.Generate != nil {
-		err = doIt(opts.Generate.Positional.Output, opts.Verbose)
-
-	} else if opts.Serve != nil {
-		err = ServeStatic(opts.Serve.Directory, opts.Serve.Port)
-	}
-
-	if err != nil {
-		log.Fatal(err)
-	}
 }
