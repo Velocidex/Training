@@ -231,3 +231,7 @@ html.print-pdf .revealer {
 html.print-pdf .solution-closed {
     display: inherit;
 }
+
+.reveal .code-wrapper code.wrap {
+    white-space: break-spaces;
+}

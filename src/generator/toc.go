@@ -44,10 +44,8 @@ func GenerateSite(
 		return err
 	}
 
-	if verbose {
-		fmt.Printf("Loading course with %v to directory %v\n",
-			Stats(course), output_directory)
-	}
+	fmt.Printf("Loading course with %v to directory %v\n",
+		Stats(course), output_directory)
 
 	// Prepare the skeleton
 	output_manager := OutputManager{output_directory, verbose}
@@ -81,29 +79,45 @@ func GenerateSite(
 			buildIndexHtml(module))
 
 		// Copy all the files over
-		output_manager.CopyDirectory("./"+module.Path, module.Path)
+		output_manager.CopyDirectory(module.Path, module.Path)
 
 		// Check all the topics and merge them with this module.
 		for _, topic := range module.Topics {
-			// Copy the directory if it is absolute.
+			module_md_path := filepath.Join(module.Path, filepath.Base(topic.Path))
+
+			// If a topic has an absolute path then it is an external
+			// reference, copy the md file to the module.
 			if filepath.IsAbs(topic.Path) {
-				output_manager.CopyDirectory("./"+filepath.Dir(topic.Path),
-					filepath.Dir(topic.Link))
+				output_manager.CopyFile(topic.Path, module_md_path)
 			}
 
 			// Also create a html for each topic.
 			if topic.Path != "index.md" {
-				output_manager.WriteFile(topic.Link, buildIndexHtml(&Module{
-					Topics: []*Topic{topic},
-				}))
+				output_manager.WriteFile(
+					topic.Link,
+					buildIndexHtml(&Module{
+						Topics: []*Topic{topic},
+					}))
 			}
 
-			// Make sure all assets are copied over if they are not
-			// already inside the module directory.
+			// Copy all the assets into the module directory.
 			for _, slide := range topic.Slides {
 				for _, asset := range slide.Assets {
-					if strings.HasPrefix(asset, "/") {
+					// If the assets is absolute we need to copy the
+					// asset into the same directory structure in the
+					// output file so it can be found.
+					if filepath.IsAbs(asset) {
 						output_manager.CopyFile(asset, asset)
+						continue
+					}
+
+					// If the asset is relative we need to copy the
+					// asset into the module directory.
+					topic_directory := filepath.Dir(topic.AbsPath)
+					if !filepath.IsAbs(asset) {
+						output_manager.CopyFile(
+							filepath.Join(topic_directory, asset),
+							filepath.Join(module.Path, asset))
 					}
 				}
 			}

@@ -1,3 +1,15 @@
 toc:
   - name: Offline Collection and Triage
     path: index.md
+
+  - name: Collection for Triage
+    path: collecting_files.md
+
+  - name: Offline Collections
+    path: /presentations/modules/offline_collector/
+
+  - name: Automated Offline uploads
+    path: cloud_upload.md
+
+  - name: Review and Summary
+    path: review.md

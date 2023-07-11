@@ -17,5 +17,5 @@ toc:
   - name: Timelines
     path: timelines.md
 
-  - name: MSBuild based attacks
-    path: /presentations/modules/msbuild_engine/
+  - name: Review and Summary
+    path: review.md

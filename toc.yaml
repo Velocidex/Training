@@ -11,20 +11,20 @@ toc:
   - name: "Module 4: Event Logs"
     path: /modules/event_logs/
 
-  - name: "Module 6: Offline Collection and Triage"
+  - name: "Module 5: Offline Collection and Triage"
     path: /modules/offline_collection/
 
-  - name: "Module 7: Volatile Artifacts and Memory Analysis"
+  - name: "Module 6: Volatile Artifacts and Memory Analysis"
     path: /modules/volatile_analysis/
 
-  - name: "Module 8: Hunting"
+  - name: "Module 7: Hunting"
     path: /modules/hunting/
 
-  - name: "Module 9: Event Monitoring"
+  - name: "Module 8: Event Monitoring"
     path: /modules/event_monitoring/
 
-  - name: "Module 10: Server Automation"
+  - name: "Module 9: Server Automation"
     path: /modules/automation/
 
-  - name: "Module 11: Capture The Flag"
+  - name: "Module 10: Capture The Flag"
     path: /modules/capture_the_flag/

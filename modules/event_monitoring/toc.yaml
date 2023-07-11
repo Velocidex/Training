@@ -2,6 +2,9 @@ toc:
   - name: Event Monitoring
     path: index.md
 
+  - name: Event Queries
+    path: event_queries.md
+
   - name: WMI Eventing
     path: wmi.md
 

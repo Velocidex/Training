@@ -9,13 +9,15 @@ import (
 
 // Serve a static directory
 var (
-	output_directory string
-	serve_port       int64
+	serve_port int64
 
 	serveCmd = &cobra.Command{
-		Use:   "serve",
-		Short: "serve the current directory",
+		Use:   "serve [flags] directory",
+		Short: "serve a directory as static HTML",
+		Args:  cobra.MatchAll(cobra.ExactArgs(1), cobra.OnlyValidArgs),
 		RunE: func(cmd *cobra.Command, args []string) error {
+			output_directory := args[0]
+
 			fs := http.FileServer(http.Dir(output_directory))
 			http.Handle("/", fs)
 
@@ -29,8 +31,6 @@ var (
 
 func init() {
 	rootCmd.AddCommand(serveCmd)
-	serveCmd.Flags().StringVarP(
-		&output_directory, "directory", "o", ".", "The directory to serve ")
 	serveCmd.Flags().Int64VarP(
 		&serve_port, "port", "p", 1313, "Port to serve ")
 }

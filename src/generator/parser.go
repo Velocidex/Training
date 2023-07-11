@@ -68,16 +68,27 @@ func ParseCourse() (*Course, error) {
 
 		// Load the slides for each topic
 		for _, topic := range module.Topics {
-			md_path := topic.Path
-			if !filepath.IsAbs(md_path) {
-				md_path = filepath.Join(module.Path, topic.Path)
+			// If the topic is absolute then it is a remote reference
+			if filepath.IsAbs(topic.Path) {
+				topic.AbsPath = topic.Path
+
+				// We will serve the index from the module.
+				topic.Link = filepath.Join(module.Path, filepath.Base(topic.Path))
+			} else {
+				topic.AbsPath = filepath.Join(module.Path, topic.Path)
+				topic.Link = filepath.Join(module.Path, topic.Path)
 			}
 
-			topic.AbsPath = md_path
-			topic.Link = strings.TrimSuffix(md_path, ".md") + ".html"
-			topic.Link = strings.TrimPrefix(topic.Link, "/presentations")
+			topic.Link = strings.TrimSuffix(topic.Link, ".md") + ".html"
 
-			data, err := readFile(md_path)
+			// If the Link is an index.html we need to rename it
+			// because we use index.html for the module page.
+			if filepath.Base(topic.Link) == "index.html" {
+				new_name := filepath.Base(filepath.Dir(topic.Path))
+				topic.Link = filepath.Join(filepath.Dir(topic.Link), new_name) + ".html"
+			}
+
+			data, err := readFile(topic.AbsPath)
 			if err != nil {
 				return nil, err
 			}

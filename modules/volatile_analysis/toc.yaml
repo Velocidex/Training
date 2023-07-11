@@ -6,3 +6,6 @@ toc:
 
   - name:  Event Tracing for Windows
     path: etw.md
+
+  - name: MSBuild based attacks
+    path: /presentations/modules/msbuild_engine/

@@ -6,6 +6,8 @@ toc:
     path: /presentations/modules/overview/
   - name: Deploying Servers
     path: deploying_servers.md
+  - name: Troubleshooting
+    path: troubleshooting.md
   - name: More Deployment Scenarios
     path: more_deployments.md
   - name: Orgs and ACLs
