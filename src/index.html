@@ -1,0 +1,47 @@
+
+<html lang="en" data-bs-theme="light">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="./css/fontawesome-all.min.css?1688344844" rel="stylesheet">
+   <link href="./css/toc.css?1688344844" rel="stylesheet">
+   <link href="./css/bootstrap.min.css" rel="stylesheet">
+   <script src="./js/jquery-3.3.1.min.js?1688344844"></script>
+   <script src="./js/toc.js?1688344844"></script>
+   <script src="./js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4"
+         src="./css/velo_workshop.svg"
+         alt="" height="100px">
+    <h1 class="display-5 fw-bold text-body-emphasis">
+      Velociraptor: Digging Deeper
+    </h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">
+        Welcome to the Velociraptor: Digging Deeper Course.
+      </p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button type="button" onClick="toggleAll()"
+              class="btn btn-primary">Toggle All</button>
+
+        <button type="button" onClick="setTheme('light')" id="light-btn"
+              class="btn btn-primary">Light</button>
+
+        <button type="button" onClick="setTheme('dark')" id="dark-btn"
+              class="btn btn-primary">Dark</button>
+
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  <ul class="toc">
+
+  </ul>
+</div>
+
+</body>
+</html>

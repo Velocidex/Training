@@ -39,6 +39,71 @@
 
 <!-- .slide: class="content " -->
 
-## Example:
+## Example: Correlating execution with files
 
-TODO
+* Run the following command:
+```
+curl.exe -o test.ps1 https://www.google.com/
+```
+
+* Collect two sources of evidence:
+   * `Windows.Timeline.Prefetch`: Collects execution times.
+   * `Windows.NTFS.MFT`: Collects filesystem information.
+* For the sake of the exercise, limit times to the previous day or so.
+
+---
+
+<!-- .slide: class="full_screen_diagram" -->
+
+### Example: Correlating execution with files
+
+![](collecting_prefetch_and_mft.png)
+
+---
+
+<!-- .slide: class="full_screen_diagram" -->
+
+### Example: Correlating execution with files
+
+* We want to reduce the total data in each table to make it easier to see.
+   * Usually a time column and a single other column
+
+![](reducing_table_for_timeline.png)
+
+---
+
+<!-- .slide: class="full_screen_diagram" -->
+
+### Example: Correlating execution with files
+
+![](reducing_table_for_timeline_2.png)
+
+---
+
+<!-- .slide: class="full_screen_diagram" -->
+
+### Example: Correlating execution with files
+
+* Create a super timeline to hold the individual timelines.
+
+![](add_super_timeline.png)
+
+---
+
+<!-- .slide: class="full_screen_diagram" -->
+
+### Example: Correlating execution with files
+
+![](new_empty_timeline.png)
+
+![](adding_timeline.png)
+
+---
+
+<!-- .slide: class="full_screen_diagram" -->
+
+### Example: Correlating execution with files
+
+* Investigating temporal correlation
+
+![](temporal_correlation.png)
