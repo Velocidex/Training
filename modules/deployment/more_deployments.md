@@ -2,9 +2,11 @@
 
 # Additional deployment scenarios
 
+<img src="/modules/images/dino_listening_music.png" style="position: absolute; right: 0px;  bottom: -200px; height: 200px; z-index: -10;"/>
+
 ---
 
-<!-- .slide: class="content" -->
+<!-- .slide: class="content small-font" -->
 
 ## Using multiple OAuth providers
 
@@ -45,9 +47,11 @@ GUI:
 
 <!-- .slide: class="full_screen_diagram" -->
 
-### MultiAuthenticator log in screen.
+## MultiAuthenticator log in screen.
 
-![](multiauth.png)
+<div style="text-align: center;">
+    <img src="multiauth.png" class="mid-height">
+</div>
 
 ---
 
@@ -110,9 +114,12 @@ GUI:
 
 ### Multi frontend deployment overview
 
-<img src="multifrontend_overview.png" class="mid-height">
+<div style="text-align: center;">
+    <img src="multifrontend_overview.png" class="mid-height">
 
 https://docs.velociraptor.app/docs/deployment/cloud/multifrontend/
+
+</div>
 
 ---
 
@@ -163,3 +170,5 @@ Add the following to the `server.config.yaml` and restart the server
 ```
 lockdown: true
 ```
+
+<img src="/modules/images/dino_angry.png" style="height: 100px; float: right">

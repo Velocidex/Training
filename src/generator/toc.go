@@ -5,6 +5,7 @@ import (
 	"path/filepath"
 	"regexp"
 	"strings"
+	"time"
 )
 
 var (
@@ -39,13 +40,17 @@ func getHeading(part string) string {
 func GenerateSite(
 	output_directory string, verbose bool) error {
 
+	now := time.Now()
+
 	course, err := ParseCourse()
 	if err != nil {
 		return err
 	}
 
-	fmt.Printf("Loading course with %v to directory %v\n",
-		Stats(course), output_directory)
+	defer func() {
+		fmt.Printf("Loading course with %v to directory %v in %v\n",
+			Stats(course), output_directory, time.Now().Sub(now))
+	}()
 
 	// Prepare the skeleton
 	output_manager := OutputManager{output_directory, verbose}

@@ -134,6 +134,11 @@ FROM glob(globs=RunGlob, accessor="registry")
 
 # Searching data
 
+## Scanning file contents
+
+<img src="/modules/images/dino_confused.png" style="position: fixed; right: 0px;  bottom: 0px; height: 200px; z-index: -10;"/>
+
+
 ---
 
 <!-- .slide: class="content small-font" -->

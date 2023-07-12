@@ -143,6 +143,10 @@ section.content {
     height: 400px;
 }
 
+.reveal section.full_screen_diagram p {
+   text-align: left;
+}
+
 .full_screen_diagram h2 {
     color: var(--r-color);
     text-align: left;

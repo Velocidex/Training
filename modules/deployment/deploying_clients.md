@@ -30,79 +30,124 @@ Two Methods:
 
 ---
 
-<!-- .slide: class="full_screen_diagram small-font" -->
+<!-- .slide: class="content small-font" -->
+
+## Domain deployment: Scheduled Task
 
 Create a share to serve the MSI from.
 
-![](making_share.png)
+<div style="text-align: center;">
+    <img src="making_share.png" class="mid-height">
+</div>
 
 ---
 
 <!-- .slide: class="full_screen_diagram small-font" -->
 
-Ensure everyone has read access from this share - and only administrators have write access!
+## Domain deployment: Scheduled Task
 
-![](setting_share_permissions.png)
+Ensure everyone has read access from this share - and only
+administrators have write access!
+
+<div style="text-align: center;">
+    <img src="setting_share_permissions.png" class="mid-height">
+</div>
+
 
 ---
 
 <!-- .slide: class="full_screen_diagram small-font" -->
+
+## Domain deployment: Scheduled Task
 
 Use the group policy management tool create a new Group Policy Object in the domain (or OU)
 
-![](creating_gpo.png)
+<div style="text-align: center;">
+    <img src="creating_gpo.png" class="mid-height">
+</div>
 
 ---
 
 <!-- .slide: class="full_screen_diagram small-font" -->
+## Domain deployment: Scheduled Task
+
 Edit the new GPO
 
-![](editing_gpo.png)
-
----
-<!-- .slide: class="full_screen_diagram small-font" -->
-
-![](editing_gpo_1.png)
+<div style="text-align: center;">
+    <img src="editing_gpo.png" class="mid-height">
+</div>
 
 ---
 
 <!-- .slide: class="full_screen_diagram small-font" -->
+
+## Domain deployment: Scheduled Task
+
+<div style="text-align: center;">
+    <img src="editing_gpo_1.png" class="mid-height">
+</div>
+
+---
+
+<!-- .slide: class="full_screen_diagram small-font" -->
+
+## Domain deployment: Scheduled Task
+
 Ensure the new scheduled task is run as system
 
-![](editing_gpo_2.png)
+<div style="text-align: center;">
+    <img src="editing_gpo_2.png" class="mid-height">
+</div>
 
 ---
 
 <!-- .slide: class="full_screen_diagram small-font" -->
+
+## Domain deployment: Scheduled Task
 
 Using scheduled tasks you can run any binary - use this method to run
 interactive collection if you do not have a dedicated Velociraptor
 server
 
-![](editing_gpo_new_action.png)
+<div style="text-align: center;">
+    <img src="editing_gpo_new_action.png" class="mid-height">
+</div>
 
 ---
 
 <!-- .slide: class="full_screen_diagram small-font" -->
+
+## Domain deployment: Scheduled Task
+
 Ensure the new scheduled task is run only once
 
-![](editing_gpo_run_once.png)
+<div style="text-align: center;">
+    <img src="editing_gpo_run_once.png" class="mid-height">
+</div>
 
 ---
 
 <!-- .slide: class="full_screen_diagram small-font" -->
+
+## Domain deployment: Assigned Software
 
 Method 2: install via assigned software packages in GPO. The main
 advantage here is that it is possible to upgrade or uninstall
 Velociraptor easily
 
-![](editing_gpo_assigned_software.png)
+<div style="text-align: center;">
+    <img src="editing_gpo_assigned_software.png" class="mid-height">
+</div>
 
 ---
 
 <!-- .slide: class="full_screen_diagram small-font" -->
+## Domain deployment: Assigned Software
 
 You will need to wait until group policy is updated on the endpoint or
 until the next reboot. The endpoint must be on the AD LAN
 
-![](editing_gpo_assigned_software_2.png)
+
+<div style="text-align: center;">
+    <img src="editing_gpo_assigned_software_2.png" class="mid-height">
+</div>
