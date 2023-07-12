@@ -11,7 +11,7 @@ toc:
   - name: "Module 4: Event Logs"
     path: /modules/event_logs/
 
-  - name: "Module 5: Offline Collection and Triage"
+  - name: "Module 5: Triage and Acquisition"
     path: /modules/offline_collection/
 
   - name: "Module 6: Volatile Artifacts and Memory Analysis"

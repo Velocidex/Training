@@ -163,7 +163,9 @@ Evaluation steps:
 
 VQL can explain its operations in detail using the `EXPLAIN` keyword
 
-![](explain_query.png)
+<div style="text-align: center;">
+    <img src="explain_query.png" class="">
+</div>
 
 ---
 
@@ -431,6 +433,8 @@ WHERE NOT IsDir
 ## Faster hashing!
 
 Convert the previous query to a multi-threaded query using foreach.
+
+<img src="/modules/images/dino_roar.png" style="height: 200px; float: right">
 
 ---
 

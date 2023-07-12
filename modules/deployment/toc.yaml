@@ -16,3 +16,5 @@ toc:
     path: deploying_clients.md
   - name: GUI Tour
     path: gui_tour.md
+  - name: Review and Summary
+    path: review.md

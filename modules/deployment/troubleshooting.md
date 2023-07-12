@@ -1,8 +1,10 @@
 <!-- .slide: class="title" -->
 
-# Troubleshooting deployments
+# Troubleshooting
+### When things do not go to plan!
 
-## When things do not go to plan!
+<img src="/modules/images/dino_scared.png" style="position: absolute; right: 0px;  bottom: -200px; height: 200px; z-index: -10;"/>
+
 
 ---
 

@@ -4,6 +4,9 @@
 
 ## Stand alone VQL Programs!
 
+<img src="/modules/images/dino_head_in_laptop.png"
+    style="position: fixed; right: 0px;  bottom: 0px; height: 200px; z-index: -10;"/>
+
 ---
 
 <!-- .slide: class="content small-font" -->
@@ -51,7 +54,13 @@ community to publish useful VQL artifacts for reuse
 <!-- .slide: class="full_screen_diagram" -->
 ## The Artifact Exchange
 
-![](/modules/artifacts_and_vql_intro/artifact-exchange.png)
+<div style="text-align: center;">
+  <img src="/modules/artifacts_and_vql_intro/artifact-exchange.png"
+     class="mid-height">
+
+https://docs.velociraptor.app/exchange/
+
+</div>
 
 ---
 
@@ -304,6 +313,9 @@ SELECT * FROM Artifact.Windows.Sys.Users() WHERE Name =~ "administrator"
 ## Exercise: Identify recent accounts
 
 Write an artifact to identify local accounts logged in since February
+
+<img src="/modules/images/dino_drinking.png" style="height: 400px">
+
 
 ---
 

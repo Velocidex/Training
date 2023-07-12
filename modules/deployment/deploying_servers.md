@@ -2,7 +2,9 @@
 
 # Deploying The Server
 
-## Cloud deployment options
+## Cloud deployment
+
+<img src="/modules/images/install_server.png" class="fixed" style=" right: 0px;  bottom: -200px; height: 300px; z-index: -10;"/>
 
 ---
 
@@ -16,13 +18,14 @@ Download Velociraptor from GitHub (.msi or .exe)
 ```
 ---
 
+<!-- .slide: class="full_screen_diagram small-font" -->
 
-<!-- .slide: class="full_screen_diagram" -->
+## Run Velociraptor on your machine
 
 The "gui" command creates an instant temporary server/client with self
-  signed SSL and a hard coded admin/password.
+signed SSL and a hard coded admin/password.
 
-![](/modules/gui_tour/velociraptor-gui.png)
+<img src="/modules/gui_tour/velociraptor-gui.png" class="mid-height">
 
 ---
 
@@ -126,17 +129,20 @@ velociraptor --config server.config.yaml debian server
 <!-- .slide: class="content small-font" -->
 ## Installing a new server
 
-1. Push the debian package to the server using scp
+Push the debian package to the server using scp
 
 ```
 scp velociraptor_server*.deb mike@123.45.67.89:/tmp/
 ```
 
-2. Install package
+Install package
 
 ```
 sudo dpkg -i velociraptor_server*.deb
 ```
+
+<img src="/modules/images/dino_confused.png" style="height: 100px; float: right">
+
 
 ---
 
@@ -145,6 +151,8 @@ sudo dpkg -i velociraptor_server*.deb
 Generate new configuration with the details in the Workshop setup document.
 
 ![](config_wizard.png)
+
+<img src="/modules/images/dino_laptop_what.png" style="height: 100px; width: 150px; float: right">
 
 ---
 
@@ -160,6 +168,8 @@ velociraptor config generate --merge
     '{"autocert_domain": "domain.com", "autocert_cert_cache": "/foo/bar"}'
 ```
 
+<img src="/modules/images/dino_1.png" style="height: 200px; float: right">
+
 ---
 
 
@@ -167,7 +177,7 @@ velociraptor config generate --merge
 ## Building a server deb package
 
 ```
-./velociraptor-v0.5.5-windows.exe --config ~/server.config.yaml debian server --binary velociraptor-v0.5.5-windows.exe
+./velociraptor-v0.7.0-windows.exe --config ~/server.config.yaml debian server --binary velociraptor-v0.7.0-windows.exe
 ```
 
 ![](building_deb.png)
@@ -180,7 +190,7 @@ velociraptor config generate --merge
 * scp the deb file to the target server
 
 ```
-sudo dpkg -i velociraptor_0.4.3_server.deb
+sudo dpkg -i velociraptor_0.7.0_server.deb
 ```
 
 ![](scp_deb.png)
@@ -209,22 +219,30 @@ by using `apt-get install -f`
 
 <!-- .slide: class="full_screen_diagram small-font" -->
 
+### Deploying the server
+
 The first time you navigate to the SSL URL the server will obtain a
 certificate from Let's Encrypt. There will be a small pause as this
 happens.
 
 ![](browse_to_GUI.png)
 
+<img src="/modules/images/dino_icecream.png" style="height: 200px; float: right">
+
 ---
 
 <!-- .slide: class="full_screen_diagram small-font" -->
+
+### Deploying the server
 
 You will be redirected to Google for authentication - Velociraptor
 does not handle any credentials in this configuration. Google will
 determine if the user authenticated properly (2 FA etc) and convey
 simple info like the user’s email address and avatar.
 
-<img src="google_oauth.png" class="mid-height">
+<div style="text-align: center;">
+   <img src="google_oauth.png" class="mid-height" >
+</div>
 
 ---
 

@@ -21,7 +21,9 @@
 
 ## The Dashboard
 
-![](/modules/gui_tour/dashboard.png)
+<div style="text-align: center;">
+    <img src="/modules/gui_tour/dashboard.png" style="height: 500px">
+</div>
 
 ---
 
@@ -29,7 +31,6 @@
 ## User Preferences
 
 You can customize the interface to your liking
-
 
 <div class="container small-font">
 <div class="col">
@@ -45,13 +46,15 @@ You can customize the interface to your liking
 </div>
 </div>
 
-<img src="/modules/gui_tour/user_preferences.png" style="bottom: inherit" class="" />
+<img src="/modules/gui_tour/user_preferences.png" style="height: 300px" class="" />
 
 ---
 
 <!-- .slide: class="title" -->
 
 # Interactively investigate individual clients
+
+<img src="/modules/images/minecraft_paleontology.png" style="position: fixed; right: 0px;  bottom: -210px; height: 200px; z-index: -10;"/>
 
 ---
 
@@ -63,7 +66,10 @@ To work with a specific client we need to search for it.  Press the
 **Search** or **Show All** button to see some clients. You can also
 use the **Show recent hosts** to see your own clients.
 
-![](/modules/gui_tour/search_clients.png)
+<div style="text-align: center;">
+    <img src="/modules/gui_tour/search_clients.png" class="mid-height"
+        style="height: 300px">
+</div>
 
 ---
 
@@ -89,7 +95,11 @@ use the **Show recent hosts** to see your own clients.
 * Internally the client id is considered the most accurate source of
 endpoint identity
 
-![](/modules/gui_tour/client_overview.png)
+<div style="text-align: center;">
+    <img src="/modules/gui_tour/client_overview.png" class="mid-height"
+        style="height: 400px">
+</div>
+
 
 ---
 
@@ -105,6 +115,8 @@ endpoint identity
 ```powershell
 Get-LocalGroupMember -Group "Administrators"
 ```
+
+<img src="/modules/images/dino_1.png" style="height: 100px; float: right">
 
 ---
 
