@@ -1,0 +1,12 @@
+toc:
+  - name: References
+    path: index.md
+
+  - name: YouTube Videos
+    path: youtube.md
+
+  - name: Blog Posts
+    path: blogs.md
+
+  - name: Links
+    path: links.md

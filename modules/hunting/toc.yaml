@@ -1,3 +1,8 @@
 toc:
-  - name: Hunting
-    path: index.md
+  - path: index.md
+
+  - name: Hunting at scale
+    path: hunting.md
+
+  - name: Review and Summary
+    path: review.md

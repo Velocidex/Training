@@ -54,8 +54,6 @@ You can customize the interface to your liking
 
 # Interactively investigate individual clients
 
-<img src="/modules/images/minecraft_paleontology.png" style="position: fixed; right: 0px;  bottom: -210px; height: 200px; z-index: -10;"/>
-
 ---
 
 
@@ -115,8 +113,6 @@ endpoint identity
 ```powershell
 Get-LocalGroupMember -Group "Administrators"
 ```
-
-<img src="/modules/images/dino_1.png" style="height: 100px; float: right">
 
 ---
 

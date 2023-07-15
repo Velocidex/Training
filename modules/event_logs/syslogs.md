@@ -97,4 +97,26 @@ https://grokdebugger.com/
 
 ## Carving SSH auth logs
 
-TODO
+* SSH auth logs are often deleted from the system (either expired or
+  maliciously)
+* It is possible to carve for auth logs from the raw device.
+* Use a fast but loose regular expression to box the syslog line
+* Then apply the more accurate Grok parser to extract the line.
+* Use the `raw_file` accessor in Linux to carve the raw disk device.
+
+---
+
+<!-- .slide: class="content" -->
+
+## Exercise: Carving SSH auth logs
+
+* Develop an artifact to carve SSH auth logs
+* `Tip`: Create a very small sample for development by appending the
+  read file to some junk data:
+
+  ```
+  cat /bin/ls auth.log > test.dd
+  ```
+
+* Apply the artifact on your Linux system to recover authentication
+  events.

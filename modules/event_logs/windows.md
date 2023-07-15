@@ -249,22 +249,3 @@ WHERE ChannelName =~ "bits"
 ## Exercise: Convert to an artifact
 
 Write an artifact that can be used to hunt for enabled or disabled event logs.
-
----
-
-<!-- .slide: class="content" -->
-
-## Using Sigma Rules to search event logs
-
-* Sigma is a rule language to express detections around event logs.
-* https://github.com/SigmaHQ/sigma Generic Signature Format for SIEM Systems
-*
-
-TODO
-
----
-<!-- .slide: class="content" -->
-
-## The EVTX Hunter
-
-TODO

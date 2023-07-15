@@ -19,5 +19,3 @@
 * We learned about some of the most useful VQL plugins (foreach(), switch(), if())
 
 * We learned about event queries and how to use asynchronous VQL queries.
-
-<img src="/modules/images/dino_dancing.png" style="height: 200px; float: right">

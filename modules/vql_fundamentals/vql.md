@@ -434,8 +434,6 @@ WHERE NOT IsDir
 
 Convert the previous query to a multi-threaded query using foreach.
 
-<img src="/modules/images/dino_roar.png" style="height: 200px; float: right">
-
 ---
 
 <!-- .slide: class="content " -->

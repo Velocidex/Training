@@ -4,8 +4,6 @@
 
 ## Cloud deployment
 
-<img src="/modules/images/install_server.png" class="fixed" style=" right: 0px;  bottom: -200px; height: 300px; z-index: -10;"/>
-
 ---
 
 <!-- .slide: class="content" -->
@@ -141,8 +139,6 @@ Install package
 sudo dpkg -i velociraptor_server*.deb
 ```
 
-<img src="/modules/images/dino_confused.png" style="height: 100px; float: right">
-
 
 ---
 
@@ -151,8 +147,6 @@ sudo dpkg -i velociraptor_server*.deb
 Generate new configuration with the details in the Workshop setup document.
 
 ![](config_wizard.png)
-
-<img src="/modules/images/dino_laptop_what.png" style="height: 100px; width: 150px; float: right">
 
 ---
 
@@ -168,7 +162,6 @@ velociraptor config generate --merge
     '{"autocert_domain": "domain.com", "autocert_cert_cache": "/foo/bar"}'
 ```
 
-<img src="/modules/images/dino_1.png" style="height: 200px; float: right">
 
 ---
 
@@ -227,7 +220,6 @@ happens.
 
 ![](browse_to_GUI.png)
 
-<img src="/modules/images/dino_icecream.png" style="height: 200px; float: right">
 
 ---
 

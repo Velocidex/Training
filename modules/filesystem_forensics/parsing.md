@@ -280,7 +280,7 @@ A common mechanism of privilege escalation is compromise of SSH keys without pas
 
 <div class="col">
 
-![](/modules/sans_2022/ssh_keys_aws.png)
+![](/presentations/sans_2022/ssh_keys_aws.png)
 
 </div>
 </div>
@@ -334,7 +334,7 @@ A common mechanism of privilege escalation is compromise of SSH keys without pas
 </div>
 <div class="col">
 
-![](/modules/sans_2022/ssh_keys_format.png)
+![](/presentations/sans_2022/ssh_keys_format.png)
 
 </div>
 </div>
@@ -463,7 +463,8 @@ FROM scope()
 
 *Uses binary parser, regular expression and file search*
 
-![](/modules/sans_2022/private_key_artifact.png)
+![](/presentations/sans_2022/private_key_artifact.png)
+
 
 ---
 

@@ -6,7 +6,7 @@ toc:
     path: collecting_files.md
 
   - name: Offline Collections
-    path: /presentations/modules/offline_collector/
+    path: offline.md
 
   - name: Automated Offline uploads
     path: cloud_upload.md

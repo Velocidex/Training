@@ -65,7 +65,7 @@ func (self OutputManager) CopyDirectory(src, dst string) error {
 		srcPath := filepath.Join(src, filename)
 		destPath := filepath.Join(output_directory, filename)
 		if copy_regex.MatchString(filename) {
-			err := self.Copy(srcPath, destPath)
+			err := self._Copy(srcPath, destPath)
 			if err != nil {
 				return err
 			}
@@ -87,20 +87,13 @@ func (self OutputManager) CopyFile(src, dst string) error {
 		return err
 	}
 
-	return self.Copy("./"+src, output_path)
+	return self._Copy("./"+src, output_path)
 }
 
-func (self OutputManager) Copy(srcFile, dstFile string) error {
+func (self OutputManager) _Copy(srcFile, dstFile string) error {
 	if self.verbose {
 		fmt.Printf("Copy %s -> %s\n", srcFile, dstFile)
 	}
-
-	out, err := os.Create(dstFile)
-	if err != nil {
-		return err
-	}
-
-	defer out.Close()
 
 	in, err := os.Open(srcFile)
 	if err != nil {
@@ -110,6 +103,13 @@ func (self OutputManager) Copy(srcFile, dstFile string) error {
 		}
 	}
 	defer in.Close()
+
+	out, err := os.Create(dstFile)
+	if err != nil {
+		return err
+	}
+
+	defer out.Close()
 
 	_, err = io.Copy(out, in)
 	if err != nil {

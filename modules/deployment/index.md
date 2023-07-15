@@ -12,8 +12,6 @@
 
 </div>
 
-<img src="../../resources/velo_bike.gif" class="fixed" style=" right: 0px;  bottom: -200px; height: 300px; z-index: -10;"/>
-
 ---
 
 <!-- .slide: class="content" -->
@@ -62,5 +60,3 @@ You will:
 <!-- .slide: class="title" -->
 
 # Let's begin our Jurassic Adventure!
-
-<img src="/modules/images/jurassic_adventure.jpg" style="bottom: 0px; height: 200px"  />

@@ -9,3 +9,9 @@ toc:
 
   - name: Server Automation
     path: automation.md
+
+  - name: The Velociraptor API
+    path: api.md
+
+  - name: Review and Summary
+    path: review.md

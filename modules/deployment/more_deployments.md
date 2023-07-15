@@ -2,8 +2,6 @@
 
 # Additional deployment scenarios
 
-<img src="/modules/images/dino_listening_music.png" style="position: absolute; right: 0px;  bottom: -200px; height: 200px; z-index: -10;"/>
-
 ---
 
 <!-- .slide: class="content small-font" -->
@@ -170,5 +168,3 @@ Add the following to the `server.config.yaml` and restart the server
 ```
 lockdown: true
 ```
-
-<img src="/modules/images/dino_angry.png" style="height: 100px; float: right">

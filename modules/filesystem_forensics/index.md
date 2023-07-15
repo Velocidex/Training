@@ -4,8 +4,6 @@
 
 ## Forensic Analysis with VQL
 
-<img src="/modules/images/minecraft_paleontology.png" style="position: fixed; right: 0px;  bottom: 0px; height: 150px; z-index: -10;"/>
-
 ---
 
 <!-- .slide: class="content " -->

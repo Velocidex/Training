@@ -13,3 +13,9 @@ toc:
 
   - name: Integration With External Systems
     path: elastic.md
+
+  - name: Server automation with event queries
+    path: server_automation.md
+
+  - name: Review and Summary
+    path: review.md

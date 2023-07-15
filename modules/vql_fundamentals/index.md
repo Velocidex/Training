@@ -3,8 +3,6 @@
 
 ## Harness the power of VQL
 
-<img src="/modules/images/dino_baby.png" style="position: fixed; right: 0px;  bottom: 0px; height: 200px; z-index: -10;"/>
-
 ---
 
 <!-- .slide: class="content small-font" -->

@@ -167,3 +167,16 @@ https://github.com/SigmaHQ/sigma#examples
 There are many false positives but a `group by` helps!
 
 <img src="triage_hayabusa.png" style="height: 400px">
+
+---
+
+<!-- .slide: class="content" -->
+
+## The EVTX Hunter
+
+* A highly flexible artifact to search the event logs
+* Can be used in many ways:
+   1. Search for any events that mention a compromised user.
+   2. Time box events around the time of interest.
+   3. Implements allowlist IOC
+   4. VSS search integrated

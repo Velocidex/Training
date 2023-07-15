@@ -28,7 +28,7 @@
 * Simply select the target to collect.
 * Many targets automatically include sub-targets.
 
-<img src="/presentations/modules/offline_collector/offline_kape_targets.png" style="height: 300px"/>
+<img src="offline_kape_targets.png" style="height: 300px"/>
 
 ---
 

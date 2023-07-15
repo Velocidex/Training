@@ -6,9 +6,8 @@
 * A highly scalable and easy to deploy DFIR plugin.
 
 > So easy to deploy you will think you did it wrong!
-> Eric Capuano
 
-<img src="/modules/images/rawr.png" style="height: 200px; float: right">
+> Eric Capuano [Live Incident Response with Velociraptor](https://www.youtube.com/watch?v=Q1IoGX--814&t=1651s)
 
 
 ---

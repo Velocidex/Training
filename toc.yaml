@@ -28,3 +28,6 @@ toc:
 
   - name: "Module 10: Capture The Flag"
     path: /modules/capture_the_flag/
+
+  - name: "References and Links"
+    path: /modules/references/
