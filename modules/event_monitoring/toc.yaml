@@ -8,5 +8,8 @@ toc:
   - name: WMI Eventing
     path: wmi.md
 
+  - name: The Process Tracker
+    path: /presentations/modules/tracking_processes/
+
   - name: Integration With External Systems
     path: elastic.md

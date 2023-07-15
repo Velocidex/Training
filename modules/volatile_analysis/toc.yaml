@@ -1,11 +1,14 @@
 toc:
   - path: index.md
 
-  - name: The Process Tracker
-    path: /modules/tracking_processes/
+  - name: Processes and Memory analysis
+    path: memory.md
 
   - name:  Event Tracing for Windows
     path: etw.md
 
   - name: MSBuild based attacks
     path: /presentations/modules/msbuild_engine/
+
+  - name: Review and Summary
+    path: review.md

@@ -256,6 +256,10 @@ Write an artifact that can be used to hunt for enabled or disabled event logs.
 
 ## Using Sigma Rules to search event logs
 
+* Sigma is a rule language to express detections around event logs.
+* https://github.com/SigmaHQ/sigma Generic Signature Format for SIEM Systems
+*
+
 TODO
 
 ---

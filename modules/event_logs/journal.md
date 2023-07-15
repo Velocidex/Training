@@ -15,7 +15,17 @@ journalctl --file /run/log/journal/*/*.journal
 
 <!-- .slide: class="content small-font" -->
 
-## Exercise: Parsing Journal Logs
+## Exercise: Parsing Journal Logs: Execve
+
+* You can use `execve()` to run an external binary
+* Use `journalctl -o json --file X.journal` to read the journal file
+* Use `parse_jsonl()` to parse the output into structured data.
+
+---
+
+<!-- .slide: class="content small-font" -->
+
+## Exercise: Parsing Journal Logs: Natively
 
 * It is useful to be able to parse the log file directly.
 
