@@ -4,8 +4,17 @@ toc:
   - name: Windows Event Logs
     path: windows.md
 
+  - name: Detection Engineering
+    path: detection.md
+
+  - name: Portable Executables
+    path: pe.md
+
   - name: Linux Syslog
     path: syslogs.md
 
   - name: Linux Journal Logs
     path: journal.md
+
+  - name: Review and Summary
+    path: review.md

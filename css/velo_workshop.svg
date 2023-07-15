@@ -22,7 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -35,8 +35,8 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1370"
-     inkscape:window-height="719"
+     inkscape:window-width="1920"
+     inkscape:window-height="965"
      id="namedview37"
      showgrid="false"
      inkscape:snap-bbox="true"
@@ -47,7 +47,7 @@
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg35"
+     inkscape:current-layer="layer4"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -81,13 +81,13 @@
        inkscape:connector-curvature="0"
        id="path19-2"
        style="fill:#ffffff;fill-rule:evenodd;stroke-width:0.9004038"
-       d="m 305.78538,435.31366 c -2.66466,1.64473 -12.38168,7.30312 -22.99665,9.31352 0.94258,5.98854 4.74275,29.66193 6.27717,32.08845 1.09201,1.72683 6.02637,7.32781 10.48055,11.64647 2.90186,2.81362 5.4691,5.02916 6.26226,5.02916 v 0.005 h 0.0205 v -0.005 c 0.79317,0 3.36049,-2.21554 6.26227,-5.02916 4.45416,-4.31866 9.38862,-9.91964 10.48054,-11.64647 1.5345,-2.42652 5.33467,-26.09991 6.27726,-32.08845 -10.61506,-2.0104 -20.332,-7.66851 -22.99675,-9.31352 l -0.0335,0.0226 z"
+       d="m 249.10415,466.70634 c -2.66466,1.64473 -12.38168,7.30312 -22.99665,9.31352 0.94258,5.98854 4.74275,29.66193 6.27717,32.08845 1.09201,1.72683 6.02637,7.32781 10.48055,11.64647 2.90186,2.81362 5.4691,5.02916 6.26226,5.02916 v 0.005 h 0.0205 v -0.005 c 0.79317,0 3.36049,-2.21554 6.26227,-5.02916 4.45416,-4.31866 9.38862,-9.91964 10.48054,-11.64647 1.5345,-2.42652 5.33467,-26.09991 6.27726,-32.08845 -10.61506,-2.0104 -20.332,-7.66851 -22.99675,-9.31352 l -0.0335,0.0226 z"
        sodipodi:nodetypes="cccccccccccccc" />
     <ellipse
        style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2.17940807;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        id="path7831"
-       cx="294.62421"
-       cy="407.13394"
+       cx="237.50696"
+       cy="437.2186"
        rx="4.8441763"
        ry="5.0561366" />
   </g>
