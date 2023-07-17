@@ -64,7 +64,7 @@ Dec 31 15:47:18 devbox velociraptor[3572509]: velociraptor.bin: error: frontend:
 
 ## HTTP based TLS security
 
-* Communication occurs over stadard TLS POST
+* Communication occurs over standard TLS POST
 * Two supported modes:
    1. Self signed mode (`Client.use_self_signed_ssl: true`)
       * Server presents a certificate issued by the internal Velociraptor CA

@@ -4,7 +4,7 @@
 
 * Many modern attacks are only present in memory
 * Velociraptor is able to gather volatile machine state
-* We learned sophisticated process visbility plugins:
+* We learned sophisticated process visibility plugins:
    * Process tokens
    * Analyzing PE files from memory
    * Dumping memory resident injected binaries

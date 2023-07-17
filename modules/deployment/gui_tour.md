@@ -172,7 +172,7 @@ Previewing a file after download.
 
 ## Previewing files
 
-The GUI allows close inpection of binary files
+The GUI allows close inspection of binary files
 * Viewing in hex or text
 * Paging - skipping to offset
 * Searching using regex or hex strings
