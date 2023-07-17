@@ -2,7 +2,7 @@
 
 # Parsing
 
-## Processing and analysing evidence on the endpoint
+## Processing and analyzing evidence on the endpoint
 
 ---
 

@@ -205,7 +205,7 @@ velociraptor.exe --config client.config.yaml pool_client --number 102 --writebac
    * Find the failed collection
    * Press the "Copy Collection" button in the toolbar
    * Modify the collection parameters (e.g. timeout)
-   * Relaunch the new collecttion
+   * Relaunch the new collection
    * When satisfied, simply add the new collection to the hunt
      manually.
 

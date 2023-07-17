@@ -1,0 +1,1000 @@
+Misspelled words:
+<url-free> README.md
+--------------------------------------------------------------------------------
+DFIR
+Velociraptor
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> src/generator/README.md
+--------------------------------------------------------------------------------
+DFIR
+Velociraptor
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/velocon_2022_cloud_velo/index.md
+--------------------------------------------------------------------------------
+EFS
+Frontend
+GRR
+OpenSearch
+VeloCon
+Velociraptor
+Velociraptor's
+backend
+centric
+codebase
+filesystem
+frontend
+li
+performant
+pre
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/sans_2022/index.md
+--------------------------------------------------------------------------------
+DFIR
+PEM
+PSExec
+PSTree
+Syslog
+Sysmon
+VQL
+Velociraptor
+Velociraptor's
+YAML
+auth
+enrichments
+exe
+li
+ol
+parsers
+syslog
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/what-is-velociraptor/index.md
+--------------------------------------------------------------------------------
+DFIR
+Github
+Pre
+VQL
+Velociraptor
+li
+pre
+runtime
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/modules/artifacts_introduction/index.md
+--------------------------------------------------------------------------------
+Args
+VFS
+VQL
+Velociraptor
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/modules/offline_collector/index.md
+--------------------------------------------------------------------------------
+GPG
+ImportCollection
+KapeFiles
+PII
+Preconfigured
+SQLiteHunter
+Utils
+Velociraptor
+args
+armoured
+decrypted
+li
+ol
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/modules/conclusions/index.md
+--------------------------------------------------------------------------------
+ETW
+FreeBSD
+Github
+MacOS
+Velociraptor
+WMI
+eventing
+li
+pre
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/modules/ntfs_forensics/index.md
+--------------------------------------------------------------------------------
+DFIR
+FullPath
+Journalling
+MFT
+MFTId
+NTFS
+ParentMFTId
+PerfLogs
+Usn
+UsnJ
+UsnJrnl
+Velociraptor
+br
+filesystem
+li
+mft
+optimised
+powershell
+ul
+yara
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/modules/bit_log_disable_hunting/index.md
+--------------------------------------------------------------------------------
+Velociraptor's
+backend
+config
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/modules/gui_tour/index.md
+--------------------------------------------------------------------------------
+SSL
+VFS
+Velociraptor
+gui
+hostname
+hostnames
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/modules/tracking_processes/index.md
+--------------------------------------------------------------------------------
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/modules/web_shell/index.md
+--------------------------------------------------------------------------------
+Github
+Powershell
+VQL
+Yara
+li
+ol
+opensource
+ul
+webshell
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/modules/msbuild_engine/index.md
+--------------------------------------------------------------------------------
+Config
+MSBuild
+PID
+PrefetchHunter
+VQL
+Velociraptor
+Yara
+exe
+li
+msbuild
+prefetch
+shellcode
+teamserver
+ul
+windbg
+yara
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/modules/orgs_and_acls/index.md
+--------------------------------------------------------------------------------
+MSI
+RBAC
+Velociraptor
+li
+orgs
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/modules/overview/index.md
+--------------------------------------------------------------------------------
+DFIR
+FreeBSD
+MacOS
+VQL
+Velociraptor
+li
+scalability
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/modules/artifacts_of_autumn/37/index.md
+--------------------------------------------------------------------------------
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/modules/artifacts_of_autumn/77/index.md
+--------------------------------------------------------------------------------
+Velociraptor's
+config
+li
+ol
+ul
+webshell
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/modules/artifacts_and_vql_intro/index.md
+--------------------------------------------------------------------------------
+DFIR
+MFT
+NTFS
+SQLECmd
+Sqlite
+VQL
+Velociraptor
+Velociraptor's
+executables
+li
+parsers
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/modules/event_monitoring/index.md
+--------------------------------------------------------------------------------
+EventLogModifications
+Sysmon
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/modules/etw/index.md
+--------------------------------------------------------------------------------
+DNS
+ETW
+GUID
+SelectMyParent
+Velociraptor
+WEP
+exe
+li
+sysmon
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/modules/secure_shell/index.md
+--------------------------------------------------------------------------------
+VQL
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/everything_open_2023/index.md
+--------------------------------------------------------------------------------
+VM
+Velociraptor
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/2023-auscert/index.md
+--------------------------------------------------------------------------------
+Auscert
+VM
+Velociraptor
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/thursday-defensive/index.md
+--------------------------------------------------------------------------------
+AMCache
+DFIR
+FN
+Github
+Locard
+Malfind
+NTFS
+Prefetch
+Pstree
+Sysmon
+Velociraptor
+eg
+li
+ol
+pre
+prefetch
+runtime
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/dfrws_apac_2022/intro.md
+--------------------------------------------------------------------------------
+APAC
+DFRWS
+MSBuild
+VM
+Velociraptor
+dotNetFx
+exe
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> presentations/velocon_2022_year_in_review/index.md
+--------------------------------------------------------------------------------
+ACLs
+DFIR
+IOPs
+OSPath
+Oauth
+UI
+VeloCon
+Velociraptor
+Yara
+config
+li
+orgs
+scalability
+ul
+validator
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/event_logs/windows.md
+--------------------------------------------------------------------------------
+DLL
+EVTX
+JSON
+UserData
+Velociraptor
+br
+dll
+dumpevtx
+evtx
+li
+sqlite
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/event_logs/review.md
+--------------------------------------------------------------------------------
+EVTX
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/event_logs/syslogs.md
+--------------------------------------------------------------------------------
+Syslog
+VQL
+auth
+foreach
+li
+syslog
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/event_logs/pe.md
+--------------------------------------------------------------------------------
+Authenticode
+EDRs
+Executables
+IAT
+Sysmon
+Velociraptor
+VersionInformation
+authenticode
+executables
+li
+sysmon
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/event_logs/journal.md
+--------------------------------------------------------------------------------
+Natively
+VQL
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/event_logs/detection.md
+--------------------------------------------------------------------------------
+Hayabusa
+ImageName
+OriginalFilename
+Powershell
+SIEM
+commandline
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/vql_fundamentals/event_queries.md
+--------------------------------------------------------------------------------
+VQL
+filestore
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/vql_fundamentals/review.md
+--------------------------------------------------------------------------------
+VQL
+Velociraptor
+li
+pre
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/vql_fundamentals/vql.md
+--------------------------------------------------------------------------------
+Args
+DLLs
+Evalution
+Foreach
+IOC
+JSON
+Pid
+VQL
+Velociraptor
+WMI
+YAML
+arg
+args
+dicts
+foreach
+li
+netstat
+ol
+parallelize
+pslist
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/vql_fundamentals/artifacts.md
+--------------------------------------------------------------------------------
+Args
+CSV
+JSON
+Subprocess
+VQL
+Velociraptor
+WMI
+arg
+boolean
+csv
+dicts
+discoverable
+foreach
+li
+subqueries
+subquery
+tempfile
+ul
+winfiletime
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/vql_fundamentals/index.md
+--------------------------------------------------------------------------------
+VQL
+Velociraptor
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/capture_the_flag/index.md
+--------------------------------------------------------------------------------
+Velociraptor
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/capture_the_flag/ctf.md
+--------------------------------------------------------------------------------
+Velociraptor
+detections
+li
+ol
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/offline_collection/cloud_upload.md
+--------------------------------------------------------------------------------
+ACLs
+GCP
+NTFS
+SMB
+Velociraptor
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/offline_collection/review.md
+--------------------------------------------------------------------------------
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/offline_collection/collecting_files.md
+--------------------------------------------------------------------------------
+KapeFiles
+MFT
+Velociraptor
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/offline_collection/offline.md
+--------------------------------------------------------------------------------
+GPG
+ImportCollection
+KapeFiles
+PII
+Preconfigured
+SMB
+SQLiteHunter
+Utils
+VQL
+Velociraptor
+args
+armoured
+decrypted
+dropbox
+executables
+li
+ol
+ul
+yaml
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/filesystem_forensics/review.md
+--------------------------------------------------------------------------------
+Accessors
+NTFS
+Velociraptor's
+Yara
+filesystem
+li
+powerfull
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/filesystem_forensics/index.md
+--------------------------------------------------------------------------------
+Filesystem
+VQL
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/filesystem_forensics/parsing.md
+--------------------------------------------------------------------------------
+Sqlite
+Structs
+VQL
+Velociraptor
+li
+ol
+parsers
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/filesystem_forensics/ntfs.md
+--------------------------------------------------------------------------------
+NTFS
+VSS
+Velociraptor
+WMI
+filesystem
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/filesystem_forensics/searching.md
+--------------------------------------------------------------------------------
+APIs
+DFIR
+FS
+Filesystem
+NTFS
+RunOnce
+VQL
+Velociraptor
+YARA
+Yara
+accessor
+accessors
+br
+exe
+executables
+filesystem
+intel
+li
+swiss
+ul
+yara
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/filesystem_forensics/accessors.md
+--------------------------------------------------------------------------------
+Accessors
+OSPath
+PathSpec
+SMB
+VQL
+Velociraptor
+accessor
+accessors
+br
+li
+smb
+stringified
+ul
+unmapped
+yara
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/filesystem_forensics/timelines.md
+--------------------------------------------------------------------------------
+MFT
+Prefetch
+VQL
+li
+ol
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/automation/api.md
+--------------------------------------------------------------------------------
+TLS
+VQL
+Velociraptor
+li
+ul
+velociraptor
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/automation/tools.md
+--------------------------------------------------------------------------------
+Autoruns
+Sysinternal
+Sysinternal's
+Velociraptor
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/automation/review.md
+--------------------------------------------------------------------------------
+VQL
+Velociraptor
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/automation/index.md
+--------------------------------------------------------------------------------
+VQL
+Velociraptor
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/automation/extending.md
+--------------------------------------------------------------------------------
+JSON
+PowerShell
+Stdout
+VQL
+Velociraptor's
+execve
+li
+natively
+powershell
+powershell's
+pslist
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/automation/automation.md
+--------------------------------------------------------------------------------
+Powershell
+VQL
+Velociraptor
+cmdline
+deduplicated
+li
+powershell
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/hunting/review.md
+--------------------------------------------------------------------------------
+Velociraptor's
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/hunting/hunting.md
+--------------------------------------------------------------------------------
+VQL
+Velociraptor's
+li
+ol
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/volatile_analysis/review.md
+--------------------------------------------------------------------------------
+Velociraptor
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/volatile_analysis/etw.md
+--------------------------------------------------------------------------------
+DNS
+ETW
+WMI
+WQL
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/volatile_analysis/memory.md
+--------------------------------------------------------------------------------
+APIs
+DLL
+Powershell
+VQL
+Velociraptor
+WinHTTP
+accessor
+dll's
+dlls
+li
+pid
+powershell
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/volatile_analysis/index.md
+--------------------------------------------------------------------------------
+APIs
+li
+prefetch
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/deployment/review.md
+--------------------------------------------------------------------------------
+Capuano
+DFIR
+Velociraptor
+blockquote
+li
+scalable
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/deployment/index.md
+--------------------------------------------------------------------------------
+Velociraptor
+Velociraptor's
+filesystems
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/deployment/deploying_servers.md
+--------------------------------------------------------------------------------
+DNS
+MSI
+OAuth
+SCCM
+SSL
+SSO
+VM
+Velociraptor
+config
+debian
+gui
+li
+ol
+ul
+url
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/deployment/deploying_clients.md
+--------------------------------------------------------------------------------
+MSI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/deployment/gui_tour.md
+--------------------------------------------------------------------------------
+VFS
+Velociraptor
+hostname
+hostnames
+li
+pre
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/deployment/more_deployments.md
+--------------------------------------------------------------------------------
+Authenticator
+OAuth
+VM
+frontend
+li
+orgs
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/deployment/communications.md
+--------------------------------------------------------------------------------
+TODO
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/deployment/troubleshooting.md
+--------------------------------------------------------------------------------
+CAs
+MITM
+PEM
+PKI
+TLS
+Velociraptor
+filesystem
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/references/links.md
+--------------------------------------------------------------------------------
+Github
+Velociraptor
+Velociraptor's
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/references/youtube.md
+--------------------------------------------------------------------------------
+Cajigas
+Capuano
+DEATHcon
+LCA
+Timestomping
+Velo
+Velocidex
+Velociraptor
+Youtube
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/references/blogs.md
+--------------------------------------------------------------------------------
+Postprocessing
+Velociraptor
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/event_monitoring/elastic.md
+--------------------------------------------------------------------------------
+HTTPS
+Kibana
+Opensearch
+Splunk
+VQL
+Velociraptor
+li
+ul
+uploader
+uploaders
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/event_monitoring/wmi.md
+--------------------------------------------------------------------------------
+Sysmon
+VQL
+Velociraptor
+WMI
+li
+sysmon
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/event_monitoring/event_queries.md
+--------------------------------------------------------------------------------
+VQL
+filestore
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/event_monitoring/review.md
+--------------------------------------------------------------------------------
+li
+ul
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/event_monitoring/server_automation.md
+--------------------------------------------------------------------------------
+KapeFiles
+li
+ul
+--------------------------------------------------------------------------------

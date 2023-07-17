@@ -137,7 +137,7 @@ SELECT * FROM foreach(row={
 
 <!-- .slide: class="full_screen_diagram" -->
 
-## Encoding powershell into JSOn
+## Encoding powershell into JSON
 
 ![](encoding_powershell_in_json.png)
 

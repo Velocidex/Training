@@ -58,7 +58,7 @@
 https://github.com/SigmaHQ/sigma#examples
 
 * Many rules detecting various signals
-   * Some are trivial to bypasss
+   * Some are trivial to bypass
    * Some are stronger
 
 

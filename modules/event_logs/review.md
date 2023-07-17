@@ -7,7 +7,7 @@
   critical information.
 * Using automated tools to apply detection logic on event logs helps
   to quickly identify an incident.
-* Hunting the EVTX logs can reveal importantant but unrelated
+* Hunting the EVTX logs can reveal important but unrelated
   information.
 
 ---

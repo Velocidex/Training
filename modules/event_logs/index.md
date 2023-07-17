@@ -2,7 +2,7 @@
 
 # Event logs
 
-## Analysing logs for detection and forensics
+## Analyzing logs for detection and forensics
 
 ---
 

@@ -2,7 +2,7 @@
 
 ## Review And Summary
 
-* In this module we were interoduced to Velociraptor!
+* In this module we were introduced to Velociraptor!
 * A highly scalable and easy to deploy DFIR plugin.
 
 > So easy to deploy you will think you did it wrong!
