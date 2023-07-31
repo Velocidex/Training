@@ -169,15 +169,7 @@ server anyway
 
 <!-- .slide: class="content " -->
 
-## Exercise: Collect triage data and upload to a cloud bucket
-
-Configure an offline collector for cloud upload.
-
----
-
-<!-- .slide: class="content " -->
-
-## Protecting the collection file: Encrypion
+## Protecting the collection file: Encryption
 * For added protection, add a password to the zip file
 * If we used a simple password it would be embedded in the collector
 * Use an X509 scheme to generate a random password.

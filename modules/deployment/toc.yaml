@@ -4,6 +4,8 @@ toc:
     path: index.md
   - name: Overview
     path: /presentations/modules/overview/
+  - name: Network Communications
+    path: communications.md
   - name: Deploying Servers
     path: deploying_servers.md
   - name: Troubleshooting

@@ -998,3 +998,24 @@ KapeFiles
 li
 ul
 --------------------------------------------------------------------------------
+
+
+<url-free> modules/offline_collection/cloud_upload.md
+IAM
+
+
+Misspelled words:
+<url-free> modules/offline_collection/review.md
+--------------------------------------------------------------------------------
+SFTP
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<url-free> modules/offline_collection/offline.md
+--------------------------------------------------------------------------------
+Decrypts
+winpmem
+--------------------------------------------------------------------------------
+
+# <url-free> modules/deployment/communications.md
+CA's

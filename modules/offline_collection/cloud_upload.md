@@ -86,3 +86,162 @@ FROM glob(globs="*",
   the collector.
 
 <img src="creating_smb_collector.png" class="mid-height">
+
+---
+
+<!-- .slide: class="title" -->
+
+# Collecting to AWS Buckets
+
+---
+
+<!-- .slide: class="content small-font" -->
+
+## Bucket credentials
+
+* On AWS bucket access is given by user policies
+* Basic entities:
+  1. A Bucket - contains upload collections
+  2. A User - a service account that assumes an identity.
+      * The user has credentials (Key and Secret)
+      * One or more policy objects associated with the user.
+  3. A Policy
+      * Specifies permissions to various actions on APIs.
+
+---
+
+<!-- .slide: class="content small-font" -->
+
+## Creating a bucket
+
+* Using the AWS console create a bucket with default permissions
+* The most important parameters are the region and the bucket name
+
+![](bucket.png)
+
+---
+
+<!-- .slide: class="content small-font" -->
+## Creating a User
+
+* In the IAM section of the console create a User account
+* Create a dedicated user account that will only be allowed to upload.
+
+![](uploader_account.png)
+
+---
+
+<!-- .slide: class="content small-font" -->
+
+### Creating security credentials
+
+* Since this account needs to log in automatically we need to get an access key for it.
+* Under the `Security credentials` tab find the `Access Keys` section and create a new key.
+* Select `Application running outside AWS` as the type of the key.
+* You can now retrieve the key from the console. Make sure to record
+  it because it wont be shown again.
+
+---
+
+<!-- .slide: class="full_screen_diagram" -->
+### Creating security credentials
+
+![](retrieving_access_key.png)
+
+---
+
+<!-- .slide: class="content small-font" -->
+
+## Creating a policy
+
+* You can attach the policy JSON object to the user account.
+* The only permission needed is the `PutObjet` permission on the
+  bucket resource.
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "s3:PutObject",
+            "Resource": "arn:aws:s3:::upload.velocidex.com/*"
+        }
+    ]
+}
+```
+
+---
+
+<!-- .slide: class="content small-font" -->
+## Testing the upload credentials
+
+* Gather the following pieces of information
+   1. Key ID
+   2. Key Secret
+   3. Bucket name and region
+
+* Add these to the collector configuration.
+
+---
+
+<!-- .slide: class="full_screen_diagram" -->
+## Testing the upload credentials
+
+![](testing_s3_upload.png)
+
+---
+
+<!-- .slide: class="content" -->
+## Viewing the contents of the bucket
+
+* While the uploader has no credentials we can create a second service
+  account with full access to the bucket.
+
+* This allows the server to view files in the bucket as soon as they
+  are uploaded!
+
+* We will use this in the next section to automate post processing.
+
+---
+
+<!-- .slide: class="content small-font" -->
+## Full access policy
+
+* To give the service accout full access use the following policy
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::upload.velocidex.com/*",
+                "arn:aws:s3:::upload.velocidex.com"
+            ]
+        }
+    ]
+}
+```
+
+---
+
+<!-- .slide: class="content small-font" -->
+
+## Testing Full access policy
+
+* Using the credentials for the full access s3 service account we can read the bucket.
+
+```sql
+LET S3_CREDENTIALS<=dict(
+  region="ap-southeast-2",
+  credentials_key='CRED_KEY',
+  credentials_secret='CRED_SECRET')
+
+SELECT * FROM glob(accessor="s3", globs="**", root="/upload.velocidex.com/")
+
+```
