@@ -1,8 +1,8 @@
 <!-- .slide: class="title" -->
 
 # Troubleshooting
-### When things do not go to plan!
 
+### When things do not go to plan!
 
 ---
 
@@ -46,53 +46,61 @@ Dec 31 15:47:18 devbox velociraptor[3572509]: velociraptor.bin: error: frontend:
 
 <!-- .slide: class="content small-font" -->
 
-## Velociraptor Network communications
-
-* Velociraptor clients connect to the server over HTTPS POST
-  messages.
-   * URLs used are set in the config file `Client.server_urls` list.
-
-* The communication is encrypted/signed using the Velociraptor
-  internal PKI. You can not change this!
-
-<img src="post_message_format.png" class="mid-height">
-
-
----
-
-<!-- .slide: class="content small-font" -->
-
-## HTTP based TLS security
-
-* Communication occurs over standard TLS POST
-* Two supported modes:
-   1. Self signed mode (`Client.use_self_signed_ssl: true`)
-      * Server presents a certificate issued by the internal Velociraptor CA
-      * Client verifies cert directly
-      * Client **does not** trust public PKI or on host root store!
-
-   2. PKI mode
-      * Client uses root CA chains to verify connections (public CAs,
-        Host root store or embedded root certs).
-      * This is suitable for MITM proxies.
-      * Add trusted certs to `Client.Crypto.root_certs` in PEM format
-
----
-
-<!-- .slide: class="content small-font" -->
-
 ## Debugging client communications
 
-* When things go wrong.... Start client manually
+* What could go wrong?
+
+   1. No connectivity between client and server
+   2. Unable to establish secure comms.
+
+* To see client logs run the client manually with the `-v` flag.
 
 ```
-velociraptor --config client.config.yaml client -v
+velociraptor.exe --config client.config.yaml client -v
 ```
 
-* Sometimes network filtering can prevent a connection.
-    1. Test by connecting to the server using `curl` to fetch the
-       server's internal certificate.
+---
+
+<!-- .slide: class="full_screen_diagram" -->
+
+## Network Connectivity problems
+
+![](./network_comms_problems.png)
+
+---
+
+<!-- .slide: class="content small-font" -->
+
+## Network Connectivity problems
+
+You can verify network connectivity and TLS configuration by using
+curl to fetch the server certificate:
 
 ```
-curl.exe -v https://example.com/server/pem
+curl.exe -k https://server:8889/server.pem
+```
+
+* For self signed deployments curl needs the `-k` flag to ignore
+  untrusted certificates.
+
+---
+
+<!-- .slide: class="content small-font" -->
+
+## Network Connectivity problems
+
+* Captive portals may interfere with the communication
+
+![](./captive_portal.png)
+
+---
+
+<!-- .slide: class="content small-font" -->
+## Network Connectivity problems
+
+* You can view the certificate details by using openssl.
+   * Check for expiry times
+
+```sh
+curl https://test.velocidex-training.com/server.pem | openssl x509 -text
 ```

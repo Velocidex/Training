@@ -1,9 +1,7 @@
 
 <!-- .slide: class="title" -->
 
-# Integration with external systems
-
-## Interfacing with Elastic/Kibana
+# Interfacing with Elastic/Kibana
 
 ---
 
@@ -173,35 +171,3 @@ SELECT * FROM elastic_upload(
 ```
 
 </div>
-
----
-
-<!-- .slide: class="content" -->
-
-## Integration with Slack/Discord
-
-TODO
-
----
-
-<!-- .slide: class="content" -->
-
-## Exercise: Forwarding alerts to Discord
-
-* Write an artifact to forward alerts to a discord channel.
-
----
-
-<!-- .slide: class="content" -->
-
-## Summary
-
-* The hunting possibilities are only limited by your imagination!
-
-* In this module we have adapted high level Tools Techniques and
-  Procedures (TTPs) into Velociraptor artifacts. We can now hunt for
-  them across the fleet.
-
-* Two types of goals:
-    * Establish a baseline
-    * High value detection

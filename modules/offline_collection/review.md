@@ -5,9 +5,15 @@
 * Collecting data from the endpoint is a balancing act:
    1. Collecting too much data makes it difficult to post process
    2. Collecting too little means frequent re-collections and pivoting.
+
 * In Client/Server model it is easy to hunt for new data quickly
    * It is better to be more targeted and answer more specific questions
    * Limit the total data returned
+
+* We saw to to collect uploads using SMB and S3
+   * More methods are available (SFTP, Azure etc).
+   * The basic principal is the same: Lock down the service account so
+     it can only upload
 
 ---
 

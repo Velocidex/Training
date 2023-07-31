@@ -14,6 +14,9 @@ toc:
   - name: Integration With External Systems
     path: elastic.md
 
+  - name: Alerting and Escalation
+    path: alerting.md
+
   - name: Server automation with event queries
     path: server_automation.md
 

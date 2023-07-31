@@ -77,3 +77,5 @@ Select * From __InstanceCreationEvent Where
 <!-- .slide: class="content" -->
 
 ## Enable sysmon
+
+![](sysmon_forwarding.png)

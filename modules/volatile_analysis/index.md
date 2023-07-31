@@ -24,6 +24,6 @@
 * Acquiring information in the correct order helps to extract maximum
   value
   1. Call APIs like process listing, handles etc
-  2. Scan process memory for signed of compromise
+  2. Scan process memory for signs of compromise
   3. Collect files like event logs, prefetch files etc.
   4. Maybe full memory capture - very rare!
