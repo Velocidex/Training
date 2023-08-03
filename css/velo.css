@@ -45,6 +45,10 @@ section.content {
     background-origin:  content-box;
 }
 
+section.content.optional {
+    background-image: url(../../css/velo_advanced.svg);
+}
+
 .title h1 {
     color: var(--r-color);
     text-shadow: 5px 5px 5px var(--r-color-shadow);
@@ -236,6 +240,6 @@ html.print-pdf .solution-closed {
     display: inherit;
 }
 
-.reveal .code-wrapper code.wrap {
+.reveal .code-wrapper code {
     white-space: break-spaces;
 }

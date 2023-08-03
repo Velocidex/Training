@@ -45,10 +45,9 @@ Example - Use Grok to detect SSH login events.
 * Grok is a way of applying regular expressions to extract structured information from log files.
 * Used by many log forwarding platforms such as Elastic for example:
 
+
 ```
-%{SYSLOGTIMESTAMP:Timestamp} %{SYSLOGHOST:logsource} \w+\[\d+\]: %{DATA:event}
-%{DATA:method} for (invalid user )?%{DATA:user}
-from %{IPORHOST:ip} port %{NUMBER:port} ssh2: %{GREEDYDATA:Key}
+%{SYSLOGTIMESTAMP:Timestamp} %{SYSLOGHOST:logsource} \w+\[\d+\]: %{DATA:event} %{DATA:method} for (invalid user )?%{DATA:user} from %{IPORHOST:ip} port %{NUMBER:port} ssh2: %{GREEDYDATA:Key}
 ```
 
 ---
@@ -115,7 +114,7 @@ https://grokdebugger.com/
   read file to some junk data:
 
   ```
-  cat /bin/ls auth.log > test.dd
+  type C:\Windows\notepad.exe auth.log > test.dd
   ```
 
 * Apply the artifact on your Linux system to recover authentication

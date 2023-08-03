@@ -159,8 +159,11 @@ Velociraptor.exe --config client.config.yaml pool_client --number 110
 
 ## Exercise: Post processing a large hunt
 
-* For this exercise collect all scheduled tasks from all systems.
+* For this exercise collect all services from all systems.
 
+* Start the pool client with 100 clients
+
+* Run a hunt on the clean system
 
 ---
 
@@ -180,7 +183,7 @@ velociraptor.exe --config client.config.yaml pool_client --number 102 --writebac
 
 ---
 
-<!-- .slide: class="content" -->
+<!-- content optional -->
 
 ## Optimizing filtering
 
@@ -208,14 +211,3 @@ velociraptor.exe --config client.config.yaml pool_client --number 102 --writebac
    * Relaunch the new collection
    * When satisfied, simply add the new collection to the hunt
      manually.
-
----
-
-
-<!-- .slide: class="content" -->
-
-## Exercise: Automating hunting
-
-* Sometimes we want to run the same hunt periodically
-* Automate scheduling a hunt collecting Scheduled Tasks every day at
-  midnight.

@@ -4,7 +4,7 @@
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content optional -->
 
 ## Using multiple OAuth providers
 
@@ -17,7 +17,7 @@
 
 ---
 
-<!-- .slide: class="content" -->
+<!-- content optional -->
 
 ## The multi Authenticator
 
@@ -43,7 +43,7 @@ GUI:
 
 ---
 
-<!-- .slide: class="full_screen_diagram" -->
+<!-- full_screen_diagram small-font optional -->
 
 ## MultiAuthenticator log in screen.
 
@@ -53,17 +53,7 @@ GUI:
 
 ---
 
-<!-- .slide: class="content" -->
-
-## Exercise: Additional OAuth provider: Azure
-
-* Add Azure as an alternate authentication provider!
-* The instructor will illustrate the Azure process for obtaining credentials
-* The instructor will provide the Azure credentials for your own VM.
-
----
-
-<!-- .slide: class="content small-font" -->
+<!-- content optional -->
 
 ## Client certificate based authentication.
 
@@ -87,7 +77,7 @@ GUI:
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content optional -->
 
 ## Import certificate into personal store (Manage User Certificates)
 
@@ -95,7 +85,7 @@ GUI:
 
 ---
 
-<!-- .slide: class="content" -->
+<!-- content -->
 
 ## Multi-Frontend deployments
 
@@ -108,7 +98,8 @@ GUI:
 
 ---
 
-<!-- .slide: class="full_screen_diagram" -->
+
+<!-- full_screen_diagram small-font -->
 
 ### Multi frontend deployment overview
 
@@ -121,7 +112,7 @@ https://docs.velociraptor.app/docs/deployment/cloud/multifrontend/
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- full_screen_diagram small-font -->
 
 ## Exercise: Create a Master/Minion deployment
 
@@ -141,7 +132,7 @@ velociraptor -v --config server.config.yaml frontend
 
 ---
 
-<!-- .slide: class="content" -->
+<!-- content -->
 
 ## Exercise: Customizing the dashboard
 
@@ -153,7 +144,7 @@ velociraptor -v --config server.config.yaml frontend
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font -->
 
 ## Server Lockdown Mode
 

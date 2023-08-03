@@ -77,7 +77,24 @@ func buildIndexHtml(module *Module) string {
 	return fmt.Sprintf(index, sections)
 }
 
+var (
+	expansions = map[string]string{
+		"<!-- title optional -->":                          `<!-- .slide: class="title optional" data-background-color="antiquewhite" -->`,
+		"<!-- content optional -->":                        `<!-- .slide: class="content optional" data-background-color="antiquewhite" -->`,
+		"<!-- content small-font optional -->":             `<!-- .slide: class="content optional small-font" data-background-color="antiquewhite" -->`,
+		"<!-- content -->":                                 `<!-- .slide: class="content" -->`,
+		"<!-- content small-font -->":                      `<!-- .slide: class="content small-font" -->`,
+		"<!-- full_screen_diagram small-font -->":          `<!-- .slide: class="full_screen_diagram small-font" -->`,
+		"<!-- full_screen_diagram small-font optional -->": `<!-- .slide: class="full_screen_diagram small-font" data-background-color="antiquewhite" -->`,
+		"<!-- hidden -->":                                  `<!-- .slide: class="content" data-visibility="hidden" -->`,
+	}
+)
+
 func adjustSectionText(in string) string {
+	for k, v := range expansions {
+		in = strings.ReplaceAll(in, k, v)
+	}
+
 	in = strings.ReplaceAll(in, "/modules/", "../../modules/")
 	return strings.ReplaceAll(in, "{Base}", "../..")
 }

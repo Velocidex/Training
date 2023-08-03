@@ -1,4 +1,4 @@
-<!-- .slide: class="content small-font" -->
+<!-- content optional -->
 
 ## The Linux Journal Logs
 
@@ -13,7 +13,7 @@ journalctl --file /run/log/journal/*/*.journal
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Exercise: Parsing Journal Logs: Execve
 
@@ -23,7 +23,7 @@ journalctl --file /run/log/journal/*/*.journal
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Exercise: Parsing Journal Logs: Natively
 
@@ -38,7 +38,7 @@ journalctl --file /run/log/journal/*/*.journal
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Exercise: Parsing Journal Logs
 
@@ -53,7 +53,7 @@ journalctl --file /run/log/journal/*/*.journal
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Exercise: Parsing Journal Logs
 

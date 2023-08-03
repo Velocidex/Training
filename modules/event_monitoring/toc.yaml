@@ -5,9 +5,6 @@ toc:
   - name: Event Queries
     path: event_queries.md
 
-  - name: WMI Eventing
-    path: wmi.md
-
   - name: The Process Tracker
     path: /presentations/modules/tracking_processes/
 

@@ -196,6 +196,33 @@ Some common event ids are documented publicly.
 
 ---
 
+<!-- .slide: class="full_screen_diagram" -->
+## What is BITS? Why should we care?
+
+![](/presentations/modules/bit_log_disable_hunting/bits-mitre.png)
+
+---
+
+<!-- .slide: class="content" -->
+## What is BITS?
+
+<div class="container">
+<div class="col">
+
+BITS activity is visible in the logs
+
+```text
+bitsadmin.exe /transfer /download /priority foreground https://www.google.com c:\Users\Administrator\test.ps1
+```
+
+</div>
+<div class="col">
+<img src="/modules/bit_log_disable_hunting/bits-log.png" style="width: 50%" class="title-inset">
+</div>
+</div>
+
+---
+
 <!-- .slide: class="content" -->
 
 ## Exercise - How can we detect this?

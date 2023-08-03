@@ -217,6 +217,30 @@ WHERE Name =~ "velociraptor"
 
 <!-- .slide: class="content small-font" -->
 
+## Exercise: Hash notepad.exe
+
+Try this query in the notebook
+
+```sql
+SELECT OSPath, hash(path=OSPath) AS Hash
+FROM glob(globs="C:/Windows/system32/*")
+WHERE Name =~ "notepad.exe"
+```
+
+Does it feel fast or slow?
+
+How about this
+
+```sql
+SELECT OSPath, hash(path=OSPath) AS Hash
+FROM glob(globs="C:/Windows/system32/*")
+WHERE Hash.MD5 =~ "A" AND Name =~ "notepad.exe"
+```
+
+---
+
+<!-- .slide: class="content small-font" -->
+
 ## Lazy Evaluators
 
 Since many VQL functions can be expensive or have side effects it is
@@ -276,7 +300,7 @@ WHERE OS =~ "linux" AND Log
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## What is a Scope?
 
@@ -290,7 +314,7 @@ implementation
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Nested Scopes
 
@@ -303,7 +327,7 @@ VQL will walk the scope stack in reverse to resolve a name.
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Scope exercise
 
@@ -317,7 +341,7 @@ VQL will walk the scope stack in reverse to resolve a name.
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Typo Example
 
@@ -333,7 +357,7 @@ SELECT Hostname, OS, Executabler FROM info()
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Unknown column types
 
@@ -344,7 +368,7 @@ SELECT Hostname, OS, Executabler FROM info()
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Unknown column types
 
@@ -369,6 +393,8 @@ FROM parse_evtx(filename="C:/Windows/System32/winevt/logs/system.evtx")
 * Subquery delimited by {}
 * Arrays delimited by () or []
 * You can use (XXX, ) to keep an array distinct from (XXX)
+
+Use `'''` for Windows paths, Regex etc
 
 ---
 
@@ -402,7 +428,7 @@ SELECT * FROM foreach(
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Foreach on steroids!
 
@@ -414,7 +440,7 @@ SELECT * FROM foreach(
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Exercise: Hash all files
 
@@ -428,7 +454,7 @@ WHERE NOT IsDir
 
 ---
 
-<!-- .slide: class="content" -->
+<!-- content small-font optional -->
 
 ## Faster hashing!
 
@@ -436,7 +462,7 @@ Convert the previous query to a multi-threaded query using foreach.
 
 ---
 
-<!-- .slide: class="content " -->
+<!-- content optional -->
 
 ## Solution
 
@@ -472,8 +498,7 @@ SELECT * FROM foreach(row={
 
 ---
 
-<!-- .slide: class="content " -->
-
+<!-- hidden -->
 ## Exercise: Filter columns by name
 
 * Consider the following CSV file
@@ -489,7 +514,7 @@ Column1,Column2,SomethingElse
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- hidden -->
 
 ## Filtering columns and dicts
 
@@ -638,7 +663,7 @@ there.
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Materialized LET expressions
 
@@ -658,7 +683,7 @@ FROM netstat()
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Materialized LET expressions - fastest
 
@@ -683,7 +708,7 @@ SELECT MyFunc(X=6) FROM scope()
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Protocols - VQL operators
 
@@ -727,7 +752,7 @@ There is a plugin reference on the web site
 
 ## Writing VQL for fun and profit!
 
-Learn by example: wmi shell
+Learn by example: `wmi shell`
 
 * A common attacker technique is to run remote command shell.
 

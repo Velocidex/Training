@@ -6,7 +6,7 @@
 
 ---
 
-<!-- .slide: class="content" -->
+<!-- content -->
 
 ## Deploying clients - Windows
 
@@ -19,7 +19,7 @@
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content optional -->
 ## Domain deployment
 
 We can deploy the MSI to the entire domain using group policy.
@@ -30,8 +30,7 @@ Two Methods:
 
 ---
 
-<!-- .slide: class="content small-font" -->
-
+<!-- content optional -->
 ## Domain deployment: Scheduled Task
 
 Create a share to serve the MSI from.
@@ -42,9 +41,10 @@ Create a share to serve the MSI from.
 
 ---
 
-<!-- .slide: class="full_screen_diagram small-font" -->
+<!-- content optional -->
 
 ## Domain deployment: Scheduled Task
+
 
 Ensure everyone has read access from this share - and only
 administrators have write access!
@@ -56,7 +56,7 @@ administrators have write access!
 
 ---
 
-<!-- .slide: class="full_screen_diagram small-font" -->
+<!-- full_screen_diagram small-font optional -->
 
 ## Domain deployment: Scheduled Task
 
@@ -68,7 +68,7 @@ Use the group policy management tool create a new Group Policy Object in the dom
 
 ---
 
-<!-- .slide: class="full_screen_diagram small-font" -->
+<!-- full_screen_diagram small-font optional -->
 ## Domain deployment: Scheduled Task
 
 Edit the new GPO
@@ -79,8 +79,7 @@ Edit the new GPO
 
 ---
 
-<!-- .slide: class="full_screen_diagram small-font" -->
-
+<!-- full_screen_diagram small-font optional -->
 ## Domain deployment: Scheduled Task
 
 <div style="text-align: center;">
@@ -89,7 +88,7 @@ Edit the new GPO
 
 ---
 
-<!-- .slide: class="full_screen_diagram small-font" -->
+<!-- full_screen_diagram small-font optional -->
 
 ## Domain deployment: Scheduled Task
 
@@ -101,7 +100,7 @@ Ensure the new scheduled task is run as system
 
 ---
 
-<!-- .slide: class="full_screen_diagram small-font" -->
+<!-- full_screen_diagram small-font optional -->
 
 ## Domain deployment: Scheduled Task
 
@@ -115,7 +114,7 @@ server
 
 ---
 
-<!-- .slide: class="full_screen_diagram small-font" -->
+<!-- full_screen_diagram small-font optional -->
 
 ## Domain deployment: Scheduled Task
 
@@ -127,7 +126,7 @@ Ensure the new scheduled task is run only once
 
 ---
 
-<!-- .slide: class="full_screen_diagram small-font" -->
+<!-- full_screen_diagram small-font optional -->
 
 ## Domain deployment: Assigned Software
 
@@ -141,7 +140,7 @@ Velociraptor easily
 
 ---
 
-<!-- .slide: class="full_screen_diagram small-font" -->
+<!-- full_screen_diagram small-font optional -->
 ## Domain deployment: Assigned Software
 
 You will need to wait until group policy is updated on the endpoint or

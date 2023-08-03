@@ -10,7 +10,7 @@
 
 ## Using Event Queries for monitoring
 
-* Velociraptor's magic saurce is the VQL language
+* Velociraptor's magic sauce is the VQL language
 * VQL queries are asynchronous and stream results as soon as they are
   available
 * This property makes VQL ideal for watching for real time events!

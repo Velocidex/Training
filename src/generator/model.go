@@ -32,6 +32,8 @@ type Slide struct {
 
 	// Any assets in slides.
 	Assets []string `yaml:"assets"`
+
+	raw_data string
 }
 
 func Stats(course *Course) string {

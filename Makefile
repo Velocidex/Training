@@ -9,3 +9,8 @@ build:
 
 spelling:
 	pyspelling
+
+zip:
+	rm -rf /tmp/digging_deeper/
+	./course generate /tmp/digging_deeper/
+	cd /tmp/ && zip -r course.zip  digging_deeper/
