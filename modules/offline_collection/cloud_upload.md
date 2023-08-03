@@ -225,7 +225,7 @@ FROM glob(globs="*",
 <!-- content small-font optional -->
 ## Full access policy
 
-* To give the service accout full access use the following policy
+* To give the service account full access use the following policy
 
 ```json
 {

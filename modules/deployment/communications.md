@@ -83,10 +83,10 @@
 * Some networks require communication via a proxy.
   * Add proxy to config file at `Client.proxy`
   * PAC or Windows Auth not supported.
-* Some networks have an SSL MITM preoxy
+* Some networks have an SSL MITM proxy
   * Add root certs to `Client.Crypto.root_certs`
   * Note that this only affects the outer TLS layer - the proxy still
-    has no visibility of the comms.
+    has no visibility of the communication.
 
 ---
 

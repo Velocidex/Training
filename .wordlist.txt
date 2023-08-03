@@ -1019,3 +1019,9 @@ winpmem
 
 # <url-free> modules/deployment/communications.md
 CA's
+
+
+<url-free> modules/vql_fundamentals/vql.md
+--------------------------------------------------------------------------------
+Multiline
+--------------------------------------------------------------------------------
