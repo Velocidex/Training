@@ -66,8 +66,7 @@ https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns
 
 Using powershell run the following:
 ```
-powershell> sc.exe create owned binpath="%COMSPEC% /c powershell.exe
-   -nop -w hidden -command New-Item -ItemType File C:\art-marker.txt"
+powershell> sc.exe create owned binpath="%COMSPEC% /c powershell.exe -nop -w hidden -command New-Item -ItemType File C:\art-marker.txt"
 ```
 
 https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1569.002/T1569.002.yaml
@@ -114,7 +113,7 @@ sources:
 ```
 ---
 
-<!-- .slide: class="content " -->
+<!-- content optional -->
 
 ## Exercise - Use Sysinternal DU
 

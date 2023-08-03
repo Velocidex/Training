@@ -158,7 +158,7 @@ Invoke-WebRequest -Uri "https://www.google.com" -UseBasicParsing
 <!-- .slide: class="content" -->
 ## Exercise: Find Powershell Module that provides WinHTTP
 
-* Write VQL to local the Powershell module which provides the WinHTTP
+* Write VQL to locate the Powershell module which provides the WinHTTP
   APIs.
   * Parse the mapped PE files of all dlls into the powershell process.
   * Inspect each dll's export directory to find WinHTTP APIs.

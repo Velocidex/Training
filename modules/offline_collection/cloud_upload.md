@@ -25,6 +25,20 @@
 
 ---
 
+<!-- content -->
+## Exercise: Preparing an SMB dropbox
+
+* Sometimes it is easiest to configure an SMB directory to receive the
+  offline collector.
+
+* Follow the
+  [instructions](https://docs.velociraptor.app/docs/offline_triage/remote_uploads/#smb-share)
+  to configure an SMB drop box folder.
+
+* Create offline collectors to upload to the folder.
+
+---
+
 <!-- .slide: class="content small-font" -->
 
 ## Step 1: Creating service account
@@ -89,13 +103,13 @@ FROM glob(globs="*",
 
 ---
 
-<!-- .slide: class="title" -->
+<!-- title optional -->
 
 # Collecting to AWS Buckets
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Bucket credentials
 
@@ -110,7 +124,7 @@ FROM glob(globs="*",
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Creating a bucket
 
@@ -121,7 +135,8 @@ FROM glob(globs="*",
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
+
 ## Creating a User
 
 * In the IAM section of the console create a User account
@@ -131,9 +146,9 @@ FROM glob(globs="*",
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
-### Creating security credentials
+## Creating security credentials
 
 * Since this account needs to log in automatically we need to get an access key for it.
 * Under the `Security credentials` tab find the `Access Keys` section and create a new key.
@@ -143,14 +158,15 @@ FROM glob(globs="*",
 
 ---
 
-<!-- .slide: class="full_screen_diagram" -->
+<!-- full_screen_diagram small-font optional -->
+
 ### Creating security credentials
 
 ![](retrieving_access_key.png)
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Creating a policy
 
@@ -174,7 +190,7 @@ FROM glob(globs="*",
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 ## Testing the upload credentials
 
 * Gather the following pieces of information
@@ -186,14 +202,14 @@ FROM glob(globs="*",
 
 ---
 
-<!-- .slide: class="full_screen_diagram" -->
+<!-- full_screen_diagram small-font optional -->
 ## Testing the upload credentials
 
 ![](testing_s3_upload.png)
 
 ---
 
-<!-- .slide: class="content" -->
+<!-- content optional -->
 ## Viewing the contents of the bucket
 
 * While the uploader has no credentials we can create a second service
@@ -206,10 +222,10 @@ FROM glob(globs="*",
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 ## Full access policy
 
-* To give the service accout full access use the following policy
+* To give the service account full access use the following policy
 
 ```json
 {
@@ -230,7 +246,7 @@ FROM glob(globs="*",
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Testing Full access policy
 

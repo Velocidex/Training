@@ -93,24 +93,3 @@ Lets carve them with `Windows.Carving.USN`
 ### Carving USN Journal can recover events in the distant past
 
 ![](carving_usnj.png)
-
-
----
-
-<!-- .slide: class="content small-font" -->
-
-## Processing Live vs. Processing the $J file
-
-* Tranditionally people collect the $J file and parse it offline.
-* This approach is limited:
-
-   * To reconstruct the full path we need to match up the MFT Id in
-     the USN journal entry with the MFT information from the $MFT
-     file.
-
-   * Velociraptor automatically calculates the full path from the
-     system using all available information. This is important for
-     filtering and context.
-
-   * Velociraptor can then open the relevant files when working on a
-     live system.

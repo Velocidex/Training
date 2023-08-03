@@ -91,7 +91,7 @@ SELECT * FROM sqlite_master
 
 ---
 
-<!-- .slide: class="content " -->
+<!-- content optional -->
 
 ## Exercise: MPLogs
 
@@ -104,7 +104,7 @@ Write a VQL Parser to parse these logs.
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Steps for solution
 
@@ -121,7 +121,7 @@ Write a VQL Parser to parse these logs.
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Possible solution
 
@@ -280,7 +280,7 @@ A common mechanism of privilege escalation is compromise of SSH keys without pas
 
 <div class="col">
 
-![](/presentations/sans_2022/ssh_keys_aws.png)
+![](ssh_keys_aws.png)
 
 </div>
 </div>
@@ -334,7 +334,7 @@ A common mechanism of privilege escalation is compromise of SSH keys without pas
 </div>
 <div class="col">
 
-![](/presentations/sans_2022/ssh_keys_format.png)
+![](ssh_keys_format.png)
 
 </div>
 </div>
@@ -463,7 +463,7 @@ FROM scope()
 
 *Uses binary parser, regular expression and file search*
 
-![](/presentations/sans_2022/private_key_artifact.png)
+![](private_key_artifact.png)
 
 
 ---

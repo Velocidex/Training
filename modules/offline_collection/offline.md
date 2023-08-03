@@ -193,26 +193,12 @@ server anyway
 
 ---
 
-<!-- .slide: class="content " -->
+<!-- content optional -->
 
 ## Take a memory image with winpmem
 
 * We will shell out to winpmem to acquire the image. We will bring
   winpmem embedded in the collector binary.
-
----
-
-<!-- .slide: class="content " -->
-## Exercise: Preparing an SMB dropbox
-
-* Sometimes it is easiest to configure an SMB directory to receive the
-  offline collector.
-
-* Follow the
-  [instructions](https://docs.velociraptor.app/docs/offline_triage/remote_uploads/#smb-share)
-  to configure an SMB drop box folder.
-
-* Create offline collectors to upload to the folder.
 
 ---
 

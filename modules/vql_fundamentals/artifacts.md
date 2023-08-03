@@ -215,15 +215,17 @@ sources:
 
 ## Collect artifact from endpoint
 
+We can collect the artifact from one endpoint
+
 ![](collect_artifact.png)
 
 ---
 
 <!-- .slide: class="content small-font" -->
-## Your artifact is ready to collect
+## Your artifact is ready to hunt!
 
-Let's create a hunt to find all currently running command shells from
-wmi across our entire deployment.
+Let's create a hunt (from all endpoints) to find all currently running
+command shells from wmi across our entire deployment.
 
 ![](hunt_artifact.png)
 
@@ -327,7 +329,7 @@ WHERE LastLogin > "2023-02-01"
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Format time
 
@@ -340,7 +342,7 @@ Update the previous artifact to format the time like `4 February 2021 10:23:00`
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Format time
 
@@ -355,7 +357,7 @@ FROM scope()
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Scope lifetime and tempfile()
 
@@ -368,7 +370,7 @@ removes it when the scope is destroyed.
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Scope lifetime and tempfile()
 
@@ -385,7 +387,7 @@ SELECT * FROM foreach(row={
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Scope lifetime and tempfile()
 

@@ -6,6 +6,9 @@ toc:
     path: searching.md
 
   - name: NTFS Forensics
+    path: /presentations/modules/ntfs_forensics/
+
+  - name: Advanced NTFS Forensics
     path: ntfs.md
 
   - name: Accessors

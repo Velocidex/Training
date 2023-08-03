@@ -6,11 +6,14 @@ import (
 	"os"
 	"path"
 	"path/filepath"
+	"regexp"
 	"strings"
 	"time"
 
 	"gopkg.in/yaml.v2"
 )
+
+var optional_regex = regexp.MustCompile("<!--.+optional.+-->")
 
 func ParseCourse() (*Course, error) {
 	root := &Course{}
@@ -97,8 +100,9 @@ func ParseCourse() (*Course, error) {
 			parts := strings.Split(string(data), "---")
 			for idx, part := range parts {
 				slide := &Slide{
-					Title: getHeading(part),
-					Index: idx,
+					Title:    getHeading(part),
+					Index:    idx,
+					raw_data: part,
 				}
 				for _, hit := range asset_regex.FindAllStringSubmatch(part, -1) {
 					slide.Assets = append(slide.Assets, hit[1])
@@ -217,19 +221,28 @@ func getCourseSlides(topic *Topic, topic_link string) string {
 		}
 		last_title = slide.Title
 
+		icon := "fa-chalkboard"
+		if isSlideOptional(slide) {
+			icon = "fa-hat-wizard"
+		}
+
 		res += fmt.Sprintf(`
        <li class="fs-4">
-         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <i class="fa fa-sm category-icon %s"></i>
          <a href="./%v#/%v" >
            %v
          </a>
        </li>
-`, topic_link, slide.Index, slide.Title)
+`, icon, topic_link, slide.Index, slide.Title)
 	}
 	res += `
  </ul>
 `
 	return res
+}
+
+func isSlideOptional(slide *Slide) bool {
+	return optional_regex.MatchString(slide.raw_data)
 }
 
 // A topic is inside a single .md file containing a self contained

@@ -93,7 +93,7 @@ SELECT * FROM glob(globs=['C:/Users/**/*.exe',
 
    * You can test this by adding a key
 
-   ```
+   ```text
    REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v Notepad /t REG_SZ /d "C:\Windows\notepad.exe"
    ```
 
@@ -118,7 +118,7 @@ FROM glob(globs=RunGlob, accessor="registry")
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content small-font optional -->
 
 ## Exercise: Hash all files provided in the globs
 

@@ -64,7 +64,9 @@ signed SSL and a hard coded admin/password.
 
 <!-- .slide: class="full_screen_diagram small-font" -->
 
-### Configuring Google OAuth2 requires a new project and a consent screen
+### Configuring Google OAuth2
+
+Requires a new project and a consent screen
 
 **NOTE**: Do not add an application logo or require more permissions -
 Google will require OAuth verification which can take weeks!
@@ -86,6 +88,8 @@ same GCP project.
 ---
 
 <!-- .slide: class="full_screen_diagram small-font" -->
+
+### Generate OAuth client credentials.
 
 * The redirect URL is the url which Google will use to call back to
   Velociraptor with the user’s successful login. Note the client id
@@ -150,7 +154,7 @@ Generate new configuration with the details in the Workshop setup document.
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content optional -->
 
 ## Automating config generation
 

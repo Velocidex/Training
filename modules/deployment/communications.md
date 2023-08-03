@@ -54,26 +54,25 @@
 
 <!-- .slide: class="content small-font" -->
 
-## TLS verification
+## TLS verification - Self Signed Mode
 
-* Velociraptor currently supports 2 modes for deployment via the config wizard:
+1. Self signed mode uses internal CAs for the TLS certificates. The client knows it is in self signed mode if the       **Client.use_self_signed_ssl** flag is true.
+    - Server presents a certificate issued by the internal Velociraptor CA
+    - Client verifies cert directly
+    - Client **does not** trust public PKI or on host root store!
+      Only trust included CA certificate.
+    - This pins the server’s certificate inside the client
 
-    1. Self signed mode uses internal CAs for the TLS
-       certificates. The client knows it is in self signed mode if the
-       **Client.use_self_signed_ssl** flag is true.
-      * Server presents a certificate issued by the internal Velociraptor CA
-      * Client verifies cert directly
-      * Client **does not** trust public PKI or on host root store!
-        Only trust included CA certificate.
-      * This pins the server’s certificate inside the client
+---
 
-* For MITM configuration make sure to add the CA's root to the config file.
+<!-- .slide: class="content small-font" -->
+## TLS verification - PKI/Lets Encrypt Mode
 
-    2. PKI Mode: Proper certificates minted by Let’s encrypt.
-      * Client uses root CA chains to verify connections (public CAs,
-        Host root store or embedded root certs).
-      * This is suitable for MITM proxies.
-      * Add trusted certs to `Client.Crypto.root_certs` in PEM format
+* PKI Mode: Proper certificates minted by Let’s encrypt.
+    * Client uses root CA chains to verify connections (public CAs,
+      Host root store or embedded root certs).
+    * This is suitable for MITM proxies.
+    * Add trusted certs to `Client.Crypto.root_certs` in PEM format
 
 ---
 
@@ -84,10 +83,10 @@
 * Some networks require communication via a proxy.
   * Add proxy to config file at `Client.proxy`
   * PAC or Windows Auth not supported.
-* Some networks have an SSL MITM preoxy
+* Some networks have an SSL MITM proxy
   * Add root certs to `Client.Crypto.root_certs`
   * Note that this only affects the outer TLS layer - the proxy still
-    has no visibility of the comms.
+    has no visibility of the communication.
 
 ---
 

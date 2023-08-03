@@ -177,8 +177,7 @@ FROM glob(globs="**",
 
 ---
 
-<!-- .slide: class="content" -->
-
+<!-- content optional -->
 ## The ZIP accessor
 
 * Zip files are a common basis for many file formats
@@ -192,7 +191,7 @@ FROM glob(globs="**",
 
 ---
 
-<!-- .slide: class="content" -->
+<!-- content optional -->
 
 ## Exercise: Search a word document for a keyword
 
@@ -202,7 +201,7 @@ FROM glob(globs="**",
 
 ---
 
-<!-- .slide: class="content" -->
+<!-- content optional -->
 
 ## Solution: Search a word document for a keyword
 
@@ -229,7 +228,7 @@ SELECT * FROM foreach(row={
 
 ---
 
-<!-- .slide: class="content" -->
+<!-- content optional -->
 
 ## Exercise: Identify vulnerable Java programs
 
@@ -244,7 +243,7 @@ SELECT * FROM foreach(row={
 
 ---
 
-<!-- .slide: class="content" -->
+<!-- content optional -->
 
 ## Exercise: Identify vulnerable Java programs
 
@@ -258,7 +257,7 @@ https://gist.github.com/xanda/7ac663984f3560f0b39b18437362d924
 
 ---
 
-<!-- .slide: class="content small-font" -->
+<!-- content optional -->
 
 ## Solution: Identify vulnerable Java programs
 
@@ -399,7 +398,7 @@ FROM pslist() WHERE Name =~ "wordpad"
 
 ---
 
-<!-- .slide: class="content" -->
+<!-- content optional -->
 
 ## The sparse accessor
 
@@ -417,7 +416,7 @@ FileName = pathspec(
 
 ---
 
-<!-- .slide: class="content" -->
+<!-- content optional -->
 
 ## Exercise: Upload only first 10k of each file.
 

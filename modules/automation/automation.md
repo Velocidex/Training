@@ -86,6 +86,16 @@ event query.
 
 ---
 
+<!-- content optional -->
+
+## Exercise: Automating hunting
+
+* Sometimes we want to run the same hunt periodically
+* Automate scheduling a hunt collecting Scheduled Tasks every day at
+  midnight.
+
+---
+
 <!-- .slide: class="content " -->
 
 ## Event Queries and Server Monitoring
