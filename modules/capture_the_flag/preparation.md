@@ -1,7 +1,21 @@
 ## Create Windows VMs for both victims
 
+I like to use `xfreerdp` to access the machine because it is easy to script it.
+
+Main victim machine:
+Assume IP is 172.31.14.220 $attacker_machine_ip
+Assume Public IP is $public_ip_of_victim
+
 ```
-xfreerdp /u:administrator /v:ec2-3-137-185-161.us-east-2.compute.amazonaws.com /p:'password' -decorations /dynamic-resolution -compression -themes /f  /audio-mode:1  /t:MainVictim
+xfreerdp /u:administrator /v:$public_ip_of_victim /p:'password_of_vm' -decorations /dynamic-resolution -compression -themes /f  /audio-mode:1  /t:MainVictim
+```
+
+Attacker Machine
+Assume IP is 172.31.7.131 $attacker_machine_ip
+Assume Public IP is $public_ip_of_attacker
+
+```
+xfreerdp /u:administrator /v:$public_ip_of_attacker /p:'password_of_vm' -decorations /dynamic-resolution -compression -themes /f  /audio-mode:1  /t:MainVictim
 ```
 
 # Preparing the attacker VM
@@ -162,7 +176,7 @@ make it harder to quote in powershell.
 ```
 #!/bin/bash
 
-xfreerdp /u:winsupport /v:ec2-3-137-185-161.us-east-2.compute.amazonaws.com /p:'P@ssword' -decorations /dynamic-resolution -compression -themes /f  /audio-mode:1 /t:WinSupport
+xfreerdp /u:winsupport /v:$public_ip_of_victim /p:'P@ssword' -decorations /dynamic-resolution -compression -themes /f  /audio-mode:1 /t:WinSupport
 ```
 
 Start a web broser and navigate to google: Search for "How to hack!"

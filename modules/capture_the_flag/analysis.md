@@ -45,7 +45,7 @@ The `winsupport` user seems suspicious... No one knows about it....
 Collect RDP authentications from the eventlogs `Windows.EventLogs.RDPAuth`
 
 ```vql
-SELECT Computer, SourceIP, UserName, Description, ClientId , count() AS Count
+SELECT EventTime, Computer, SourceIP, UserName, Description, ClientId , count() AS Count
 FROM source(artifact="Windows.EventLogs.RDPAuth")
 WHERE Description =~ "LOGON_SUCCESSFUL"
 GROUP BY UserName, Description, ClientId
