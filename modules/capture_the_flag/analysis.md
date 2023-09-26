@@ -21,7 +21,7 @@ time.
 User home directory creation time is a good proxy for when the user
 first logged in.
 
-Hunt for FileFinder - post process by sorting the birth time of the
+Hunt for `FileFinder` - post process by sorting the birth time of the
 home directory.
 
 Let's talk about file finder as a general purpose tool for fetching file
@@ -42,7 +42,7 @@ The `winsupport` user seems suspicious... No one knows about it....
 
 ## RDP Auth
 
-Collect RDP authentications from the eventlogs `Windows.EventLogs.RDPAuth`
+Collect RDP authentications from the event logs `Windows.EventLogs.RDPAuth`
 
 ```vql
 SELECT EventTime, Computer, SourceIP, UserName, Description, ClientId , count() AS Count
@@ -55,7 +55,7 @@ Get timeline of login - what is the blast radius?
 
 Which machines are affected?
 
-Get earliest use of winsupport:
+Get earliest use of `winsupport`:
 
 ```vql
 SELECT * FROM source(artifact="Windows.EventLogs.RDPAuth")
@@ -100,9 +100,9 @@ Order by level to show critical first.
 
 Lots of interesting activities!
 
-- Look for winsupport login events
+- Look for `winsupport` login events
 - Account creation alerts
-- Service creation - psexec
+- Service creation - `psexec`
 
 ## Search for ADS
 
@@ -117,13 +117,13 @@ The USN Journal records file activity on the endpoint.
 Limit by the earliest time
 
 - Look for interaction with powershell files - see new powershell file created
-- Look for psexec files...
-- Look for prefetch file
+- Look for `psexec` files...
+- Look for `prefetch` file
 
-- Look for executable files being created - find nosuspicious.exe
+- Look for executable files being created - find `notsuspicious.exe`
   created in Windows directory - very suspicious!
 - search for file with a .key extension - typical tool mark of
-  psexec. This also tells us where the attacker came from.
+  `psexec`. This also tells us where the attacker came from.
 
 The USN Journal allows us to look back in time
 ```vql
@@ -135,8 +135,8 @@ What executables were deleted? In the windows directory?
 
 ## Look for powershell artifacts:
 
-- ISEAutosave
-- Powershell ReadLine
+- `ISEAutosave`
+- `Powershell ReadLine`
 
 Examine the powershell activity - disabling firewall
 
@@ -144,26 +144,26 @@ Examine the powershell activity - disabling firewall
 
 Prefetch timeline - see activity in prefetch
 
-## SQLiteHunting
+## SQLite Hunting
 
-We still dont know exactly what the winsupport user did?
+We still don't know exactly what the `winsupport` user did?
 
-SQLiteHunter parses many artifacts
+`SQLiteHunter` parses many artifacts
 - browser artifacts - History downloads etc. Reveal the watering hole.
 
 ## What else did the attacker do on the system?
 
 Lets find evidence of the attacker interacting with the system.
 
-- RecentDocs
-- Lnk analysis
+- `RecentDocs`
+- `Lnk analysis`
 
 This confirms the attacker opened the documents to view them and
-potentially exfiled them.
+potentially ex-filtrated them.
 
 ## Look for new services T1543.003
 
-Windows.System.Services(Calculate_hashes=True, CertificateInfo=True)
+`Windows.System.Services`
 
 Closely inspect unsigned services.
 

