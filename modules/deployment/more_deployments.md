@@ -68,6 +68,11 @@ Wrote PKCS12 file on mike.pkcs12.
 Creating API client file on mike.config.yaml.
 ```
 
+---
+
+<!-- content optional -->
+
+## Client certificate based authentication.
 
 ```yaml
 GUI:
