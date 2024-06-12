@@ -7,6 +7,9 @@ all: build
 build:
 	go build -o $(output) ./src/
 
+generate:
+	./course generate ./public
+
 spelling:
 	pyspelling
 
