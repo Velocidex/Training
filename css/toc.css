@@ -1,0 +1,20 @@
+li.toc_close ul {
+    display: none;
+}
+
+ul.toc li {
+    list-style: none;
+}
+
+
+html[data-bs-theme="light"] #light-btn {
+    display: none;
+}
+
+html[data-bs-theme="dark"] #dark-btn {
+    display: none;
+}
+
+.print-link {
+    float: right;
+}

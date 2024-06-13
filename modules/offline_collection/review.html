@@ -1,0 +1,82 @@
+
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Velociraptor Deployment</title>
+
+        <link rel="stylesheet" href="../../dist/reveal.css">
+        <link rel="stylesheet" href="../../dist/theme/serif.css" id="theme">
+        <link rel="stylesheet" href="../../css/velo.css">
+        <link rel="stylesheet" href="../../plugin/highlight/vs.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+
+<section data-markdown
+  data-transition="fade"
+  data-separator="^---+\n\n"
+  data-separator-vertical="^>+\n\n">
+<textarea data-template>
+<!-- .slide: class="content small-font" -->
+
+## Review And Summary
+
+* Collecting data from the endpoint is a balancing act:
+   1. Collecting too much data makes it difficult to post process
+   2. Collecting too little means frequent re-collections and pivoting.
+
+* In Client/Server model it is easy to hunt for new data quickly
+   * It is better to be more targeted and answer more specific questions
+   * Limit the total data returned
+
+* We saw to to collect uploads using SMB and S3
+   * More methods are available (SFTP, Azure etc).
+   * The basic principal is the same: Lock down the service account so
+     it can only upload
+
+---
+
+<!-- .slide: class="content" -->
+## Local collection considerations
+
+* Local collection can be done well without a server and permanent
+  agent installed.
+
+* A disadvantage is that we do not get feedback of how the collection
+  is going and how many resources are consumed.
+
+* We really need to plan ahead what we want to collect and it is more
+  difficult to pivot and dig deeper in response to findings.
+
+</textarea>
+</section>
+
+            </div>
+        </div>
+        <script src="../../dist/reveal.js"></script>
+        <script src="../../plugin/markdown/markdown.js"></script>
+        <script src="../../plugin/highlight/highlight.js"></script>
+        <script src="../../plugin/notes/notes.js"></script>
+        <script src="../../plugin/zoom/zoom.js"></script>
+        <script src="../../js/jquery-3.3.1.min.js?1688344844"></script>
+        <script src="../../js/slides.js"></script>
+        <script>
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: false,
+                hash: true,
+                center: false,
+                slideNumber: true,
+
+                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+            }).then(initializeSlides);
+
+        </script>
+
+    </body>
+</html>

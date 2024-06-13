@@ -1,0 +1,91 @@
+
+<!-- .slide: class="title" -->
+# The process tracker
+
+## Complimenting forensic analysis with monitoring...
+
+---
+
+<!-- .slide: class="content" -->
+## What is the point of Forensics?
+
+* Forensics is used to reconstruct past events from artifacts left on
+  the system.
+* We are at the mercy of lucky accidents and side effects of system
+  behavior!
+* When Velociraptor is running permanently on the endpoint, we can
+  deliberately monitor the endpoint and record a more accurate
+  timeline of events!
+
+---
+
+<!-- .slide: class="content" -->
+## Tracking processes
+
+* One of the critical questions we ask is `Where did this process come
+  from?`
+
+* Context of where the process came from is important in establishing
+  initial access vector!
+
+* We could collect all process execution from all endpoints, but:
+    * This will generate a large volume of events.
+    * Vast majority of events are not interesting.
+    * Often we determine which process is interesting is determined by
+      context.
+
+---
+
+<!-- .slide: class="content" -->
+## The process tracker
+
+* Velociraptor can track processes locally on the endpoint at runtime.
+* If the need arises, we can enrich with process execution information.
+* This can be done **EVEN IF THE PROCESS EXITED**
+
+---
+
+<!-- .slide: class="full_screen_diagram" -->
+## Exercise: Enable the process tracker
+
+![](enable-process-tracker.png)
+
+---
+
+<!-- .slide: class="content" -->
+## Emulate a typical attack
+
+```powershell
+psexec.exe /s powershell
+ping.exe www.google.com
+curl.exe -o script.ps1 https://www.google.com/
+notepad.exe
+```
+
+---
+
+<!-- .slide: class="full_screen_diagram" -->
+## Inspect the notepad process
+
+<img src="process_hacker.png" style="height: 600px">
+
+---
+
+<!-- .slide: class="content" -->
+## Using Generic.System.Pstree
+
+![](collecting_pstree.png)
+
+---
+
+<!-- .slide: class="content" -->
+## View process tree
+
+![](pstree.png)
+
+---
+
+<!-- .slide: class="content" -->
+## Inspect the process call chain
+
+![](powershell_pstree.png)

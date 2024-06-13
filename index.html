@@ -1,0 +1,4512 @@
+
+<html lang="en" data-bs-theme="light">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="./css/fontawesome-all.min.css?1688344844" rel="stylesheet">
+   <link href="./css/toc.css?1688344844" rel="stylesheet">
+   <link href="./css/bootstrap.min.css" rel="stylesheet">
+   <script src="./js/jquery-3.3.1.min.js?1688344844"></script>
+   <script src="./js/toc.js?1688344844"></script>
+   <script src="./js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4"
+         src="./css/velo_workshop.svg"
+         alt="" height="100px">
+    <h1 class="display-5 fw-bold text-body-emphasis">
+      Velociraptor: Digging Deeper
+    </h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">
+        Welcome to the Velociraptor: Digging Deeper Course.
+      </p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button type="button" onClick="toggleAll()"
+              class="btn btn-primary">Toggle All</button>
+
+        <button type="button" onClick="setTheme('light')" id="light-btn"
+              class="btn btn-primary">Light</button>
+
+        <button type="button" onClick="setTheme('dark')" id="dark-btn"
+              class="btn btn-primary">Dark</button>
+
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  <ul class="toc">
+
+       <li class="toc_close fs-2">
+          <span onClick="toggleLeaf(this)">
+             <i class="fa fa-sm category-icon fa-angle-right"></i>
+          </span>
+          <a href=".//modules/deployment/index.html">
+           Module 1: Deployment
+         </a>
+         <a class="btn btn-link print-link" role="button"
+                 href=".//modules/deployment/index.html?print-pdf">
+            <i class="fa fa-sm fa-print"></i>
+         </a>
+         
+ <ul>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/deployment/overview.html">
+           Overview
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/overview.html#/0" >
+           What is Velociraptor?
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/overview.html#/1" >
+           Deployment overview
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/overview.html#/2" >
+           Typical deployments
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/deployment/communications.html">
+           Network Communications
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/communications.html#/0" >
+           Network Communications
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/communications.html#/1" >
+           Network Communications overview
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/communications.html#/3" >
+           Velociraptor’s internal PKI
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/communications.html#/4" >
+           TLS verification - Self Signed Mode
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/communications.html#/5" >
+           TLS verification - PKI/Lets Encrypt Mode
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/communications.html#/6" >
+           Adding Proxy and MITM settings
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/communications.html#/7" >
+           Configuration reference
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/deployment/deploying_servers.html">
+           Deploying Servers
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/deploying_servers.html#/0" >
+           Deploying The Server
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/deploying_servers.html#/1" >
+           Run Velociraptor on your machine
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/deploying_servers.html#/3" >
+           Self Signed SSL mode
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/deploying_servers.html#/4" >
+           Steps to deploy Velociraptor
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/deploying_servers.html#/5" >
+           Setting Dynamic DNS with Google Domains
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/deploying_servers.html#/6" >
+           Configuring Google OAuth2
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/deploying_servers.html#/7" >
+           Generate OAuth client credentials.
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/deploying_servers.html#/10" >
+           Installing a new server
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/deployment/deploying_servers.html#/13" >
+           Automating config generation
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/deploying_servers.html#/14" >
+           Building a server deb package
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/deploying_servers.html#/15" >
+           Deploying the server
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/deploying_servers.html#/20" >
+           Your Velociraptor is ready to use!
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/deployment/troubleshooting.html">
+           Troubleshooting
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/troubleshooting.html#/0" >
+           Troubleshooting
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/troubleshooting.html#/1" >
+           Server fails to start
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/troubleshooting.html#/2" >
+           Starting the server manually
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/troubleshooting.html#/3" >
+           Debugging client communications
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/troubleshooting.html#/4" >
+           Network Connectivity problems
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/deployment/more_deployments.html">
+           More Deployment Scenarios
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/more_deployments.html#/0" >
+           Additional deployment scenarios
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/deployment/more_deployments.html#/1" >
+           Using multiple OAuth providers
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/deployment/more_deployments.html#/2" >
+           The multi Authenticator
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/deployment/more_deployments.html#/3" >
+           MultiAuthenticator log in screen.
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/deployment/more_deployments.html#/4" >
+           Client certificate based authentication.
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/deployment/more_deployments.html#/6" >
+           Import certificate into personal store (Manage User Certificates)
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/more_deployments.html#/7" >
+           Multi-Frontend deployments
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/more_deployments.html#/8" >
+           Multi frontend deployment overview
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/more_deployments.html#/9" >
+           Exercise: Create a Master/Minion deployment
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/more_deployments.html#/10" >
+           Exercise: Customizing the dashboard
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/more_deployments.html#/11" >
+           Server Lockdown Mode
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/deployment/orgs_and_acls.html">
+           Orgs and ACLs
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/orgs_and_acls.html#/0" >
+           Multi-Tenancy and RBAC
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/orgs_and_acls.html#/1" >
+           Supporting Multiple Orgs
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/orgs_and_acls.html#/2" >
+           Switching to different orgs
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/orgs_and_acls.html#/3" >
+           Creating a new org
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/orgs_and_acls.html#/4" >
+           Users and orgs
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/orgs_and_acls.html#/5" >
+           Adding a new user
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/orgs_and_acls.html#/6" >
+           Assign user to org
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/orgs_and_acls.html#/7" >
+           Adjust User permissions
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/orgs_and_acls.html#/8" >
+           Preparing a deployment for the new org
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/orgs_and_acls.html#/9" >
+           Fetching the prepared MSI for deployment
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/orgs_and_acls.html#/10" >
+           Auditing user action
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/orgs_and_acls.html#/11" >
+           Inspecting the audit timeline
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/deployment/deploying_clients.html">
+           Deploying Clients
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/deploying_clients.html#/0" >
+           Configuring Clients
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/deploying_clients.html#/1" >
+           Deploying clients - Windows
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/deployment/deploying_clients.html#/2" >
+           Domain deployment
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/deployment/deploying_clients.html#/3" >
+           Domain deployment: Scheduled Task
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/deployment/deploying_clients.html#/11" >
+           Domain deployment: Assigned Software
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/deployment/gui_tour.html">
+           GUI Tour
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/gui_tour.html#/0" >
+           A Velociraptor GUI tour
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/gui_tour.html#/1" >
+           The Dashboard
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/gui_tour.html#/3" >
+           User Preferences
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/gui_tour.html#/4" >
+           Interactively investigate individual clients
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/gui_tour.html#/5" >
+           Searching for a client
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/gui_tour.html#/6" >
+           Search for clients
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/gui_tour.html#/7" >
+           Client Overview
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/gui_tour.html#/8" >
+           Shell commands
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/gui_tour.html#/9" >
+           Running Shell Commands
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/gui_tour.html#/10" >
+           Interactively fetching files from the endpoint
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/gui_tour.html#/11" >
+           The VFS View
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/gui_tour.html#/12" >
+           Navigating the interface
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/gui_tour.html#/13" >
+           The VFS interface
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/gui_tour.html#/14" >
+           Previewing files
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/gui_tour.html#/15" >
+           Velociraptor artifacts
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/gui_tour.html#/16" >
+           What does the VFS view do under the cover?
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/gui_tour.html#/17" >
+           Velociraptor uses expert knowledge to find the evidence
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/deployment/review.html">
+           Review and Summary
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/deployment/review.html#/0" >
+           Review And Summary
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-2">
+          <span onClick="toggleLeaf(this)">
+             <i class="fa fa-sm category-icon fa-angle-right"></i>
+          </span>
+          <a href=".//modules/vql_fundamentals/index.html">
+           Module 2: VQL Fundamentals
+         </a>
+         <a class="btn btn-link print-link" role="button"
+                 href=".//modules/vql_fundamentals/index.html?print-pdf">
+            <i class="fa fa-sm fa-print"></i>
+         </a>
+         
+ <ul>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/vql_fundamentals/vql.html">
+           The VQL Language
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/0" >
+           Why a query language?
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/1" >
+           VQL - Velociraptor's magic sauce
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/2" >
+           The notebook - an interactive document
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/3" >
+           Add VQL Cell to a new Notebook
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/4" >
+           The notebook - an interactive document
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/5" >
+           Completes plugin names
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/6" >
+           Suggests plugin args
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/7" >
+           Create a local server
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/8" >
+           What is VQL?
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/9" >
+           Plugins
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/10" >
+           Life of a query
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/12" >
+           Explaining a query
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/14" >
+           Exercise: List running processes
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/15" >
+           Inspect the data with the table widget
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/17" >
+           Exercise: Hash notepad.exe
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/18" >
+           Lazy Evaluators
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/19" >
+           Exercise: Evalution and Side effects with log()
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/21" >
+           Checking the log function output
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/22" >
+           What is a Scope?
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/23" >
+           Nested Scopes
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/24" >
+           Scope exercise
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/25" >
+           Typo Example
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/26" >
+           Unknown column types
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/28" >
+           VQL Syntax
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/29" >
+           The foreach plugin
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/31" >
+           Foreach on steroids!
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/32" >
+           Exercise: Hash all files
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/33" >
+           Faster hashing!
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/34" >
+           Solution
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/35" >
+           The foreach() column parameter
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/36" >
+           Exercise: Filter columns by name
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/37" >
+           Filtering columns and dicts
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/38" >
+           LET expressions
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/39" >
+           LET expressions are lazy
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/41" >
+           Materialized LET expressions
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/46" >
+           Materialized LET expressions - fastest
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/47" >
+           Local VQL functions
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/48" >
+           Protocols - VQL operators
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/49" >
+           Plugin reference
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/50" >
+           Plugin reference site
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/51" >
+           Writing VQL for fun and profit!
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/52" >
+           Start small - list processes
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/53" >
+           View raw JSON data
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/54" >
+           Refine - Filter by name
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/55" >
+           Subquery - find parent process
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/56" >
+           Detection: Processes spawned by WMI
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/58" >
+           Exercise: Enrich netstat
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/59" >
+           Step 1: Identify listening processes
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/60" >
+           Step 2: Lookup the process from Pid
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/61" >
+           Step 3: Lookup binary information
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/63" >
+           Complete solution
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/65" >
+           Column formatting
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/vql.html#/66" >
+           Example: Display hex data in the GUI
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/vql_fundamentals/artifacts.html">
+           Artifacts
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/0" >
+           VQL Artifacts
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/1" >
+           Artifacts: VQL modules
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/2" >
+           Velociraptor Artifacts
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/3" >
+           Velociraptor Query Language
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/4" >
+           The Artifact Exchange
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/5" >
+           Automatically import Exchange
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/6" >
+           Exercise: Manually import Exchange artifacts
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/7" >
+           Manually importing artifact packs
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/8" >
+           Main parts of an artifact
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/9" >
+           The Artifact Repository
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/10" >
+           Main parts of an artifact
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/11" >
+           Parameters
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/12" >
+           Parameter types
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/13" >
+           Exercise: Create an artifact
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/14" >
+           Make a WMI Subprocess artifact
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/15" >
+           Final artifact
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/16" >
+           Collect artifact from endpoint
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/17" >
+           Your artifact is ready to hunt!
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/18" >
+           Artifact writing tips
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/20" >
+           Calling artifacts from VQL
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/21" >
+           VQL and times
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/23" >
+           Exercise: Identify recent accounts
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/25" >
+           Format time
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/27" >
+           Scope lifetime and tempfile()
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/30" >
+           VQL control structures
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/31" >
+           Looping over arrays
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/32" >
+           Conditional: if plugin and function
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/33" >
+           Conditional: switch plugin
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/34" >
+           Conditional: chain plugin
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/35" >
+           Aggregate functions
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/36" >
+           Example: Count
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/37" >
+           GROUP BY clause
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/38" >
+           Example: Count all rows
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/artifacts.html#/39" >
+           Stacking
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/vql_fundamentals/review.html">
+           Review and Summary
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/vql_fundamentals/review.html#/0" >
+           Review
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-2">
+          <span onClick="toggleLeaf(this)">
+             <i class="fa fa-sm category-icon fa-angle-right"></i>
+          </span>
+          <a href=".//modules/filesystem_forensics/index.html">
+           Module 3: Filesystem Forensics
+         </a>
+         <a class="btn btn-link print-link" role="button"
+                 href=".//modules/filesystem_forensics/index.html?print-pdf">
+            <i class="fa fa-sm fa-print"></i>
+         </a>
+         
+ <ul>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/filesystem_forensics/searching.html">
+           Searching for files
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/searching.html#/0" >
+           Searching for files - glob()
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/searching.html#/1" >
+           Exercise: Search for exe
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/searching.html#/2" >
+           Filesystem accessors
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/searching.html#/3" >
+           The registry accessor
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/searching.html#/5" >
+           Exercise - RunOnce artifact
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/filesystem_forensics/searching.html#/7" >
+           Exercise: Hash all files provided in the globs
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/searching.html#/8" >
+           Searching data
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/searching.html#/10" >
+           YARA - The swiss army knife
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/searching.html#/11" >
+           YARA rules
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/searching.html#/12" >
+           Exercise: drive by download
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/searching.html#/13" >
+           Step 1: Figure out where to look
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/searching.html#/14" >
+           Step 2: Recover URLs
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/searching.html#/15" >
+           Step 3: Let’s do this!
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/searching.html#/16" >
+           YARA best practice
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/searching.html#/17" >
+           Uploading files
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/searching.html#/18" >
+           Exercise: Upload Recent executables
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/filesystem_forensics/ntfs_forensics.html">
+           NTFS Forensics
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/ntfs_forensics.html#/0" >
+           NTFS Overview
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/ntfs_forensics.html#/1" >
+           New Technology File System
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/ntfs_forensics.html#/2" >
+           MFT entries contain attributes
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/ntfs_forensics.html#/3" >
+           NTFS Analysis
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/ntfs_forensics.html#/4" >
+           Finding suspicious files
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/ntfs_forensics.html#/5" >
+           Windows.Forensics. FilenameSearch
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/ntfs_forensics.html#/6" >
+           Windows.NTFS.MFT
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/ntfs_forensics.html#/7" >
+           Exercise - Generate test data
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/ntfs_forensics.html#/8" >
+           More setup
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/ntfs_forensics.html#/9" >
+           Exercise
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/ntfs_forensics.html#/10" >
+           The USN journal
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/ntfs_forensics.html#/11" >
+           USN Journal
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/ntfs_forensics.html#/12" >
+           Exercise - Windows.Forensics.Usn
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/ntfs_forensics.html#/13" >
+           Exercise - UsnJ solution
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/ntfs_forensics.html#/15" >
+           Advanced NTFS: Alternate Data Stream
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/filesystem_forensics/ntfs.html">
+           Advanced NTFS Forensics
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/ntfs.html#/0" >
+           Volume Shadow Copies
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/ntfs.html#/1" >
+           NTFS accessor and VSS
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/ntfs.html#/2" >
+           Velociraptor shows VSS at the top level of the filesystem
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/ntfs.html#/3" >
+           Exercise: Find all VSS copies of the event logs
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/ntfs.html#/5" >
+           Carving The USN Journal
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/ntfs.html#/6" >
+           Carving USN Journal can recover events in the distant past
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/filesystem_forensics/accessors.html">
+           Accessors
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/0" >
+           More about Accessors
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/1" >
+           What is an accessor?
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/2" >
+           The OSPath object
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/3" >
+           Parsing a string into an OSPath
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/4" >
+           Exercise: Parsing paths
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/6" >
+           Parsing paths
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/7" >
+           Life of a Path
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/8" >
+           Exercise: OSPath operations
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/9" >
+           OSPath operations
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/10" >
+           Basic accessors: file, auto
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/11" >
+           The data and scope accessors
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/12" >
+           The ZIP accessor
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/13" >
+           Exercise: Search a word document for a keyword
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/14" >
+           Solution: Search a word document for a keyword
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/15" >
+           Exercise: Identify vulnerable Java programs
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/17" >
+           Solution: Identify vulnerable Java programs
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/18" >
+           Raw registry parsing
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/19" >
+           Exercise: Repeat the Run/RunOnce example with raw registry.
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/20" >
+           The process accessor: accessing process memory
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/21" >
+           Exercise: Write an artifact that uploads process memory
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/24" >
+           The sparse accessor
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/25" >
+           Exercise: Upload only first 10k of each file.
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/26" >
+           The smb accessor
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/accessors.html#/27" >
+           Exercise: Configuring an SMB share
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/filesystem_forensics/parsing.html">
+           Parsing
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/0" >
+           Parsing
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/1" >
+           Parsing evidence on the endpoint
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/2" >
+           Built in parsers - SQLite
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/3" >
+           Exercise: Parse the chrome Top Sites file
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/4" >
+           Sqlite analysis
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/5" >
+           Complex RegEx parsing
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/6" >
+           Parsing with Regular Expressions
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/7" >
+           Exercise: MPLogs
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/8" >
+           Steps for solution
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/9" >
+           Possible solution
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/10" >
+           The Binary Parser
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/11" >
+           Parsing binary data
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/12" >
+           What is binary data?
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/13" >
+           Parsing a struct
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/14" >
+           Parsing Structs
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/15" >
+           Calculating fields
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/17" >
+           Unsecured SSH keys
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/18" >
+           Traditional approach
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/19" >
+           How can I tell if a file is protected?
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/20" >
+           Exercise: Parse SSH Private keys
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/21" >
+           Step 1: read the file.
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/22" >
+           Step 2: Extract the base64 encoded part
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/25" >
+           Step 3: Binary parser built in VQL
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/26" >
+           Step 4: Parse the header and find if the key is encrypted.
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/30" >
+           Exercise:  Parsing root certificates in the registry
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/32" >
+           Solution
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/parsing.html#/33" >
+           Parsing the trusted certificates from the registry
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/filesystem_forensics/timelines.html">
+           Timelines
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/timelines.html#/0" >
+           Timelines
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/timelines.html#/1" >
+           What is a timeline?
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/timelines.html#/2" >
+           Timeline workflow
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/timelines.html#/3" >
+           Example: Correlating execution with files
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/filesystem_forensics/review.html">
+           Review and Summary
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/filesystem_forensics/review.html#/0" >
+           Review And Summary
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-2">
+          <span onClick="toggleLeaf(this)">
+             <i class="fa fa-sm category-icon fa-angle-right"></i>
+          </span>
+          <a href=".//modules/event_logs/index.html">
+           Module 4: Event Logs
+         </a>
+         <a class="btn btn-link print-link" role="button"
+                 href=".//modules/event_logs/index.html?print-pdf">
+            <i class="fa fa-sm fa-print"></i>
+         </a>
+         
+ <ul>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/event_logs/windows.html">
+           Windows Event Logs
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/windows.html#/0" >
+           Windows Event Logs
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/windows.html#/2" >
+           Parsing EVTX
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/windows.html#/3" >
+           Event Messages - Where are they?
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/windows.html#/4" >
+           Internationalization of the log message
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/windows.html#/5" >
+           The Event description is missing from the evtx file.
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/windows.html#/6" >
+           Event message search
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/windows.html#/7" >
+           Deriving event messages
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/windows.html#/9" >
+           Resolving a message from an event
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/windows.html#/10" >
+           Resolving Messages
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/windows.html#/11" >
+           What could go wrong?
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/windows.html#/12" >
+           Event Message databases
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/windows.html#/13" >
+           References
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/windows.html#/14" >
+           Disabling event logs
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/windows.html#/15" >
+           What is BITS? Why should we care?
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/windows.html#/16" >
+           What is BITS?
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/windows.html#/17" >
+           Exercise - How can we detect this?
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/windows.html#/18" >
+           Solution: What is the setting?
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/windows.html#/19" >
+           Exercise: Detect disabled logs
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/windows.html#/20" >
+           Solution
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/windows.html#/21" >
+           Exercise: Convert to an artifact
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/event_logs/detection.html">
+           Detection Engineering
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/detection.html#/0" >
+           Detection engineering
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/detection.html#/1" >
+           Velociraptor vs. SIEM
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/detection.html#/2" >
+           Event Log based detection
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/detection.html#/3" >
+           Sigma - a rule language for logs
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/detection.html#/4" >
+           Some Sigma examples
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/detection.html#/7" >
+           Sigma limitations
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/detection.html#/8" >
+           Sigma rule tips
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/detection.html#/9" >
+           Using Sigma With Velociraptor
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/detection.html#/10" >
+           Exercise: Hayabusa
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/detection.html#/13" >
+           The EVTX Hunter
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/event_logs/pe.html">
+           Portable Executables
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/pe.html#/0" >
+           PE Files
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/pe.html#/1" >
+           PE File structure
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/pe.html#/2" >
+           Authenticode - signing PE files
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/pe.html#/3" >
+           Authenticode - signing via Catalogue
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/pe.html#/4" >
+           Parsing PE Files
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/pe.html#/6" >
+           Exercise: Manipulating Driver hashes
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/pe.html#/11" >
+           Hashes and PE files
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/pe.html#/12" >
+           Weak Hash based detection rule
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/pe.html#/13" >
+           Stronger detection rule
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/event_logs/syslogs.html">
+           Linux Syslog
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/syslogs.html#/0" >
+           Syslog logs
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/syslogs.html#/1" >
+           Line based logging
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/syslogs.html#/2" >
+           Parsing SSH login events
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/syslogs.html#/3" >
+           Grok for parsing syslogs
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/syslogs.html#/4" >
+           Let's use VQL to parse ssh events
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/syslogs.html#/5" >
+           Filter lines and apply Grok
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/syslogs.html#/6" >
+           Parsing log lines with Grok
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/syslogs.html#/7" >
+           Carving SSH auth logs
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/syslogs.html#/8" >
+           Exercise: Carving SSH auth logs
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/event_logs/journal.html">
+           Linux Journal Logs
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/event_logs/journal.html#/0" >
+           The Linux Journal Logs
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/event_logs/journal.html#/1" >
+           Exercise: Parsing Journal Logs: Execve
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/event_logs/journal.html#/2" >
+           Exercise: Parsing Journal Logs: Natively
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/event_logs/journal.html#/3" >
+           Exercise: Parsing Journal Logs
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/event_logs/review.html">
+           Review and Summary
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_logs/review.html#/0" >
+           Review And Summary
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-2">
+          <span onClick="toggleLeaf(this)">
+             <i class="fa fa-sm category-icon fa-angle-right"></i>
+          </span>
+          <a href=".//modules/offline_collection/index.html">
+           Module 5: Triage and Acquisition
+         </a>
+         <a class="btn btn-link print-link" role="button"
+                 href=".//modules/offline_collection/index.html?print-pdf">
+            <i class="fa fa-sm fa-print"></i>
+         </a>
+         
+ <ul>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/offline_collection/collecting_files.html">
+           Collection for Triage
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/collecting_files.html#/0" >
+           Collecting files
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/collecting_files.html#/1" >
+           Windows.KapeFiles.Targets
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/collecting_files.html#/2" >
+           Exercise: Use Windows.KapeFiles.Targets
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/collecting_files.html#/3" >
+           Exporting collections from GUI
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/collecting_files.html#/4" >
+           Resource control
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/collecting_files.html#/5" >
+           Velociraptor has your back!
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/offline_collection/offline.html">
+           Offline Collections
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/offline.html#/0" >
+           Offline collections
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/offline.html#/1" >
+           Why Offline collection?
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/offline.html#/2" >
+           Velociraptor Artifacts
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/offline.html#/3" >
+           Why Offline collection?
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/offline.html#/4" >
+           Create an offline collector
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/offline.html#/5" >
+           Selecting the Windows.KapeFiles.Targets artifact
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/offline.html#/6" >
+           Configuring the collector to encrypt output
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/offline.html#/7" >
+           Downloading the prepared binary
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/offline.html#/8" >
+           Offline collector binaries
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/offline.html#/9" >
+           Acquire data!
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/offline.html#/10" >
+           Acquired file is encrypted
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/offline.html#/12" >
+           Importing into Velociraptor
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/offline.html#/13" >
+           Import the collection into the Velociraptor server
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/offline.html#/14" >
+           Inspect the import process
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/offline.html#/15" >
+           Inspect the collected data
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/offline.html#/16" >
+           Protecting the collection file: Encryption
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/offline.html#/17" >
+           Including third party binaries
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/offline_collection/offline.html#/18" >
+           Take a memory image with winpmem
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/offline.html#/19" >
+           Importing collections into the GUI
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/offline.html#/20" >
+           Local collection considerations
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/offline_collection/cloud_upload.html">
+           Automated Offline uploads
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/cloud_upload.html#/0" >
+           Uploading offline collections automatically
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/cloud_upload.html#/1" >
+           Configure SMB upload
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/cloud_upload.html#/2" >
+           Exercise: Preparing an SMB dropbox
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/cloud_upload.html#/3" >
+           Step 1: Creating service account
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/cloud_upload.html#/4" >
+           Step 2: Share directory to new user
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/cloud_upload.html#/5" >
+           Step 3: Adjust ACLs
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/cloud_upload.html#/6" >
+           Step 4: Test ACLs using VQL
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/cloud_upload.html#/7" >
+           Step 5: Creating the SMB collector
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/offline_collection/cloud_upload.html#/8" >
+           Collecting to AWS Buckets
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/offline_collection/cloud_upload.html#/9" >
+           Bucket credentials
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/offline_collection/cloud_upload.html#/10" >
+           Creating a bucket
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/offline_collection/cloud_upload.html#/11" >
+           Creating a User
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/offline_collection/cloud_upload.html#/12" >
+           Creating security credentials
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/offline_collection/cloud_upload.html#/14" >
+           Creating a policy
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/offline_collection/cloud_upload.html#/15" >
+           Testing the upload credentials
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/offline_collection/cloud_upload.html#/17" >
+           Viewing the contents of the bucket
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/offline_collection/cloud_upload.html#/18" >
+           Full access policy
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/offline_collection/cloud_upload.html#/19" >
+           Testing Full access policy
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/offline_collection/review.html">
+           Review and Summary
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/review.html#/0" >
+           Review And Summary
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/offline_collection/review.html#/1" >
+           Local collection considerations
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-2">
+          <span onClick="toggleLeaf(this)">
+             <i class="fa fa-sm category-icon fa-angle-right"></i>
+          </span>
+          <a href=".//modules/volatile_analysis/index.html">
+           Module 6: Volatile Artifacts and Memory Analysis
+         </a>
+         <a class="btn btn-link print-link" role="button"
+                 href=".//modules/volatile_analysis/index.html?print-pdf">
+            <i class="fa fa-sm fa-print"></i>
+         </a>
+         
+ <ul>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/volatile_analysis/memory.html">
+           Processes and Memory analysis
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/memory.html#/0" >
+           Processes and Memory analysis
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/memory.html#/1" >
+           What is a process?
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/memory.html#/2" >
+           Process Information
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/memory.html#/3" >
+           Exercise - Find elevated command shell
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/memory.html#/5" >
+           Mapped Memory
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/memory.html#/6" >
+           Process memory view
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/memory.html#/7" >
+           The VAD plugin
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/memory.html#/8" >
+           Exercise - look into powershell
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/memory.html#/9" >
+           Exercise: Dump mapped objects
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/memory.html#/10" >
+           Dumping process memory
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/memory.html#/11" >
+           Parsing PE files from memory
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/memory.html#/12" >
+           Exercise: Find Powershell Module that provides WinHTTP
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/memory.html#/13" >
+           Exercise: Find Powershell Module that provides WinHTTP API
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/memory.html#/14" >
+           Searching memory
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/memory.html#/15" >
+           Exercise: Scan memory for keyword
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/memory.html#/17" >
+           Mutants
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/memory.html#/18" >
+           Exercise - Mutants
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/memory.html#/19" >
+           Enumerate the mutants
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/volatile_analysis/etw.html">
+           Event Tracing for Windows
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/etw.html#/0" >
+           Event Tracing for Windows
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/etw.html#/1" >
+           What is ETW
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/etw.html#/2" >
+           ETW Providers
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/etw.html#/3" >
+           ETW for event driven logs
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/etw.html#/4" >
+           Exercise - Monitor DNS queries
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/etw.html#/6" >
+           Windows Management Instrumentation
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/etw.html#/7" >
+           WMI Explorer
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/volatile_analysis/msbuild_engine.html">
+           MSBuild based attacks
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/msbuild_engine.html#/0" >
+           MSBuild based attacks
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/msbuild_engine.html#/1" >
+           Microsoft Build Engine
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/msbuild_engine.html#/2" >
+           MSBuild: Cobalt Strike teamserver
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/msbuild_engine.html#/3" >
+           MSBuild: Detection ideas
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/msbuild_engine.html#/4" >
+           MSBuild: Disk - template file
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/msbuild_engine.html#/5" >
+           MSBuild: Disk - template
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/msbuild_engine.html#/6" >
+           Detection ideas
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/msbuild_engine.html#/8" >
+           MSBuild: Exercise description
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/msbuild_engine.html#/9" >
+           MSBuild exercise
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/msbuild_engine.html#/10" >
+           MSBuild Exercise
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/msbuild_engine.html#/11" >
+           MSBuild: Evidence of execution - prefetch
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/msbuild_engine.html#/12" >
+           Windows.Detection. PrefetchHunter
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/msbuild_engine.html#/13" >
+           Memory artifacts
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/msbuild_engine.html#/14" >
+           Detect Cobalt Strike Beacon
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/msbuild_engine.html#/15" >
+           Inject beacon into process
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/msbuild_engine.html#/16" >
+           Search for beacon in memory
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/msbuild_engine.html#/17" >
+           Detecting Cobalt Strike in memory
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/msbuild_engine.html#/18" >
+           Decoding Cobalt Strike Config
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/msbuild_engine.html#/19" >
+           Extract configuration data from memory
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/volatile_analysis/review.html">
+           Review and Summary
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/volatile_analysis/review.html#/0" >
+           Review And Summary
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-2">
+          <span onClick="toggleLeaf(this)">
+             <i class="fa fa-sm category-icon fa-angle-right"></i>
+          </span>
+          <a href=".//modules/hunting/index.html">
+           Module 7: Hunting
+         </a>
+         <a class="btn btn-link print-link" role="button"
+                 href=".//modules/hunting/index.html?print-pdf">
+            <i class="fa fa-sm fa-print"></i>
+         </a>
+         
+ <ul>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/hunting/hunting.html">
+           Hunting at scale
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/hunting/hunting.html#/0" >
+           Typical hunting workflow
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/hunting/hunting.html#/1" >
+           Mitre Att&ck framework
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/hunting/hunting.html#/2" >
+           Atomic Red Team
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/hunting/hunting.html#/3" >
+           Exercise: Detect Att&ck Techniques
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/hunting/hunting.html#/4" >
+           First plant a signal on your machine
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/hunting/hunting.html#/5" >
+           Windows.Persistence.Debug
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/hunting/hunting.html#/6" >
+           Hunting - mass collections
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/hunting/hunting.html#/7" >
+           Exercise - baseline event logs
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/hunting/hunting.html#/8" >
+           Pool clients
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/hunting/hunting.html#/9" >
+           Create a hunt
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/hunting/hunting.html#/10" >
+           Select hunt artifacts
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/hunting/hunting.html#/11" >
+           Collect results
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/hunting/hunting.html#/12" >
+           Exercise - Stacking
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/hunting/hunting.html#/13" >
+           Stacking can reveal results that stand out
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/hunting/hunting.html#/14" >
+           Exercise: Labeling suspicious hits
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/hunting/hunting.html#/15" >
+           Exercise: Post processing a large hunt
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/hunting/hunting.html#/16" >
+           Create a malicious service
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/hunting/hunting.html#/17" >
+           Optimizing filtering
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/hunting/hunting.html#/18" >
+           Recollecting failed hunts
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/hunting/review.html">
+           Review and Summary
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/hunting/review.html#/0" >
+           Review And Summary
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-2">
+          <span onClick="toggleLeaf(this)">
+             <i class="fa fa-sm category-icon fa-angle-right"></i>
+          </span>
+          <a href=".//modules/event_monitoring/index.html">
+           Module 8: Event Monitoring
+         </a>
+         <a class="btn btn-link print-link" role="button"
+                 href=".//modules/event_monitoring/index.html?print-pdf">
+            <i class="fa fa-sm fa-print"></i>
+         </a>
+         
+ <ul>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/event_monitoring/event_queries.html">
+           Event Queries
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/event_queries.html#/0" >
+           Event queries and asynchronous VQL
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/event_queries.html#/1" >
+           VQL: Event Queries
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/event_queries.html#/3" >
+           Playing with event queries
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/event_queries.html#/4" >
+           Client monitoring architecture
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/event_queries.html#/6" >
+           Example event query
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/event_monitoring/tracking_processes.html">
+           The Process Tracker
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/tracking_processes.html#/0" >
+           The process tracker
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/tracking_processes.html#/1" >
+           What is the point of Forensics?
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/tracking_processes.html#/2" >
+           Tracking processes
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/tracking_processes.html#/3" >
+           The process tracker
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/tracking_processes.html#/4" >
+           Exercise: Enable the process tracker
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/tracking_processes.html#/5" >
+           Emulate a typical attack
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/tracking_processes.html#/6" >
+           Inspect the notepad process
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/tracking_processes.html#/7" >
+           Using Generic.System.Pstree
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/tracking_processes.html#/8" >
+           View process tree
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/tracking_processes.html#/9" >
+           Inspect the process call chain
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/event_monitoring/elastic.html">
+           Integration With External Systems
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/elastic.html#/0" >
+           Interfacing with Elastic/Kibana
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/elastic.html#/1" >
+           What is Elastic/Opensearch
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/elastic.html#/2" >
+           Connection to Elastic or Opensearch
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/elastic.html#/3" >
+           Installing ELK
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/elastic.html#/4" >
+           Interacting with Opensearch
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/elastic.html#/6" >
+           Installing the uploader
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/elastic.html#/7" >
+           Verifying the Uploader works
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/elastic.html#/8" >
+           Check for new indexes
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/elastic.html#/9" >
+           Verify that indexes are populated
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/elastic.html#/10" >
+           You can clear indices when you want
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/elastic.html#/11" >
+           Exercise: Create and maintain Elastic index
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/event_monitoring/alerting.html">
+           Alerting and Escalation
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/alerting.html#/0" >
+           Alerting and Escalation
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/alerting.html#/1" >
+           Integration with Slack/Discord
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/alerting.html#/3" >
+           Sending a message to a discord channel
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/alerting.html#/5" >
+           Exercise: Alert discord when a new hunt is created
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/alerting.html#/6" >
+           The Alerting framework
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/alerting.html#/8" >
+           Exercise: Forwarding alerts to Discord
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/alerting.html#/9" >
+           Other integrations
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/event_monitoring/server_automation.html">
+           Server automation with event queries
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/server_automation.html#/0" >
+           Server Automation With Event Queries
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/server_automation.html#/2" >
+           Exercise: Automatically archive Windows.KapeFiles.Targets
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/server_automation.html#/3" >
+           Exercise: Import offline collections
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/event_monitoring/review.html">
+           Review and Summary
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/event_monitoring/review.html#/0" >
+           Review And Summary
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-2">
+          <span onClick="toggleLeaf(this)">
+             <i class="fa fa-sm category-icon fa-angle-right"></i>
+          </span>
+          <a href=".//modules/automation/index.html">
+           Module 9: Server Automation
+         </a>
+         <a class="btn btn-link print-link" role="button"
+                 href=".//modules/automation/index.html?print-pdf">
+            <i class="fa fa-sm fa-print"></i>
+         </a>
+         
+ <ul>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/automation/extending.html">
+           Extending VQL With Powershell
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/extending.html#/0" >
+           Extending VQL - Artifacts
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/extending.html#/1" >
+           Extending artifacts - PowerShell
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/extending.html#/2" >
+           Exercise: PowerShell based pslist
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/extending.html#/4" >
+           Alternative - encode scripts
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/extending.html#/5" >
+           Alternative - tempfile scripts
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/extending.html#/6" >
+           Dealing with output
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/extending.html#/7" >
+           Parsing JSON output
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/extending.html#/8" >
+           Encoding powershell into JSON
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/extending.html#/9" >
+           Reusing powershell artifacts
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/automation/tools.html">
+           Using External Tools
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/tools.html#/0" >
+           Using external tools
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/tools.html#/1" >
+           Why use external tools?
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/tools.html#/2" >
+           Velociraptor Tools
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/tools.html#/3" >
+           Autoruns
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/tools.html#/5" >
+           Let's add a persistence
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/tools.html#/6" >
+           Launching the Autoruns artifact
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/tools.html#/7" >
+           Configuring the Autoruns tool
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/tools.html#/8" >
+           Detect the malicious scheduled task
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/tools.html#/9" >
+           Artifact encapsulation
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/automation/tools.html#/10" >
+           Exercise - Use Sysinternal DU
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/tools.html#/11" >
+           Third party binaries summary
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/automation/automation.html">
+           Server Automation
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/automation.html#/0" >
+           Automating the Velociraptor Server
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/automation.html#/1" >
+           Server artifacts
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/automation.html#/2" >
+           Example: Client version distribution
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/automation.html#/3" >
+           Server concepts
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/automation.html#/4" >
+           Exercise - label clients
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/automation.html#/5" >
+           Exercise - label clients with event query
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/automation.html#/6" >
+           Exercise: Server management with VQL
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-hat-wizard"></i>
+         <a href=".//modules/automation/automation.html#/7" >
+           Exercise: Automating hunting
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/automation.html#/8" >
+           Event Queries and Server Monitoring
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/automation.html#/9" >
+           Exercise - Watch for flow completions
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/automation.html#/10" >
+           Server Event Artifacts
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/automation.html#/11" >
+           Exercise: Powershell encoded cmdline
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/automation.html#/13" >
+           Alerting and escalation.
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/automation.html#/14" >
+           Exercise: Escalate alerts to slack/discord.
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/automation/api.html">
+           The Velociraptor API
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/api.html#/0" >
+           The Velociraptor API
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/api.html#/1" >
+           Why an API?
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/api.html#/2" >
+           Velociraptor API Server overview
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/api.html#/4" >
+           The Velociraptor API
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/api.html#/5" >
+           Create a client API certificate
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/api.html#/6" >
+           Grant access to API key
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/api.html#/7" >
+           Export access to your API
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/api.html#/8" >
+           Using the API to connect to the server.
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/api.html#/9" >
+           Schedule an artifact collection
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/api.html#/10" >
+           Waiting for the results
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/api.html#/11" >
+           Reading the results
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/api.html#/12" >
+           Exercise: Put it all together
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/automation/review.html">
+           Review and Summary
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/automation/review.html#/0" >
+           Review And Summary
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-2">
+          <span onClick="toggleLeaf(this)">
+             <i class="fa fa-sm category-icon fa-angle-right"></i>
+          </span>
+          <a href=".//modules/capture_the_flag/index.html">
+           Module 10: Capture The Flag
+         </a>
+         <a class="btn btn-link print-link" role="button"
+                 href=".//modules/capture_the_flag/index.html?print-pdf">
+            <i class="fa fa-sm fa-print"></i>
+         </a>
+         
+ <ul>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/capture_the_flag/ctf.html">
+           Capture The Flag
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/capture_the_flag/ctf.html#/0" >
+           Capture the Flag
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/capture_the_flag/ctf.html#/1" >
+           Rules of engagements
+         </a>
+       </li>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/capture_the_flag/ctf.html#/2" >
+           Possible attacks
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-2">
+          <span onClick="toggleLeaf(this)">
+             <i class="fa fa-sm category-icon fa-angle-right"></i>
+          </span>
+          <a href=".//modules/references/index.html">
+           References and Links
+         </a>
+         <a class="btn btn-link print-link" role="button"
+                 href=".//modules/references/index.html?print-pdf">
+            <i class="fa fa-sm fa-print"></i>
+         </a>
+         
+ <ul>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/references/youtube.html">
+           YouTube Videos
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/references/youtube.html#/0" >
+           Youtube Videos
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/references/blogs.html">
+           Blog Posts
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/references/blogs.html#/0" >
+           Blog posts
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+       <li class="toc_close fs-3">
+         <span onClick="toggleLeaf(this)">
+            <i class="fa fa-sm category-icon fa-angle-right"></i>
+         </span>
+         <a href=".//modules/references/links.html">
+           Links
+         </a>
+         
+ <ul>
+
+       <li class="fs-4">
+         <i class="fa fa-sm category-icon fa-chalkboard"></i>
+         <a href=".//modules/references/links.html#/0" >
+           Links
+         </a>
+       </li>
+
+ </ul>
+
+       </li>
+
+ </ul>
+
+       </li>
+
+  </ul>
+  <footer class="text-center text-lg-start bg-light text-muted">
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+       <div class="me-5 d-none d-lg-block">
+         © 2024 Copyright:
+         <a class="text-reset fw-bold" href="https://rapid7.com/">Rapid7 Inc</a>
+       </div>
+       <div class="me-4 text-reset">
+         Built on 2024-06-13T04:26:05Z
+       </div>
+    </section>
+  </footer>
+</div>
+
+</body>
+</html>

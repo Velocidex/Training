@@ -1,0 +1,147 @@
+
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Velociraptor Deployment</title>
+
+        <link rel="stylesheet" href="../../dist/reveal.css">
+        <link rel="stylesheet" href="../../dist/theme/serif.css" id="theme">
+        <link rel="stylesheet" href="../../css/velo.css">
+        <link rel="stylesheet" href="../../plugin/highlight/vs.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+
+<section data-markdown
+  data-transition="fade"
+  data-separator="^---+\n\n"
+  data-separator-vertical="^>+\n\n">
+<textarea data-template>
+<!-- .slide: class="content small-font" -->
+
+## Volume Shadow Copies
+
+NTFS allows for a special copy on write snapshot feature called
+`Volume Shadow Copy`.
+
+Create a VSS copy on your own machine using WMI:
+
+```sh
+wmic shadowcopy call create Volume='C:\'
+```
+
+Ensure your system contains a volume shadow copy
+```bash
+vssadmin list shadows
+```
+
+Note:
+
+On Windows server OS you can use:
+```bash
+vssadmin create shadow
+```
+
+---
+
+<!-- .slide: class="content small-font" -->
+
+## NTFS accessor and VSS
+
+* When a VSS copy is created, it is accessible via a special
+  device. Velociraptor allows the VSS copies to be enumerated by
+  listing them at the top level of the filesystem.
+
+* At the top level, the accessor provides metadata about each device
+  in the “Data” column, including its creation time. This is
+  essentially the same output as vssadmin list shadows
+
+---
+
+<!-- .slide: class="full_screen_diagram" -->
+
+### Velociraptor shows VSS at the top level of the filesystem
+
+![](vss.png)
+
+
+---
+
+<!-- .slide: class="content small-font" -->
+
+## Exercise: Find all VSS copies of the event logs
+
+* We can glob the VSS just as if they were a directory
+* Makes it easy to fetch every version of a certain file (e.g. a log file).
+
+---
+
+<!-- .slide: class="full_screen_diagram small-font" -->
+
+## Exercise: Find all VSS copies of the event logs
+
+<div class="solution solution-closed">
+
+```
+SELECT *
+FROM glob(globs="/*/windows/system32/winevt/logs/system.evtx", accessor="ntfs")
+```
+
+![](evtx_in_vss.png)
+
+</div>
+
+---
+
+<!-- .slide: class="content" -->
+
+## Carving The USN Journal
+
+* The USN Journal is very useful to determine filesystem activities.
+* However, it is normally limited to 30mb
+* In practice the USN Journal rolls over quickly
+* However, the journal is not overwritten!
+* There is a large likelyhood that entries remain for a long time.
+
+Lets carve them with `Windows.Carving.USN`
+
+---
+
+<!-- .slide: class="full_screen_diagram small-font" -->
+
+### Carving USN Journal can recover events in the distant past
+
+![](carving_usnj.png)
+
+</textarea>
+</section>
+
+            </div>
+        </div>
+        <script src="../../dist/reveal.js"></script>
+        <script src="../../plugin/markdown/markdown.js"></script>
+        <script src="../../plugin/highlight/highlight.js"></script>
+        <script src="../../plugin/notes/notes.js"></script>
+        <script src="../../plugin/zoom/zoom.js"></script>
+        <script src="../../js/jquery-3.3.1.min.js?1688344844"></script>
+        <script src="../../js/slides.js"></script>
+        <script>
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: false,
+                hash: true,
+                center: false,
+                slideNumber: true,
+
+                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+            }).then(initializeSlides);
+
+        </script>
+
+    </body>
+</html>

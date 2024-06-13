@@ -1,0 +1,75 @@
+
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Velociraptor Deployment</title>
+
+        <link rel="stylesheet" href="../../dist/reveal.css">
+        <link rel="stylesheet" href="../../dist/theme/serif.css" id="theme">
+        <link rel="stylesheet" href="../../css/velo.css">
+        <link rel="stylesheet" href="../../plugin/highlight/vs.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+
+<section data-markdown
+  data-transition="fade"
+  data-separator="^---+\n\n"
+  data-separator-vertical="^>+\n\n">
+<textarea data-template>
+<!-- .slide: class="content" -->
+
+## Review And Summary
+
+* Event logs are very important for Incident Response
+* The Windows Event logs format is structured, but does not contain
+  critical information.
+* Using automated tools to apply detection logic on event logs helps
+  to quickly identify an incident.
+* Hunting the EVTX logs can reveal important but unrelated
+  information.
+
+---
+
+<!-- .slide: class="content" -->
+
+## Review And Summary
+
+* On Linux syslog events are not structured.
+* We can use `Grok` or regular expressions to extract information but
+  this is fragile.
+* Syslog can be carved from disk - even after rotation.
+* Newer systems are using journal logs as well.
+
+</textarea>
+</section>
+
+            </div>
+        </div>
+        <script src="../../dist/reveal.js"></script>
+        <script src="../../plugin/markdown/markdown.js"></script>
+        <script src="../../plugin/highlight/highlight.js"></script>
+        <script src="../../plugin/notes/notes.js"></script>
+        <script src="../../plugin/zoom/zoom.js"></script>
+        <script src="../../js/jquery-3.3.1.min.js?1688344844"></script>
+        <script src="../../js/slides.js"></script>
+        <script>
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: false,
+                hash: true,
+                center: false,
+                slideNumber: true,
+
+                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+            }).then(initializeSlides);
+
+        </script>
+
+    </body>
+</html>

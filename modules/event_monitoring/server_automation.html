@@ -1,0 +1,83 @@
+
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Velociraptor Deployment</title>
+
+        <link rel="stylesheet" href="../../dist/reveal.css">
+        <link rel="stylesheet" href="../../dist/theme/serif.css" id="theme">
+        <link rel="stylesheet" href="../../css/velo.css">
+        <link rel="stylesheet" href="../../plugin/highlight/vs.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+
+<section data-markdown
+  data-transition="fade"
+  data-separator="^---+\n\n"
+  data-separator-vertical="^>+\n\n">
+<textarea data-template>
+<!-- .slide: class="title" -->
+
+# Server Automation With Event Queries
+
+---
+
+<!-- .slide: class="content" -->
+
+## Server Automation With Event Queries
+
+* It is possible to automate things based on server side events.
+* When collections complete they emit `System.Flow.Completion` which
+  can be watched using the `watch_monitoring()` plugin.
+
+---
+
+<!-- .slide: class="content" -->
+
+## Exercise: Automatically archive Windows.KapeFiles.Targets
+
+* When the user collects a `Windows.KapeFiles.Targets` artifact,
+  zip the collection up (with [create_flow_download](https://docs.velociraptor.app/vql_reference/server/create_flow_download/)) and archive it into a directory
+
+---
+
+<!-- .slide: class="content" -->
+## Exercise: Import offline collections
+
+* Write an artifact that will automatically import any new offline
+  collection thatt appear in a directory.
+* Also add the collections to a running hunt.
+
+</textarea>
+</section>
+
+            </div>
+        </div>
+        <script src="../../dist/reveal.js"></script>
+        <script src="../../plugin/markdown/markdown.js"></script>
+        <script src="../../plugin/highlight/highlight.js"></script>
+        <script src="../../plugin/notes/notes.js"></script>
+        <script src="../../plugin/zoom/zoom.js"></script>
+        <script src="../../js/jquery-3.3.1.min.js?1688344844"></script>
+        <script src="../../js/slides.js"></script>
+        <script>
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: false,
+                hash: true,
+                center: false,
+                slideNumber: true,
+
+                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+            }).then(initializeSlides);
+
+        </script>
+
+    </body>
+</html>

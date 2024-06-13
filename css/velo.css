@@ -1,0 +1,245 @@
+:root {
+  --r-link-color: #3c8ea8;
+  --r-main-font: Ariel;
+  --r-color: #41aa13;
+  --r-color-shadow: #41aa1360;
+  --bullet-color: #990000;
+  --subtitle-color: #990000;
+  --subtitle-shadow: #99000060;
+  --r-link-color-hover: #2640c0;
+  --r-background-color: white;
+}
+
+.reveal ul, .reveal ul li {
+  list-style: none; /* Remove default bullets */
+}
+
+ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--bullet-color); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  /* font-size: 1.4em; */
+  /* display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+  padding-right: 0.5em;
+}
+
+ul li::after {
+    margin-top: 0.0em;
+}
+
+section.title {
+    background-image: url(../../css/velo_workshop.svg);
+    background-size: 228px;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-origin:  content-box;
+}
+
+section.content {
+    background-image: url(../../css/velo_workshop.svg);
+    background-size: 228px;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-origin:  content-box;
+}
+
+section.content.optional {
+    background-image: url(../../css/velo_advanced.svg);
+}
+
+.title h1 {
+    color: var(--r-color);
+    text-shadow: 5px 5px 5px var(--r-color-shadow);
+    text-align: left;
+    width: 100%;
+    font-size: 5ex;
+    margin-top: 20%;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.title h2 {
+    color: var(--subtitle-color);
+    text-shadow: 5px 5px 5px var(--subtitle-shadow);
+    margin-top: 10%;
+    text-align: left;
+    width: 100%;
+    font-size: 3ex;
+}
+
+.title h3 {
+    color: var(--subtitle-color);
+    text-shadow: 5px 5px 5px var(--subtitle-shadow);
+    margin-top: 0%;
+    text-align: left;
+    width: 100%;
+    font-size: 2ex;
+}
+
+.title .inset {
+    border-left: solid;
+    border-width: 5px;
+    border-color: #ffCCAA;
+    padding-left: 20px;
+}
+
+.content .inset, .title-inset, .full_screen_diagram .inset {
+    position: absolute;
+    right: 0;
+    width: 40%;
+    border: 0;
+}
+
+.content h2 {
+    color: var(--r-color);
+    text-align: left;
+    margin-bottom: 70px;
+    font-size: 3ex;
+    padding-top: 10px;
+    padding-left: 20px;
+    margin-right: 230px;
+}
+
+.content h3 {
+    color: var(--r-color);
+    text-align: left;
+    text-shadow: 10px 10px 10px #00000060;
+    margin-top: -70px;
+    margin-bottom: 70px;
+    font-size: 2ex;
+    margin-left: 20px;
+}
+
+.content h4 {
+    color: var(--r-color);
+    text-align: left;
+    text-shadow: 10px 10px 10px #00000060;
+    font-size: 2ex;
+    margin-left: 20px;
+}
+
+.content ul li ul {
+    font-size: 1.7ex;
+}
+
+.content p {
+    text-align: left;
+}
+
+.content ul {
+    display: block;
+}
+
+.content pre {
+    width: 100%;
+    margin: 0;
+}
+.content code {
+    overflow: hidden;
+}
+.content li p {
+    display: inline;
+}
+
+.mid-height {
+    height: 400px;
+}
+
+.reveal section.full_screen_diagram p {
+   text-align: left;
+}
+
+.full_screen_diagram h2 {
+    color: var(--r-color);
+    text-align: left;
+    font-size: 3ex;
+}
+
+.full_screen_diagram h3 {
+    color: black;
+    margin-top: 1ex;
+    text-align: left;
+    font-size: 2ex;
+    text-shadow: 10px 10px 10px #00000060;
+}
+
+.full_screen_diagram hr {
+    display: none;
+}
+
+section.full_screen_diagram {
+    overflow-y: hidden;
+    max-height: 90vh;
+}
+
+.full_screen_diagram a {
+    font-size: 1ex;
+}
+
+.content .container {
+    display: flex;
+}
+
+.content .col {
+    flex: 1;
+}
+
+.col {
+    font-size: 2ex;
+}
+
+.reveal table.noborder td {
+    border: none;
+}
+
+.reveal code.hljs {
+    padding: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.reveal .small-font {
+    font-size: 1.7ex;
+}
+
+.over-height pre {
+    height: 800px;
+}
+
+
+.fixed {
+    display: inline;
+    position: fixed;
+}
+
+html.print-pdf .fixed {
+    display: none;
+}
+
+html.print-pdf pre.code-wrapper code {
+    text-wrap: balance;
+}
+
+.solution-closed {
+    display: none;
+}
+
+.revealer {
+    cursor: pointer;
+    background-color: antiquewhite;
+    border-style: outset;
+}
+
+html.print-pdf .revealer {
+    display: none;
+}
+
+html.print-pdf .solution-closed {
+    display: inherit;
+}
+
+.reveal .code-wrapper code {
+    white-space: break-spaces;
+}

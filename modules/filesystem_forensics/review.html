@@ -1,0 +1,79 @@
+
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Velociraptor Deployment</title>
+
+        <link rel="stylesheet" href="../../dist/reveal.css">
+        <link rel="stylesheet" href="../../dist/theme/serif.css" id="theme">
+        <link rel="stylesheet" href="../../css/velo.css">
+        <link rel="stylesheet" href="../../plugin/highlight/vs.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+
+<section data-markdown
+  data-transition="fade"
+  data-separator="^---+\n\n"
+  data-separator-vertical="^>+\n\n">
+<textarea data-template>
+<!-- .slide: class="content " -->
+
+## Review And Summary
+
+* Searching for files is a powerful technique
+  * We can search by file names
+  * Search file content with Yara
+* Velociraptor's powerfull NTFS parser provides access to filesystem
+  specific information.
+* Accessors allow Velociraptor's plugins to be applied to a wide range
+  of situations.
+
+---
+
+<!-- .slide: class="content " -->
+
+## Review And Summary
+
+* Velociraptor has a number of powerful parsing tools
+   * Allows deep analysis to be performed on the endpoint
+   * Many built in parsers for common file formats (SQLite, Zip, PST etc).
+   * Using Regexp we can parse text based files
+   * A declerative binary parser can extract information from binary
+     files.
+
+* Velociraptor timelines allows to visualize multiple time based
+  events together.
+
+</textarea>
+</section>
+
+            </div>
+        </div>
+        <script src="../../dist/reveal.js"></script>
+        <script src="../../plugin/markdown/markdown.js"></script>
+        <script src="../../plugin/highlight/highlight.js"></script>
+        <script src="../../plugin/notes/notes.js"></script>
+        <script src="../../plugin/zoom/zoom.js"></script>
+        <script src="../../js/jquery-3.3.1.min.js?1688344844"></script>
+        <script src="../../js/slides.js"></script>
+        <script>
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: false,
+                hash: true,
+                center: false,
+                slideNumber: true,
+
+                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+            }).then(initializeSlides);
+
+        </script>
+
+    </body>
+</html>

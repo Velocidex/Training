@@ -1,0 +1,75 @@
+
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Velociraptor Deployment</title>
+
+        <link rel="stylesheet" href="../../dist/reveal.css">
+        <link rel="stylesheet" href="../../dist/theme/serif.css" id="theme">
+        <link rel="stylesheet" href="../../css/velo.css">
+        <link rel="stylesheet" href="../../plugin/highlight/vs.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+
+<section data-markdown
+  data-transition="fade"
+  data-separator="^---+\n\n"
+  data-separator-vertical="^>+\n\n">
+<textarea data-template>
+<!-- .slide: class="content" -->
+
+## Review And Summary
+
+* In this module we were introduced to Velociraptor!
+* A highly scalable and easy to deploy DFIR plugin.
+
+> So easy to deploy you will think you did it wrong!
+
+> Eric Capuano [Live Incident Response with Velociraptor](https://www.youtube.com/watch?v=Q1IoGX--814&t=1651s)
+
+
+---
+
+<!-- .slide: class="content" -->
+## Review And Summary
+
+* We learned about Velociraptor's Multi-Tenancy feature and how ACLs
+  are managed for Velociraptor's users.
+* We built MSI packages ready for deployment and used GPO for domain
+  deployment.
+* Finally we interacted with clients and learned our way around the
+  GUI.
+
+</textarea>
+</section>
+
+            </div>
+        </div>
+        <script src="../../dist/reveal.js"></script>
+        <script src="../../plugin/markdown/markdown.js"></script>
+        <script src="../../plugin/highlight/highlight.js"></script>
+        <script src="../../plugin/notes/notes.js"></script>
+        <script src="../../plugin/zoom/zoom.js"></script>
+        <script src="../../js/jquery-3.3.1.min.js?1688344844"></script>
+        <script src="../../js/slides.js"></script>
+        <script>
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: false,
+                hash: true,
+                center: false,
+                slideNumber: true,
+
+                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+            }).then(initializeSlides);
+
+        </script>
+
+    </body>
+</html>
