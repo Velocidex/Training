@@ -191,7 +191,7 @@ func buildCourseTOC(course *Course) string {
   <footer class="text-center text-lg-start bg-light text-muted">
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
        <div class="me-5 d-none d-lg-block">
-         © 2023 Copyright:
+         © 2024 Copyright:
          <a class="text-reset fw-bold" href="https://rapid7.com/">Rapid7 Inc</a>
        </div>
        <div class="me-4 text-reset">

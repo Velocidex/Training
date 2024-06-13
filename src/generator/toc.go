@@ -67,6 +67,7 @@ func GenerateSite(
 	output_manager.CopyDirectory("./css", "css")
 	output_manager.CopyDirectory("./js", "js")
 	output_manager.CopyFile("./src/generator/README.md", "README.md")
+	output_manager.CopyFile("./CNAME", "CNAME")
 
 	if verbose {
 		Dump(course)
